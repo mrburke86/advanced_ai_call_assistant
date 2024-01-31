@@ -4,4 +4,3 @@ webrtcvad==2.0.10
 wavio==0.0.8
 openai-whisper==20231117
 torch==2.1.2
-numpy==1.26.3

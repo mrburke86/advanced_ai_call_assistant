@@ -6,6 +6,17 @@ backend/utils/__pycache__/
 
 backend/*.py[cod]
 
-# Frontend
+### Frontend ###
+# Dependencies
 frontend/node_modules/
 frontend/.next/
+
+# Local env files
+frontend/.env*.local
+
+# Vercel
+frontend/.vercel
+
+# Typescript
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
