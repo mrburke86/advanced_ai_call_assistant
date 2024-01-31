@@ -9,7 +9,7 @@ from config import LOGS_DIR
 def setup_logging():
     root_logger = logging.getLogger()
 
-    if not root_logger.handlers:  # Check if handlers are already added
+    if not root_logger.handlers:
         # now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")  # Generate timestamp
         log_file_path = os.path.join(
             LOGS_DIR, f"current_ai_audio_assistant_2024-01-30.log"

@@ -5,6 +5,7 @@ import logging
 import multiprocessing
 import threading
 import time
+import queue
 
 from config import ORIGINAL_RECORDINGS_DIR
 from recorder import AudioCaptureProcessor, AudioSegmentManager
@@ -68,6 +69,7 @@ if __name__ == "__main__":
     try:
         setup_recording_environment(ORIGINAL_RECORDINGS_DIR)
         transcription_queue = multiprocessing.Queue()
+        # transcription_queue = queue.Queue()
 
         audio_thread = threading.Thread(
             target=audio_capture_and_processing_wrapper,

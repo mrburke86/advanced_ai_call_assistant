@@ -7,7 +7,7 @@ import requests
 
 import torch
 import whisper
-from transcriber.redis_publisher import RedisPublisher
+# from transcriber.redis_publisher import RedisPublisher
 from config import MODEL_NAME
 from utils.load_model import WhisperModelLoader
 
@@ -18,7 +18,7 @@ logger.setLevel(logging.DEBUG)
 class TranscriberService:
     def __init__(self):
         self.whisper_model = None
-        self.redis_publisher = RedisPublisher()
+        # self.redis_publisher = RedisPublisher()
 
     def send_data_to_nextjs(self, data):
         try:

@@ -1,0 +1,145 @@
+2024-01-31 15:44:29,771 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-01-31 15:44:29,771 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\original
+2024-01-31 15:44:29,772 | ERROR | __main__ | Unexpected error: [WinError 3] The system cannot find the path specified: 'backend\\data\\original'
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 69, in <module>
+    setup_recording_environment(ORIGINAL_RECORDINGS_DIR)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\utils.py", line 104, in setup_recording_environment
+    for filename in os.listdir(directory):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'backend\\data\\original'
+2024-01-31 15:48:53,625 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-01-31 15:48:53,626 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-01-31 15:48:53,626 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-01-31 15:48:53,642 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-01-31 15:48:53,643 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-01-31 15:48:53,643 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-01-31 15:48:53,696 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-01-31 15:48:58,157 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-01-31 15:49:22,738 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-01-31 15:49:35,720 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-01-31 15:49:35.719932
+2024-01-31 15:49:35,733 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-01-31_15-49-35.wav
+2024-01-31 15:49:35,733 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 12.0 seconds
+2024-01-31 15:49:35,734 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-01-31 15:49:40,570 | ERROR | __mp_main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 24, in transcription_worker
+    transcriber.load_model()
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 36, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1099, in __init__
+    self.refresh(lock_args=self.lock_args)
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1348, in refresh
+    self.display()
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1496, in display
+    self.sp(self.__str__() if msg is None else msg)
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 462, in print_status
+    fp_write('\r' + s + (' ' * max(last_len[0] - len_s, 0)))
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 455, in fp_write
+    fp.write(str(s))
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\utils.py", line 195, in inner
+    return func(*args, **kwargs)
+  File "c:\Users\hello\.vscode\extensions\ms-python.python-2023.22.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_io.py", line 40, in write
+    r.write(s)
+OSError: [WinError 6] The handle is invalid
+2024-01-31 15:57:01,602 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-01-31 15:57:01,603 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-01-31 15:57:01,603 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-01-31_15-49-35.wav
+2024-01-31 15:57:01,604 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-01-31_15-49-35.wav
+2024-01-31 15:57:01,604 | INFO | utils.utils | Finished clearing recordings. 1 files deleted.
+2024-01-31 15:57:01,607 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-01-31 15:57:01,607 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-01-31 15:57:01,607 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-01-31 15:57:01,610 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-01-31 15:57:01,629 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-01-31 15:57:15,161 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-01-31 15:57:19,170 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-01-31 15:57:19.170732
+2024-01-31 15:57:19,177 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-01-31_15-57-19.wav
+2024-01-31 15:57:19,177 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 2.5 seconds
+2024-01-31 15:57:19,178 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-01-31 15:57:21,151 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-01-31 15:57:25,670 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-01-31 15:57:25.670795
+2024-01-31 15:57:25,673 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-01-31_15-57-25.wav
+2024-01-31 15:57:25,674 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 4.0 seconds
+2024-01-31 15:57:25,674 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-01-31 15:57:44,030 | ERROR | __main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 25, in transcription_worker
+    transcriber.load_model()
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 36, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1099, in __init__
+    self.refresh(lock_args=self.lock_args)
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1348, in refresh
+    self.display()
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1496, in display
+    self.sp(self.__str__() if msg is None else msg)
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 462, in print_status
+    fp_write('\r' + s + (' ' * max(last_len[0] - len_s, 0)))
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 455, in fp_write
+    fp.write(str(s))
+  File "c:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\utils.py", line 195, in inner
+    return func(*args, **kwargs)
+OSError: [WinError 6] The handle is invalid
+2024-01-31 16:01:46,182 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-01-31 16:01:46,182 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-01-31 16:01:46,182 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-01-31_15-57-19.wav
+2024-01-31 16:01:46,182 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-01-31_15-57-19.wav
+2024-01-31 16:01:46,182 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-01-31_15-57-25.wav
+2024-01-31 16:01:46,183 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-01-31_15-57-25.wav
+2024-01-31 16:01:46,183 | INFO | utils.utils | Finished clearing recordings. 2 files deleted.
+2024-01-31 16:01:46,185 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-01-31 16:01:46,185 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-01-31 16:01:46,185 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-01-31 16:01:46,198 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-01-31 16:01:48,703 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-01-31 16:02:14,728 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-01-31 16:02:27,719 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-01-31 16:02:27.719277
+2024-01-31 16:02:27,727 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-01-31_16-02-27.wav
+2024-01-31 16:02:27,727 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 12.5 seconds
+2024-01-31 16:02:27,727 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-01-31 16:02:32,098 | ERROR | __mp_main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 25, in transcription_worker
+    transcriber.load_model()
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 36, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1097, in __init__
+    self.sp = self.status_printer(self.fp)
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 451, in status_printer
+    getattr(sys.stderr, 'flush', lambda: None)()
+OSError: [WinError 6] The handle is invalid
+2024-01-31 16:10:39,718 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-01-31 16:10:42,208 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-01-31 16:10:42.208743
+2024-01-31 16:10:42,210 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-01-31_16-10-42.wav
+2024-01-31 16:10:42,210 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 2.0 seconds
+2024-01-31 16:10:42,210 | DEBUG | recorder.audio_buffer | Clearing audio buffer
