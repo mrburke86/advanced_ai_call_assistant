@@ -1,0 +1,7 @@
+# Backend
+backend/__pycache__/
+backend/*.py[cod]
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
