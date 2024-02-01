@@ -320,3 +320,196 @@ Starting main program...
 2024-02-01 07:31:38,479 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
 2024-02-01 07:31:38,903 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
 2024-02-01 07:31:38,905 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 09:57:03,588 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 09:57:03,589 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 09:57:03,589 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-02-01_07-31-34.wav
+2024-02-01 09:57:03,590 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-02-01_07-31-34.wav
+2024-02-01 09:57:03,590 | INFO | utils.utils | Finished clearing recordings. 1 files deleted.
+2024-02-01 09:57:03,601 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 09:57:03,602 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 09:57:03,602 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 09:57:03,617 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 09:57:08,337 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 09:57:50,791 | ERROR | __mp_main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 25, in transcription_worker
+    transcriber.load_model()
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 37, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1099, in __init__
+    self.refresh(lock_args=self.lock_args)
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1348, in refresh
+    self.display()
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 1496, in display
+    self.sp(self.__str__() if msg is None else msg)
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 462, in print_status
+    fp_write('\r' + s + (' ' * max(last_len[0] - len_s, 0)))
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\std.py", line 455, in fp_write
+    fp.write(str(s))
+  File "C:\Users\hello\coding\python\virtual_environments\python399_venv\lib\site-packages\tqdm\utils.py", line 195, in inner
+    return func(*args, **kwargs)
+  File "c:\Users\hello\.vscode\extensions\ms-python.python-2023.22.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_io.py", line 40, in write
+    r.write(s)
+OSError: [WinError 6] The handle is invalid
+2024-02-01 09:58:48,645 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 09:58:48,646 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 09:58:48,646 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 09:58:48,653 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 09:58:48,653 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 09:58:48,654 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 09:58:48,668 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 09:58:52,357 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 09:59:06,954 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 09:59:06,954 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 09:59:06,955 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 09:59:06,961 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 09:59:06,962 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 09:59:06,962 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 09:59:06,976 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 09:59:10,827 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 09:59:53,685 | ERROR | __mp_main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 25, in transcription_worker
+    transcriber.load_model()
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 37, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1099, in __init__
+    self.refresh(lock_args=self.lock_args)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1348, in refresh
+    self.display()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1496, in display
+    self.sp(self.__str__() if msg is None else msg)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 462, in print_status
+    fp_write('\r' + s + (' ' * max(last_len[0] - len_s, 0)))
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 455, in fp_write
+    fp.write(str(s))
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\utils.py", line 195, in inner
+    return func(*args, **kwargs)
+  File "c:\Users\hello\.vscode\extensions\ms-python.python-2023.22.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_io.py", line 40, in write
+    r.write(s)
+OSError: [WinError 6] The handle is invalid
+2024-02-01 10:04:53,222 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 10:04:53,223 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 10:04:53,223 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 10:04:53,230 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 10:04:53,230 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 10:04:53,231 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 10:04:53,248 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 10:04:57,094 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 10:06:01,936 | ERROR | __mp_main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 25, in transcription_worker
+    transcriber.load_model()
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 37, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1099, in __init__
+    self.refresh(lock_args=self.lock_args)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1348, in refresh
+    self.display()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1496, in display
+    self.sp(self.__str__() if msg is None else msg)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 462, in print_status
+    fp_write('\r' + s + (' ' * max(last_len[0] - len_s, 0)))
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 455, in fp_write
+    fp.write(str(s))
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\utils.py", line 195, in inner
+    return func(*args, **kwargs)
+  File "c:\Users\hello\.vscode\extensions\ms-python.python-2023.22.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_io.py", line 40, in write
+    r.write(s)
+OSError: [WinError 6] The handle is invalid
+2024-02-01 10:22:59,562 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 10:22:59,562 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 10:22:59,562 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 10:22:59,565 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 10:22:59,565 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 10:22:59,565 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 10:22:59,581 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 10:23:02,039 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 10:23:44,866 | ERROR | __mp_main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "c:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 25, in transcription_worker
+    transcriber.load_model()
+  File "c:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 37, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "c:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1097, in __init__
+    self.sp = self.status_printer(self.fp)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 451, in status_printer
+    getattr(sys.stderr, 'flush', lambda: None)()
+OSError: [WinError 6] The handle is invalid
+2024-02-01 10:42:26,518 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 10:42:26,519 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 10:42:26,519 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 10:42:26,527 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 10:42:26,527 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 10:42:26,528 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 10:42:26,541 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 10:42:30,431 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 10:43:13,247 | ERROR | __mp_main__ | Error occurred in transcription worker: [WinError 6] The handle is invalid
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 25, in transcription_worker
+    transcriber.load_model()
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 37, in load_model
+    self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\utils\load_model.py", line 18, in load_model
+    whisper_model = whisper.load_model("base")
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 133, in load_model
+    checkpoint_file = _download(_MODELS[name], download_root, in_memory)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\whisper\__init__.py", line 70, in _download
+    with tqdm(
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1099, in __init__
+    self.refresh(lock_args=self.lock_args)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1348, in refresh
+    self.display()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 1496, in display
+    self.sp(self.__str__() if msg is None else msg)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 462, in print_status
+    fp_write('\r' + s + (' ' * max(last_len[0] - len_s, 0)))
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\std.py", line 455, in fp_write
+    fp.write(str(s))
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\tqdm\utils.py", line 195, in inner
+    return func(*args, **kwargs)
+  File "c:\Users\hello\.vscode\extensions\ms-python.python-2023.22.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_io.py", line 40, in write
+    r.write(s)
+OSError: [WinError 6] The handle is invalid
