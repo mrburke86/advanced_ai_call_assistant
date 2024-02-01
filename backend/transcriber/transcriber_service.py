@@ -22,7 +22,7 @@ class TranscriberService:
         logger.debug("Transcriber service initialized.")
 
     def send_data_to_nextjs(self, data):
-        url = "http://localhost:3001/api/receive-data"  # Update with your Next.js API route
+        url = "http://localhost:3000/api/receive-data"  # Update with your Next.js API route
         logger.debug(f"Sending data to Next.js API at {url}")
         try:
             response = requests.post(url, json=data)

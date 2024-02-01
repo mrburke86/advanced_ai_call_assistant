@@ -207,3 +207,203 @@ ValueError: too many values to unpack (expected 3)
 2024-02-01 14:33:49,164 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
 2024-02-01 14:33:49,164 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
 2024-02-01 14:33:49,164 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-01 14:42:19,629 | INFO | __main__ | 
+
+
+
+2024-02-01 14:42:19,630 | INFO | __main__ | Starting main program...
+2024-02-01 14:42:19,635 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 14:42:19,635 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 14:42:19,635 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 14:42:19,635 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 14:42:19,635 | INFO | __main__ | Audio capture thread started.
+2024-02-01 14:42:19,644 | INFO | __main__ | Transcription worker process started.
+2024-02-01 14:42:19,663 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 14:42:22,235 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-01 14:42:22,236 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 14:42:22,236 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-01 14:42:22,236 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-01 14:42:22,237 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-01 14:42:22,237 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-01 14:42:31,195 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-01 14:42:31,197 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-02-01 14:42:31,197 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-01 14:42:31,197 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-01 14:42:31,197 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:42:41,703 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:42:56,693 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-42-56.wav
+2024-02-01 14:42:56,944 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-42-56.wav
+2024-02-01 14:42:56,946 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-42-56.wav
+2024-02-01 14:42:56,946 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 13.5 seconds
+2024-02-01 14:42:56,946 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-42-56.wav', datetime.datetime(2024, 2, 1, 14, 42, 56, 693499), 13.5)
+2024-02-01 14:42:56,946 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:42:56,946 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-42-56.wav
+2024-02-01 14:42:56,946 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-42-56.wav
+2024-02-01 14:42:56,946 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:43:06,006 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:43:12,577 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:43:12.577961
+2024-02-01 14:43:12,577 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:42:56.693499
+2024-02-01 14:43:12,577 | INFO | transcriber.transcriber_service | Transcription time: 15.88 seconds
+2024-02-01 14:43:12,577 | INFO | transcriber.transcriber_service | Transcription result: the first step would be getting videos from YouTube. So we have YouTube up here. First thing we need to do is actually get the audio files to the MP3 files. So we need to download those. We're going to see
+2024-02-01 14:43:12,577 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:43:12,584 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:43:13,603 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:43:13,604 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:43:13,604 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-42-56.wav completed.
+2024-02-01 14:43:13,604 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:43:46,237 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:43:57,769 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-43-57.wav
+2024-02-01 14:43:57,791 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-43-57.wav
+2024-02-01 14:43:57,791 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-43-57.wav
+2024-02-01 14:43:57,792 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 10.5 seconds
+2024-02-01 14:43:57,792 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:43:57,792 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:43:57,793 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-43-57.wav', datetime.datetime(2024, 2, 1, 14, 43, 57, 769346), 10.5)
+2024-02-01 14:43:57,793 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-43-57.wav
+2024-02-01 14:43:57,793 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-43-57.wav
+2024-02-01 14:43:57,883 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:43:58,337 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:43:58.337261
+2024-02-01 14:43:58,337 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:43:57.769346
+2024-02-01 14:43:58,337 | INFO | transcriber.transcriber_service | Transcription time: 0.57 seconds
+2024-02-01 14:43:58,337 | INFO | transcriber.transcriber_service | Transcription result: store them locally or wherever local is for you. And once we have those, we want to use OpenAI as a whisper.
+2024-02-01 14:43:58,337 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:43:58,338 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:43:58,358 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:43:58,359 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:43:58,359 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-43-57.wav completed.
+2024-02-01 14:43:58,359 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:44:03,738 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:44:12,757 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-44-12.wav
+2024-02-01 14:44:12,761 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-44-12.wav
+2024-02-01 14:44:12,761 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-44-12.wav
+2024-02-01 14:44:12,761 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 7.5 seconds
+2024-02-01 14:44:12,761 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:44:12,761 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-44-12.wav', datetime.datetime(2024, 2, 1, 14, 44, 12, 757663), 7.5)
+2024-02-01 14:44:12,761 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-44-12.wav
+2024-02-01 14:44:12,761 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-44-12.wav
+2024-02-01 14:44:12,761 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:44:12,844 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:44:13,353 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:44:13.353780
+2024-02-01 14:44:13,353 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:44:12.757663
+2024-02-01 14:44:13,353 | INFO | transcriber.transcriber_service | Transcription time: 0.60 seconds
+2024-02-01 14:44:13,353 | INFO | transcriber.transcriber_service | Transcription result: I don't know if they have logo but we'll just go whisper to create
+2024-02-01 14:44:13,353 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:44:13,354 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:44:13,367 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:44:13,367 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:44:13,368 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-44-12.wav completed.
+2024-02-01 14:44:13,368 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:44:16,747 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:44:31,738 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-44-31.wav
+2024-02-01 14:44:31,746 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-44-31.wav
+2024-02-01 14:44:31,746 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-44-31.wav
+2024-02-01 14:44:31,747 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 14.0 seconds
+2024-02-01 14:44:31,747 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-44-31.wav', datetime.datetime(2024, 2, 1, 14, 44, 31, 738118), 14.0)
+2024-02-01 14:44:31,747 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-44-31.wav
+2024-02-01 14:44:31,747 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-44-31.wav
+2024-02-01 14:44:31,747 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:44:31,747 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:44:31,831 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:44:32,619 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:44:32.619979
+2024-02-01 14:44:32,619 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:44:31.738118
+2024-02-01 14:44:32,619 | INFO | transcriber.transcriber_service | Transcription time: 0.88 seconds
+2024-02-01 14:44:32,620 | INFO | transcriber.transcriber_service | Transcription result: text from that. Okay, so we have all this text and what is pretty cool with OpenEyesWisp, but it will also include the time sums where it found that
+2024-02-01 14:44:32,620 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:44:32,621 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:44:32,634 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:44:32,634 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:44:32,634 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-44-31.wav completed.
+2024-02-01 14:44:32,634 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:44:42,747 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:44:52,258 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-44-52.wav
+2024-02-01 14:44:52,274 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-44-52.wav
+2024-02-01 14:44:52,274 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-44-52.wav
+2024-02-01 14:44:52,275 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 9.0 seconds
+2024-02-01 14:44:52,275 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+backend\\data\\recordings\\2024-02-01_14-44-52.wav', datetime.datetime(2024, 2, 1, 14, 44, 52, 257552), 9.0)
+2024-02-01 14:44:52,275 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-44-52.wav
+2024-02-01 14:44:52,275 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-44-52.wav
+2024-02-01 14:44:52,275 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:44:52,363 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:44:52,748 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:44:53,080 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:44:53.080691
+2024-02-01 14:44:53,080 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:44:52.257552
+2024-02-01 14:44:53,080 | INFO | transcriber.transcriber_service | Transcription time: 0.82 seconds
+2024-02-01 14:44:53,080 | INFO | transcriber.transcriber_service | Transcription result: that particular text. Okay, so it's actually not going to look so much like a long piece of text. It's going to look more like segments of text.
+2024-02-01 14:44:53,080 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:44:53,081 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:44:53,093 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:44:53,093 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:44:53,093 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-44-52.wav completed.
+2024-02-01 14:44:53,093 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:45:04,249 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-45-04.wav
+2024-02-01 14:45:04,259 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-45-04.wav
+2024-02-01 14:45:04,259 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-45-04.wav
+2024-02-01 14:45:04,259 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 10.0 seconds
+2024-02-01 14:45:04,259 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:45:04,259 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:45:04,259 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-45-04.wav', datetime.datetime(2024, 2, 1, 14, 45, 4, 249281), 10.0)
+2024-02-01 14:45:04,259 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-45-04.wav
+2024-02-01 14:45:04,260 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-45-04.wav
+2024-02-01 14:45:04,339 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:45:04,958 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:45:04.958113
+2024-02-01 14:45:04,958 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:45:04.249281
+2024-02-01 14:45:04,958 | INFO | transcriber.transcriber_service | Transcription time: 0.71 seconds
+2024-02-01 14:45:04,958 | INFO | transcriber.transcriber_service | Transcription result: like this and those segments of text will have like a certain end second so it would be like here up to seven seconds in and then we'll have seven
+2024-02-01 14:45:04,958 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:45:04,959 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:45:04,971 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:45:04,971 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:45:04,971 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-45-04.wav completed.
+2024-02-01 14:45:04,971 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:45:15,767 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:45:50,757 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-45-50.wav
+2024-02-01 14:45:50,797 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-45-50.wav
+2024-02-01 14:45:50,798 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-45-50.wav
+2024-02-01 14:45:50,798 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 33.0 seconds
+2024-02-01 14:45:50,798 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:45:50,798 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-45-50.wav', datetime.datetime(2024, 2, 1, 14, 45, 50, 757550), 33.0)
+2024-02-01 14:45:50,798 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-45-50.wav
+2024-02-01 14:45:50,798 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-45-50.wav
+2024-02-01 14:45:50,798 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:45:50,923 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:45:52,617 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:45:52.617388
+2024-02-01 14:45:52,617 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:45:50.757550
+2024-02-01 14:45:52,617 | INFO | transcriber.transcriber_service | Transcription time: 1.86 seconds
+2024-02-01 14:45:52,617 | INFO | transcriber.transcriber_service | Transcription result: 12 seconds in, some more text. So with that, we can then take those segments. We can encode them with a sentence, transform a model. So let's just put S-Bert. We're not going to use S-Bert, but something along those lines. And then we get some vectors. So we have our little vector space here. Should also mention here the S-Bert model will be a Q&A model, question answering.
+2024-02-01 14:45:52,618 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:45:52,619 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:45:52,629 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:45:52,629 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:45:52,629 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-45-50.wav completed.
+2024-02-01 14:45:52,629 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:46:10,980 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-01 14:46:10,980 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-01 14:46:10,980 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-01 14:46:10,980 | ERROR | __mp_main__ | Error occurred in transcription worker: 'Queue' object has no attribute 'Empty'
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 33, in transcription_worker
+    item = transcription_queue.get()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\multiprocessing\queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\multiprocessing\connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\multiprocessing\connection.py", line 305, in _recv_bytes
+    waitres = _winapi.WaitForMultipleObjects(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 53, in transcription_worker
+    except transcription_queue.Empty:
+AttributeError: 'Queue' object has no attribute 'Empty'
+2024-02-01 14:46:10,991 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-01 14:46:11,748 | INFO | __main__ | Transcription worker process terminated.
+2024-02-01 14:51:45,769 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:51:47,769 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-51-47.wav
+2024-02-01 14:51:47,773 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-51-47.wav
+2024-02-01 14:51:47,773 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-51-47.wav
+2024-02-01 14:51:47,773 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 1.5 seconds
+2024-02-01 14:51:47,773 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:51:47,774 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.

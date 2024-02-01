@@ -3,8 +3,9 @@ backend/__pycache__/
 backend/recorder/__pycache__/
 backend/transcriber/__pycache__/
 backend/utils/__pycache__/
-
 backend/*.py[cod]
+backend/data/recordings/*
+backend/data/transcriptions/*
 
 ### Frontend ###
 # Dependencies
