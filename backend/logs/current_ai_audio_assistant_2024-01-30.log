@@ -227,3 +227,96 @@ Traceback (most recent call last):
   File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\requests\adapters.py", line 519, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/subscribe (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000267727E4DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2024-02-01 07:28:32,005 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 07:28:32,005 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 07:28:32,006 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-01-31_22-45-19.wav
+2024-02-01 07:28:32,006 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-01-31_22-45-19.wav
+2024-02-01 07:28:32,006 | INFO | utils.utils | Finished clearing recordings. 1 files deleted.
+2024-02-01 07:28:32,017 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 07:28:32,017 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 07:28:32,018 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 07:28:32,059 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 07:28:32,607 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 07:28:34,075 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-02-01 07:28:34.075932
+2024-02-01 07:28:34,087 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-02-01_07-28-34.wav
+2024-02-01 07:28:34,087 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 0.5 seconds
+2024-02-01 07:28:34,089 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 07:28:36,779 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 07:28:38,009 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-01 07:28:40,322 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 07:28:40.322331
+2024-02-01 07:28:40,322 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 07:28:34.075932
+2024-02-01 07:28:40,323 | INFO | transcriber.transcriber_service | Transcription time: 6.25 seconds
+2024-02-01 07:28:40,323 | WARNING | transcriber.transcriber_service | No speech detected or skipping the recording.
+2024-02-01 07:29:11,605 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 07:29:13,085 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-02-01 07:29:13.085362
+2024-02-01 07:29:13,087 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-02-01_07-29-13.wav
+2024-02-01 07:29:13,087 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 0.5 seconds
+2024-02-01 07:29:13,087 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 07:29:14,728 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 07:29:14.728062
+2024-02-01 07:29:14,728 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 07:29:13.085362
+2024-02-01 07:29:14,729 | INFO | transcriber.transcriber_service | Transcription time: 1.64 seconds
+2024-02-01 07:29:14,729 | WARNING | transcriber.transcriber_service | No speech detected or skipping the recording.
+2024-02-01 07:29:20,105 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 07:29:39,595 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-02-01 07:29:39.595239
+2024-02-01 07:29:39,609 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-02-01_07-29-39.wav
+2024-02-01 07:29:39,610 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 19.0 seconds
+2024-02-01 07:29:39,610 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 07:29:44,487 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 07:29:44.487832
+2024-02-01 07:29:44,487 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 07:29:39.595239
+2024-02-01 07:29:44,487 | INFO | transcriber.transcriber_service | Transcription time: 4.89 seconds
+2024-02-01 07:29:44,487 | INFO | transcriber.transcriber_service | Transcription: But it even under welcome to Piers Morgana's sense. Ben Shapiro is one of the most talked about political pundits on the planet. When he sounds off, people listen. And as of this week, they've been listening to him rapping. Yes, you heard that correctly. The man he once informously said, fact, rap is a music. And if you think it is your stupid, sparking international.
+2024-02-01 07:29:44,500 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 07:29:53,563 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/subscribe HTTP/1.1" 404 None
+2024-02-01 07:29:53,810 | ERROR | transcriber.transcriber_service | Error sending data to Next.js: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\transcriber\transcriber_service.py", line 28, in send_data_to_nextjs
+    f"Data sent to Next.js | Status Code: {response.status_code} | Response: {response.json()}"
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-02-01 07:31:07,016 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 07:31:07,017 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 07:31:07,017 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-02-01_07-28-34.wav
+2024-02-01 07:31:07,018 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-02-01_07-28-34.wav
+2024-02-01 07:31:07,018 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-02-01_07-29-13.wav
+2024-02-01 07:31:07,018 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-02-01_07-29-13.wav
+2024-02-01 07:31:07,018 | DEBUG | utils.utils | Processing file: backend\data\recordings\2024-02-01_07-29-39.wav
+2024-02-01 07:31:07,019 | DEBUG | utils.utils | Deleted file: backend\data\recordings\2024-02-01_07-29-39.wav
+2024-02-01 07:31:07,019 | INFO | utils.utils | Finished clearing recordings. 3 files deleted.
+2024-02-01 07:31:07,027 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 07:31:07,027 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 07:31:07,027 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 07:31:07,057 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 07:31:11,477 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 07:31:12,836 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-01 07:31:19,579 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 07:31:34,591 | DEBUG | recorder.audio_segment_manager | Speech end detected | Time: 2024-02-01 07:31:34.591625
+2024-02-01 07:31:34,648 | INFO | recorder.audio_segment_manager | Buffer saved for transcription: backend\data\recordings\2024-02-01_07-31-34.wav
+2024-02-01 07:31:34,649 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 14.0 seconds
+2024-02-01 07:31:34,651 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 07:31:38,461 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 07:31:38.461653
+2024-02-01 07:31:38,461 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 07:31:34.591625
+2024-02-01 07:31:38,461 | INFO | transcriber.transcriber_service | Transcription time: 3.87 seconds
+2024-02-01 07:31:38,461 | INFO | transcriber.transcriber_service | Transcription: currently has, this is true, the number one hip-hop single in the United States will find out why and frankly how a little later when he's not dropping the rat beat Ben Shapiro's day job is dropping hard truths, at least that's
+2024-02-01 07:31:38,479 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 07:31:38,903 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 07:31:38,905 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}

@@ -7,6 +7,7 @@ import requests
 
 import torch
 import whisper
+
 # from transcriber.redis_publisher import RedisPublisher
 from config import MODEL_NAME
 from utils.load_model import WhisperModelLoader
@@ -22,7 +23,7 @@ class TranscriberService:
 
     def send_data_to_nextjs(self, data):
         try:
-            url = "http://localhost:3000/api/subscribe"  # Update with your Next.js API route
+            url = "http://localhost:3000/api/receive-data"  # Update with your Next.js API route
             response = requests.post(url, json=data)
             logger.info(
                 f"Data sent to Next.js | Status Code: {response.status_code} | Response: {response.json()}"
