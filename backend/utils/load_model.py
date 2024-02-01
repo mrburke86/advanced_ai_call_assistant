@@ -1,4 +1,4 @@
-# backend\utils\load_model.py
+# backend\utils\load_model.py 
 import logging
 
 import torch
@@ -14,14 +14,23 @@ class WhisperModelLoader:
 
     @classmethod
     def load_model(cls, model_name):
-        # Load the Whisper model
-        whisper_model = whisper.load_model("base")
+        logger.debug(f"Attempting to load the Whisper model: {model_name}")
 
-        # Check if CUDA is available and move the model to GPU if possible
-        if torch.cuda.is_available():
-            whisper_model = whisper_model.to("cuda")
-            logger.info("Loaded Whisper model onto CUDA (GPU).")
-        else:
-            logger.info("CUDA not available, loaded Whisper model onto CPU.")
+        try:
+            # Load the Whisper model
+            whisper_model = whisper.load_model("base")
+            logger.info(f"Whisper model {model_name} loaded successfully.")
 
-        return whisper_model
+            # Check if CUDA is available and move the model to GPU if possible
+            if torch.cuda.is_available():
+                whisper_model = whisper_model.to("cuda")
+                logger.info("Loaded Whisper model onto CUDA (GPU).")
+            else:
+                logger.info("CUDA not available, loaded Whisper model onto CPU.")
+
+            return whisper_model
+
+        except Exception as e:
+            logger.error(f"Error occurred while loading Whisper model: {e}")
+            logger.debug("Exception details:", exc_info=True)
+            return None

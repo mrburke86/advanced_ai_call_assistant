@@ -12,7 +12,7 @@ def setup_logging():
 
     if not root_logger.handlers:
         log_file_path = os.path.join(
-            LOGS_DIR, f"current_ai_audio_assistant_2024-01-30.log"
+            LOGS_DIR, f"current_ai_audio_assistant_2024-02-01.log"
         )
 
         # Define formatter for the file handler

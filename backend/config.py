@@ -9,8 +9,8 @@ NUM_WORKERS = 1
 
 TRANSCRIPT_DIR = os.path.join("backend", "data", "transcriptions")
 ORIGINAL_RECORDINGS_DIR = os.path.join("backend", "data", "recordings")
-# RECORDINGS_DIR = os.path.join("backend", "data", "recordings")
 PROFILER_DIR = os.path.join("backend", "data", "profiler")
 LOGS_DIR = os.path.join("backend", "logs")
 
 MODEL_NAME = "base"
+# RECORDINGS_DIR = os.path.join("backend", "data", "recordings")

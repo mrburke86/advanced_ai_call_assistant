@@ -26,27 +26,31 @@ class AudioCaptureProcessor:
 
             while True:
                 try:
-                    original_audio, overflowed = stream.read(
-                        int(SAMPLE_RATE * CHUNK_DURATION_SECS)
-                    )
+                    original_audio, overflowed = stream.read(int(SAMPLE_RATE * CHUNK_DURATION_SECS))
+                    # logger.debug("Audio chunk read from stream.")
 
                     if overflowed:
-                        logger.warning(
-                            "Audio input overflowed | Overflowed data:", original_audio
-                        )
+                        logger.warning("Audio input overflowed. Data may be lost.")
 
                     converted_data = self.convert_to_pcm(original_audio)
+                    # logger.debug("Audio chunk converted to PCM format.")
+                    
                     is_speech_detected = self.detect_speech_in_frame(converted_data)
+                    # logger.debug(f"Speech detection in frame completed: {'Detected' if is_speech_detected else 'Not detected'}")
 
                     yield original_audio, is_speech_detected
 
                 except Exception as e:
-                    logger.error(
-                        f"Error in audio stream processing: {e}", exc_info=True
-                    )
+                    logger.error(f"Error in audio stream processing: {e}")
+                    logger.error(traceback.format_exc())  # Detailed stack trace
 
     def convert_to_pcm(self, original_audio):
-        return (original_audio * 32767).astype(np.int16)
+        try:
+            # logger.debug("Converting audio to PCM format.")
+            return (original_audio * 32767).astype(np.int16)
+        except Exception as e:
+            logger.error(f"Error converting audio to PCM: {e}")
+            return np.array([])  # Return an empty array on error
 
     def detect_speech_in_frame(self, converted_data):
         frame_duration_ms = 30

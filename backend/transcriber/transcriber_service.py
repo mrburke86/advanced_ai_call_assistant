@@ -19,11 +19,12 @@ logger.setLevel(logging.DEBUG)
 class TranscriberService:
     def __init__(self):
         self.whisper_model = None
-        # self.redis_publisher = RedisPublisher()
+        logger.debug("Transcriber service initialized.")
 
     def send_data_to_nextjs(self, data):
+        url = "http://localhost:3001/api/receive-data"  # Update with your Next.js API route
+        logger.debug(f"Sending data to Next.js API at {url}")
         try:
-            url = "http://localhost:3000/api/receive-data"  # Update with your Next.js API route
             response = requests.post(url, json=data)
             logger.info(
                 f"Data sent to Next.js | Status Code: {response.status_code} | Response: {response.json()}"
@@ -34,25 +35,32 @@ class TranscriberService:
             return None
 
     def load_model(self):
-        self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+        logger.debug(f"Loading Whisper model: {MODEL_NAME}")
+        try:
+            self.whisper_model = WhisperModelLoader.load_model(MODEL_NAME)
+            logger.info("Whisper model loaded successfully.")
+        except Exception as e:
+            logger.error(f"Error loading Whisper model: {e}", exc_info=True)
 
     def process_audio_file(self, file_path):
+        logger.debug(f"Processing audio file: {file_path}")
         try:
             audio = whisper.load_audio(file_path)
             audio = whisper.pad_or_trim(audio)
             audio_tensor = torch.from_numpy(audio).to(self.whisper_model.device)
-            mel = whisper.log_mel_spectrogram(audio_tensor).to(
-                self.whisper_model.device
-            )
+            mel = whisper.log_mel_spectrogram(audio_tensor).to(self.whisper_model.device)
+            logger.info("Audio file processed successfully.")
             return mel
         except Exception as e:
             logger.error(f"Error while processing audio file: {e}", exc_info=True)
             return None
 
     async def transcribe(self, file_path, speech_end_time, buffer_length):
+        logger.debug(f"Starting transcription for file: {file_path}")
         try:
             mel = self.process_audio_file(file_path)
             if mel is None:
+                logger.warning("Failed to process audio file for transcription.")
                 return None
 
             options = whisper.DecodingOptions(language="en", fp16=False)
@@ -68,7 +76,7 @@ class TranscriberService:
             logger.info(f"Transcription time: {formatted_time} seconds")
 
             if result and result.no_speech_prob < 0.5:
-                logger.info(f"Transcription: {result.text}")
+                logger.info(f"Transcription result: {result.text}")
 
                 # Create a data dictionary
                 data = {

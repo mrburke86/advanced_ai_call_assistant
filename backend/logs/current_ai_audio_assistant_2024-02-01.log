@@ -1,0 +1,209 @@
+2024-02-01 14:21:01,002 | INFO | __main__ | 
+
+
+
+2024-02-01 14:21:01,002 | INFO | __main__ | Starting main program...
+2024-02-01 14:21:01,005 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 14:21:01,005 | INFO | __main__ | Audio capture thread started.
+2024-02-01 14:21:01,005 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 14:21:01,005 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 14:21:01,005 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 14:21:01,011 | INFO | __main__ | Transcription worker process started.
+2024-02-01 14:21:01,027 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 14:21:03,556 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-01 14:21:03,556 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 14:21:03,557 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-01 14:21:03,557 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-01 14:21:03,557 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-01 14:21:03,557 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-01 14:21:06,404 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-01 14:21:06,406 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-02-01 14:21:06,406 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-01 14:21:06,406 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-01 14:21:06,406 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:21:14,040 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:21:43,060 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-21-43.wav
+2024-02-01 14:21:43,077 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-21-43.wav
+2024-02-01 14:21:43,078 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-21-43.wav
+2024-02-01 14:21:43,079 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 28.5 seconds
+2024-02-01 14:21:43,079 | DEBUG | __mp_main__ | Received file_path from queue: backend\data\recordings\2024-02-01_14-21-43.wav
+2024-02-01 14:21:43,079 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:21:43,079 | ERROR | __mp_main__ | Error occurred in transcription worker: local variable 'file_path' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 47, in transcription_worker
+    logger.debug(f"Transcription for {file_path} started.")
+UnboundLocalError: local variable 'file_path' referenced before assignment
+2024-02-01 14:21:43,079 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:21:43,081 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-01 14:22:01,043 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-01 14:22:01,043 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-01 14:22:01,043 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-01 14:22:01,043 | INFO | __main__ | Transcription worker process terminated.
+2024-02-01 14:24:11,306 | INFO | __main__ | 
+
+
+
+2024-02-01 14:24:11,306 | INFO | __main__ | Starting main program...
+2024-02-01 14:24:11,308 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 14:24:11,308 | INFO | __main__ | Audio capture thread started.
+2024-02-01 14:24:11,309 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 14:24:11,309 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 14:24:11,309 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 14:24:11,315 | INFO | __main__ | Transcription worker process started.
+2024-02-01 14:24:11,330 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 14:24:13,879 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-01 14:24:13,880 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 14:24:13,880 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-01 14:24:13,880 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-01 14:24:13,880 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-01 14:24:13,880 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-01 14:24:16,565 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-01 14:24:16,567 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-02-01 14:24:16,567 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-01 14:24:16,567 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-01 14:24:16,567 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:24:43,350 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:24:57,850 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-24-57.wav
+2024-02-01 14:24:57,859 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-24-57.wav
+2024-02-01 14:24:57,860 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-24-57.wav
+2024-02-01 14:24:57,860 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 13.5 seconds
+2024-02-01 14:24:57,860 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:24:57,860 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:24:57,860 | DEBUG | __mp_main__ | Received file_path from queue: backend\data\recordings\2024-02-01_14-24-57.wav
+2024-02-01 14:24:57,861 | ERROR | __mp_main__ | Error occurred in transcription worker: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 49, in transcription_worker
+    file_path, end_time, buffer_length = item
+ValueError: too many values to unpack (expected 3)
+2024-02-01 14:24:57,862 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-01 14:26:39,419 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-01 14:26:39,419 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-01 14:26:39,419 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-01 14:26:39,419 | INFO | __main__ | Transcription worker process terminated.
+2024-02-01 14:26:51,427 | INFO | __main__ | 
+
+
+
+2024-02-01 14:26:51,427 | INFO | __main__ | Starting main program...
+2024-02-01 14:26:51,430 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 14:26:51,430 | INFO | __main__ | Audio capture thread started.
+2024-02-01 14:26:51,430 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 14:26:51,430 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 14:26:51,430 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 14:26:51,438 | INFO | __main__ | Transcription worker process started.
+2024-02-01 14:26:51,453 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 14:26:53,921 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-01 14:26:53,921 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 14:26:53,922 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-01 14:26:53,922 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-01 14:26:53,922 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-01 14:26:53,922 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-01 14:26:56,545 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-01 14:26:56,547 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-02-01 14:26:56,547 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-01 14:26:56,548 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-01 14:26:56,548 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:26:58,974 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:27:08,484 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-27-08.wav
+2024-02-01 14:27:08,496 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-27-08.wav
+2024-02-01 14:27:08,498 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-27-08.wav
+2024-02-01 14:27:08,498 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 9.0 seconds
+2024-02-01 14:27:08,499 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:27:08,499 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-27-08.wav', datetime.datetime(2024, 2, 1, 14, 27, 8, 483803), 9.0)
+2024-02-01 14:27:08,499 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-27-08.wav
+2024-02-01 14:27:08,499 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:27:08,499 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-27-08.wav
+2024-02-01 14:27:09,937 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:27:12,060 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:27:12.060363
+2024-02-01 14:27:12,060 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:27:08.483803
+2024-02-01 14:27:12,060 | INFO | transcriber.transcriber_service | Transcription time: 3.58 seconds
+2024-02-01 14:27:12,060 | INFO | transcriber.transcriber_service | Transcription result: and it's also open source which is pretty cool. Now you might expect this model to be absolutely huge like GPT-3 or
+2024-02-01 14:27:12,060 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3000/api/receive-data
+2024-02-01 14:27:12,066 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3000
+2024-02-01 14:27:13,571 | DEBUG | urllib3.connectionpool | http://localhost:3000 "POST /api/receive-data HTTP/1.1" 200 None
+2024-02-01 14:27:13,572 | INFO | transcriber.transcriber_service | Data sent to Next.js | Status Code: 200 | Response: {'message': 'Data received successfully'}
+2024-02-01 14:27:13,572 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-01_14-27-08.wav completed.
+2024-02-01 14:27:13,572 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:28:53,979 | INFO | __main__ | 
+
+
+
+2024-02-01 14:28:53,979 | INFO | __main__ | Starting main program...
+2024-02-01 14:28:53,981 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 14:28:53,981 | INFO | __main__ | Audio capture thread started.
+2024-02-01 14:28:53,981 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 14:28:53,982 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 14:28:53,982 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 14:28:53,986 | INFO | __main__ | Transcription worker process started.
+2024-02-01 14:28:54,002 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 14:28:56,406 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-01 14:28:56,406 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 14:28:56,407 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-01 14:28:56,407 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-01 14:28:56,407 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-01 14:28:56,407 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-01 14:28:58,967 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-01 14:28:58,969 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-02-01 14:28:58,969 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-01 14:28:58,969 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-01 14:28:58,970 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:29:16,543 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:29:31,044 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-29-31.wav
+2024-02-01 14:29:31,055 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-29-31.wav
+2024-02-01 14:29:31,057 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-29-31.wav
+2024-02-01 14:29:31,057 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 14.0 seconds
+2024-02-01 14:29:31,057 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:29:31,057 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:29:31,057 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-29-31.wav', datetime.datetime(2024, 2, 1, 14, 29, 31, 43378), 14.0)
+2024-02-01 14:29:31,057 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-29-31.wav
+2024-02-01 14:29:31,057 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-29-31.wav
+2024-02-01 14:29:32,247 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:29:34,726 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:29:34.726756
+2024-02-01 14:29:34,726 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:29:31.043378
+2024-02-01 14:29:34,726 | INFO | transcriber.transcriber_service | Transcription time: 3.68 seconds
+2024-02-01 14:29:34,726 | INFO | transcriber.transcriber_service | Transcription result: or Dali too, but in reality it's actually a relatively small model. Like we can, I believe the largest version of the model can be run with about 10GB of RAM.
+2024-02-01 14:29:34,726 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3001/api/receive-data
+2024-02-01 14:29:34,729 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3001
+2024-02-01 14:32:14,512 | INFO | __main__ | 
+
+
+
+2024-02-01 14:32:14,512 | INFO | __main__ | Starting main program...
+2024-02-01 14:32:14,515 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 14:32:14,515 | INFO | __main__ | Audio capture thread started.
+2024-02-01 14:32:14,515 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 14:32:14,515 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 14:32:14,516 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 14:32:14,523 | INFO | __main__ | Transcription worker process started.
+2024-02-01 14:32:14,537 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 14:32:17,069 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-01 14:32:17,069 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 14:32:17,070 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-01 14:32:17,070 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-01 14:32:17,070 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-01 14:32:17,070 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-01 14:32:19,772 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-01 14:32:19,775 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-02-01 14:32:19,775 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-01 14:32:19,775 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-01 14:32:19,775 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-01 14:33:00,048 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-01 14:33:21,558 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-01_14-33-21.wav
+2024-02-01 14:33:21,582 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-01_14-33-21.wav
+2024-02-01 14:33:21,584 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-01_14-33-21.wav
+2024-02-01 14:33:21,584 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 20.0 seconds
+2024-02-01 14:33:21,584 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-01 14:33:21,585 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-01 14:33:21,585 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-01_14-33-21.wav', datetime.datetime(2024, 2, 1, 14, 33, 21, 558031), 20.0)
+2024-02-01 14:33:21,585 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-01_14-33-21.wav
+2024-02-01 14:33:21,585 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-01_14-33-21.wav
+2024-02-01 14:33:22,814 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-01 14:33:25,101 | DEBUG | transcriber.transcriber_service | Transcription Complete | Time: 2024-02-01 14:33:25.101225
+2024-02-01 14:33:25,101 | INFO | transcriber.transcriber_service | Speech End Time: 2024-02-01 14:33:21.558031
+2024-02-01 14:33:25,101 | INFO | transcriber.transcriber_service | Transcription time: 3.54 seconds
+2024-02-01 14:33:25,101 | INFO | transcriber.transcriber_service | Transcription result: Which is not that much so we should be able to use open eyes whisper with videos on YouTube To transcribe them more accurately than what YouTube captions can provide so that would be our first Well, that would be almost our first set because we actually need the videos so our very first
+2024-02-01 14:33:25,101 | DEBUG | transcriber.transcriber_service | Sending data to Next.js API at http://localhost:3001/api/receive-data
+2024-02-01 14:33:25,105 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:3001
+2024-02-01 14:33:49,164 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-01 14:33:49,164 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-01 14:33:49,164 | INFO | __main__ | Termination signal sent to transcription worker.

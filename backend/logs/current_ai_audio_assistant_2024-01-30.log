@@ -513,3 +513,1234 @@ Traceback (most recent call last):
   File "c:\Users\hello\.vscode\extensions\ms-python.python-2023.22.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_io.py", line 40, in write
     r.write(s)
 OSError: [WinError 6] The handle is invalid
+2024-02-01 12:17:09,524 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 12:17:09,524 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 12:17:09,524 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 12:17:09,527 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 12:17:09,527 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 12:17:09,527 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 12:17:09,543 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 12:17:11,847 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 12:17:12,848 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-01 12:19:32,736 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-01 12:22:03,488 | INFO | utils.utils |  
+
+
+Starting main program...
+2024-02-01 12:22:03,488 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 12:22:03,488 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 12:22:03,491 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 12:22:03,491 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 12:22:03,491 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 12:22:03,504 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 12:22:05,841 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-01 12:22:06,923 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-01 12:24:33,414 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-01 12:43:32,347 | INFO | __main__ | Starting main application.
+2024-02-01 12:43:32,347 | INFO | utils.utils | 
+
+
+Starting main program...
+2024-02-01 12:43:32,347 | DEBUG | utils.utils | Beginning to clear recordings from directory: backend\data\recordings
+2024-02-01 12:43:32,347 | INFO | utils.utils | There were no files to delete from 'backend\data\recordings' directory.
+2024-02-01 12:43:32,350 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 12:43:32,350 | INFO | __main__ | Audio capture thread started.
+2024-02-01 12:43:32,350 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 12:43:32,350 | ERROR | __main__ | Unexpected error: threads can only be started once
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 87, in <module>
+    audio_thread.start()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\threading.py", line 894, in start
+    raise RuntimeError("threads can only be started once")
+RuntimeError: threads can only be started once
+2024-02-01 12:43:32,350 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 12:43:32,351 | INFO | __main__ | Main application terminated.
+2024-02-01 12:43:32,351 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 12:49:49,156 | INFO | __main__ | 
+
+
+Starting main program...
+2024-02-01 12:49:49,159 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 12:49:49,159 | INFO | __main__ | Audio capture thread started.
+2024-02-01 12:49:49,159 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 12:49:49,159 | ERROR | __main__ | Unexpected error: threads can only be started once
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 89, in <module>
+    audio_thread.start()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\threading.py", line 894, in start
+    raise RuntimeError("threads can only be started once")
+RuntimeError: threads can only be started once
+2024-02-01 12:49:49,159 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 12:49:49,160 | INFO | __main__ | Main application terminated.
+2024-02-01 12:49:49,160 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 12:50:08,107 | INFO | __main__ | 
+
+
+Starting main program...
+2024-02-01 12:50:08,111 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 12:50:08,111 | INFO | __main__ | Audio capture thread started.
+2024-02-01 12:50:08,111 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 12:50:08,111 | ERROR | __main__ | Unexpected error: threads can only be started once
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 89, in <module>
+    audio_thread.start()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\threading.py", line 894, in start
+    raise RuntimeError("threads can only be started once")
+RuntimeError: threads can only be started once
+2024-02-01 12:50:08,111 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 12:50:08,112 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 12:50:08,112 | INFO | __main__ | Main application terminated.
+2024-02-01 12:50:59,225 | INFO | __main__ | 
+
+
+Starting main program...
+2024-02-01 12:50:59,228 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 12:50:59,228 | INFO | __main__ | Audio capture thread started.
+2024-02-01 12:50:59,228 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 12:50:59,228 | ERROR | __main__ | Unexpected error: threads can only be started once
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 89, in <module>
+    audio_thread.start()
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\threading.py", line 894, in start
+    raise RuntimeError("threads can only be started once")
+RuntimeError: threads can only be started once
+2024-02-01 12:50:59,228 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 12:50:59,229 | INFO | __main__ | Main application terminated.
+2024-02-01 12:50:59,229 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 12:51:38,651 | INFO | __main__ | 
+
+
+Starting main program...
+2024-02-01 12:51:38,653 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-01 12:51:38,653 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-01 12:51:38,653 | INFO | __main__ | Audio capture thread started.
+2024-02-01 12:51:38,653 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-01 12:51:38,653 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-01 12:51:38,666 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-01 12:51:39,206 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:39,206 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:39,207 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:39,207 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:39,207 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:39,207 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:39,687 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:39,687 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:39,687 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:39,687 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:39,687 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:39,687 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:40,176 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:40,176 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:40,176 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:40,177 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:40,177 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:40,177 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:40,676 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:40,676 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:40,676 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:40,676 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:40,676 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:40,676 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:41,206 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:41,206 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:41,207 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:41,208 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:41,208 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:41,208 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:41,686 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:41,686 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:41,686 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:41,686 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:41,686 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:41,686 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:42,186 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:42,186 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:42,187 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:42,188 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:42,188 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:42,188 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:42,686 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:42,686 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:42,687 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:42,687 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:42,688 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:42,688 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:43,196 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:43,196 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:43,197 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:43,198 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:43,198 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:43,198 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:43,696 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:43,696 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:43,696 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:43,696 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:43,696 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:43,696 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:44,196 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:44,196 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:44,197 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:44,197 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:44,198 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:44,198 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:44,676 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:44,676 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:44,676 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:44,677 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:44,677 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:44,677 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:45,176 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:45,176 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:45,176 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:45,176 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:45,176 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:45,177 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:45,696 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:45,696 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:45,698 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:45,698 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:45,698 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:45,699 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:46,196 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:46,196 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:46,197 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:46,197 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:46,197 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:46,197 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:46,677 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:46,677 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:46,677 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:46,677 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:46,677 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:46,678 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:47,177 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:47,177 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:47,177 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:47,177 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:47,177 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:47,177 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:47,706 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:47,901 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:47,901 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:47,902 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:47,902 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:47,902 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:48,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:48,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:48,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:48,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:48,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:48,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:48,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:48,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:48,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:48,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:48,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:48,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:49,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:49,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:49,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:49,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:49,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:49,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:49,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:49,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:49,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:49,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:49,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:49,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:50,213 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:50,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:50,214 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:50,214 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:50,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:50,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:50,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:50,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:50,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:50,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:50,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:50,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:51,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:51,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:51,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:51,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:51,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:51,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:51,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:51,692 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:51,692 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:51,692 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:51,693 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:51,693 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:52,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:52,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:52,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:52,223 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:52,223 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:52,223 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:52,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:52,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:52,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:52,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:52,713 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:52,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:53,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:53,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:53,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:53,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:53,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:53,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:53,695 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:53,696 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:53,696 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:53,696 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:53,697 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:53,697 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:54,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:54,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:54,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:54,223 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:54,223 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:54,223 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:54,722 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:54,722 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:54,723 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:54,723 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:54,723 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:54,723 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:55,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:55,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:55,203 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:55,203 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:55,203 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:55,204 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:55,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:55,692 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:55,692 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:55,693 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:55,693 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:55,693 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:56,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:56,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:56,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:56,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:56,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:56,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:56,722 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:56,723 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:56,724 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:56,725 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:56,725 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:56,725 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:57,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:57,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:57,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:57,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:57,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:57,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:57,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:57,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:57,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:57,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:57,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:57,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:58,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:58,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:58,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:58,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:58,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:58,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:58,722 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:58,722 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:58,722 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:58,722 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:58,722 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:58,722 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:59,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:59,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:59,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:59,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:59,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:59,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:51:59,714 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:51:59,714 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:51:59,714 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:51:59,716 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:51:59,717 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:51:59,717 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:00,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:00,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:00,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:00,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:00,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:00,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:00,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:00,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:00,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:00,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:00,713 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:00,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:01,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:01,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:01,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:01,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:01,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:01,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:01,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:01,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:01,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:01,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:01,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:01,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:02,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:02,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:02,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:02,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:02,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:02,203 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:02,722 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:02,722 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:02,722 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:02,722 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:02,722 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:02,722 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:03,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:03,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:03,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:03,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:03,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:03,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:03,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:03,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:03,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:03,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:03,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:03,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:04,209 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:04,209 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:04,209 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:04,210 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:04,210 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:04,210 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:04,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:04,692 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:04,692 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:04,692 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:04,692 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:04,692 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:05,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:05,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:05,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:05,222 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:05,222 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:05,222 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:05,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:05,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:05,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:05,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:05,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:05,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:06,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:06,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:06,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:06,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:06,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:06,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:06,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:06,692 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:06,692 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:06,692 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:06,692 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:06,692 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:07,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:07,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:07,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:07,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:07,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:07,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:07,722 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:07,722 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:07,722 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:07,722 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:07,722 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:07,722 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:08,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:08,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:08,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:08,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:08,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:08,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:08,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:08,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:08,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:08,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:08,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:08,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:09,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:09,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:09,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:09,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:09,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:09,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:09,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:09,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:09,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:09,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:09,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:09,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:10,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:10,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:10,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:10,214 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:10,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:10,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:10,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:10,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:10,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:10,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:10,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:10,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:11,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:11,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:11,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:11,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:11,193 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:11,193 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:11,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:11,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:11,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:11,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:11,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:11,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:12,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:12,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:12,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:12,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:12,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:12,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:12,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:12,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:12,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:12,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:12,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:12,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:13,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:13,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:13,193 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:13,193 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:13,194 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:13,194 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:13,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:13,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:13,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:13,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:13,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:13,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:14,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:14,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:14,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:14,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:14,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:14,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:14,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:14,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:14,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:14,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:14,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:14,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:15,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:15,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:15,193 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:15,194 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:15,194 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:15,194 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:15,722 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:15,722 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:15,722 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:15,722 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:15,722 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:15,722 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:16,223 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:16,223 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:16,223 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:16,223 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:16,223 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:16,223 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:16,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:16,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:16,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:16,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:16,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:16,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:17,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:17,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:17,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:17,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:17,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:17,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:17,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:17,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:17,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:17,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:17,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:17,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:18,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:18,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:18,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:18,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:18,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:18,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:18,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:18,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:18,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:18,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:18,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:18,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:19,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:19,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:19,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:19,214 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:19,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:19,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:19,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:19,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:19,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:19,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:19,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:19,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:20,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:20,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:20,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:20,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:20,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:20,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:20,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:20,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:20,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:20,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:20,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:20,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:21,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:21,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:21,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:21,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:21,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:21,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:21,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:21,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:21,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:21,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:21,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:21,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:22,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:22,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:22,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:22,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:22,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:22,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:22,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:22,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:22,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:22,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:22,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:22,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:23,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:23,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:23,203 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:23,203 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:23,204 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:23,204 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:23,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:23,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:23,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:23,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:23,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:23,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:24,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:24,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:24,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:24,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:24,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:24,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:24,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:24,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:24,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:24,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:24,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:24,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:25,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:25,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:25,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:25,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:25,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:25,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:25,703 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:25,703 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:25,704 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:25,704 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:25,705 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:25,705 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:26,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:26,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:26,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:26,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:26,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:26,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:26,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:26,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:26,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:26,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:26,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:26,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:27,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:27,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:27,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:27,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:27,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:27,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:27,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:27,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:27,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:27,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:27,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:27,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:28,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:28,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:28,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:28,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:28,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:28,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:28,713 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:28,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:28,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:28,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:28,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:28,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:29,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:29,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:29,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:29,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:29,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:29,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:29,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:29,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:29,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:29,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:29,713 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:29,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:30,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:30,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:30,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:30,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:30,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:30,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:30,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:30,692 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:30,692 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:30,692 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:30,692 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:30,692 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:31,213 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:31,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:31,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:31,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:31,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:31,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:31,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:31,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:31,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:31,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:31,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:31,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:32,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:32,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:32,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:32,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:32,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:32,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:32,693 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:32,693 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:32,693 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:32,694 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:32,695 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:32,695 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:33,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:33,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:33,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:33,222 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:33,222 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:33,222 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:33,713 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:33,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:33,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:33,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:33,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:33,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:34,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:34,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:34,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:34,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:34,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:34,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:34,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:34,693 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:34,693 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:34,693 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:34,693 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:34,694 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:35,213 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:35,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:35,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:35,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:35,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:35,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:35,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:35,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:35,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:35,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:35,713 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:35,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:36,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:36,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:36,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:36,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:36,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:36,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:36,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:36,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:36,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:36,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:36,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:36,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:37,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:37,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:37,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:37,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:37,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:37,193 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:37,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:37,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:37,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:37,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:37,713 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:37,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:38,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:38,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:38,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:38,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:38,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:38,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:38,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:38,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:38,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:38,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:38,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:38,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:39,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:39,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:39,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:39,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:39,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:39,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:39,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:39,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:39,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:39,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:39,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:39,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:40,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:40,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:40,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:40,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:40,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:40,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:40,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:40,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:40,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:40,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:40,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:40,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:41,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:41,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:41,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:41,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:41,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:41,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:41,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:41,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:41,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:41,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:41,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:41,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:42,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:42,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:42,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:42,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:42,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:42,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:42,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:42,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:42,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:42,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:42,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:42,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:43,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:43,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:43,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:43,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:43,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:43,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:43,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:43,692 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:43,692 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:43,692 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:43,692 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:43,693 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:44,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:44,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:44,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:44,223 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:44,223 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:44,223 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:44,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:44,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:44,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:44,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:44,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:44,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:45,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:45,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:45,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:45,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:45,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:45,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:45,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:45,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:45,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:45,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:45,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:45,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:46,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:46,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:46,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:46,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:46,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:46,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:46,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:46,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:46,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:46,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:46,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:46,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:47,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:47,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:47,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:47,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:47,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:47,213 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:47,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:47,693 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:47,693 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:47,694 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:47,694 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:47,694 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:48,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:48,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:48,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:48,223 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:48,223 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:48,223 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:48,723 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:48,723 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:48,723 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:48,724 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:48,724 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:48,725 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:49,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:49,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:49,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:49,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:49,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:49,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:49,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:49,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:49,703 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:49,703 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:49,704 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:49,704 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:50,203 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:50,203 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:50,204 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:50,204 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:50,205 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:50,205 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:50,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:50,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:50,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:50,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:50,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:50,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:51,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:51,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:51,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:51,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:51,213 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:51,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:51,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:51,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:51,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:51,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:51,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:51,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:52,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:52,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:52,193 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:52,194 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:52,194 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:52,194 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:52,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:52,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:52,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:52,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:52,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:52,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:53,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:53,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:53,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:53,214 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:53,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:53,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:53,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:53,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:53,703 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:53,703 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:53,703 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:53,703 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:54,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:54,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:54,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:54,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:54,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:54,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:54,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:54,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:54,714 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:54,715 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:54,715 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:54,715 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:55,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:55,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:55,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:55,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:55,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:55,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:55,713 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:55,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:55,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:55,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:55,713 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:55,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:56,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:56,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:56,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:56,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:56,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:56,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:56,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:56,693 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:56,693 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:56,694 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:56,694 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:56,694 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:57,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:57,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:57,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:57,222 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:57,222 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:57,222 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:57,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:57,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:57,702 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:57,702 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:57,702 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:57,702 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:58,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:58,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:58,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:58,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:58,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:58,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:58,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:58,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:58,703 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:58,703 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:58,703 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:58,704 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:59,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:59,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:59,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:59,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:59,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:59,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:52:59,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:52:59,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:52:59,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:52:59,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:52:59,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:52:59,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:00,202 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:00,202 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:00,202 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:00,202 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:00,202 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:00,202 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:00,703 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:00,704 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:00,704 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:00,705 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:00,705 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:00,705 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:01,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:01,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:01,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:01,213 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:01,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:01,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:01,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:01,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:01,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:01,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:01,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:01,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:02,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:02,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:02,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:02,214 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:02,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:02,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:02,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:02,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:02,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:02,712 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:02,712 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:02,712 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:03,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:03,193 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:03,193 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:03,195 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:03,195 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:03,195 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:03,723 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:03,724 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:03,724 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:03,725 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:03,725 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:03,725 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:04,203 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:04,204 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:04,204 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:04,205 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:04,205 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:04,205 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:04,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:04,702 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:04,703 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:04,704 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:04,704 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:04,704 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:05,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:05,192 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:05,192 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:05,192 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:05,192 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:05,192 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:05,722 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:05,722 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:05,722 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:05,722 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:05,722 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:05,722 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:06,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:06,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:06,223 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:06,223 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:06,223 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:06,223 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:06,702 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:06,703 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:06,703 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:06,704 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:06,704 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:06,704 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:07,192 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:07,193 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:07,193 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:07,194 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:07,194 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:07,194 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:07,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:07,712 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:07,712 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:07,713 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:07,713 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:07,713 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:08,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:08,212 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:08,212 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:08,212 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:08,212 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:08,212 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:08,712 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:08,713 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:08,713 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:08,714 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:08,714 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:08,714 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:09,212 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:09,213 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:09,213 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:09,214 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:09,214 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:09,214 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:09,692 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:09,693 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:09,693 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:09,694 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:09,694 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:09,694 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:10,222 | DEBUG | recorder.audio_capture_processor | Audio chunk read from stream.
+2024-02-01 12:53:10,222 | DEBUG | recorder.audio_capture_processor | Converting audio to PCM format.
+2024-02-01 12:53:10,222 | DEBUG | recorder.audio_capture_processor | Audio chunk converted to PCM format.
+2024-02-01 12:53:10,222 | DEBUG | recorder.audio_capture_processor | Speech detection in frame completed: Not detected
+2024-02-01 12:53:10,222 | DEBUG | __main__ | Processing audio chunk.
+2024-02-01 12:53:10,222 | DEBUG | recorder.audio_segment_manager | Processing audio chunk...
+2024-02-01 12:53:10,326 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-01 12:53:10,327 | INFO | __main__ | Main application terminated.
+2024-02-01 12:53:10,335 | ERROR | __main__ | Error occurred in audio capture and processing: Error querying host API -10000
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 29, in capture_and_process_stream
+    original_audio, overflowed = stream.read(int(SAMPLE_RATE * CHUNK_DURATION_SECS))
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 1456, in read
+    data, overflowed = RawInputStream.read(self, frames)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 1236, in read
+    _check(err)
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 2745, in _check
+    raise PortAudioError(errormsg, err, hosterror_info)
+sounddevice.PortAudioError: <unprintable PortAudioError object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 59, in audio_capture_and_processing_wrapper
+    for original_audio, is_speech_detected in audio_capture_processor.capture_and_process_stream():
+  File "C:\Users\hello\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 44, in capture_and_process_stream
+    logger.error(f"Error in audio stream processing: {e}")
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 2226, in __str__
+    hostname = query_hostapis(host_api)['name']
+  File "C:\Users\hello\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 646, in query_hostapis
+    raise PortAudioError(f'Error querying host API {index}')
+sounddevice.PortAudioError: Error querying host API -10000
