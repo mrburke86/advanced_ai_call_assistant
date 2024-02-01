@@ -1,4 +1,4 @@
-# Backend
+### Backend ###
 backend/__pycache__/
 backend/recorder/__pycache__/
 backend/transcriber/__pycache__/
@@ -9,7 +9,23 @@ backend/*.py[cod]
 ### Frontend ###
 # Dependencies
 frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# testing
+frontend/coverage
+
+# next.js
 frontend/.next/
+frontend/out/
+frontend/build.pnp
+frontend/.pnp.js
+
+# debug
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
 
 # Local env files
 frontend/.env*.local
@@ -17,6 +33,8 @@ frontend/.env*.local
 # Vercel
 frontend/.vercel
 
+# turbo
+frontend/.turbo
 # Typescript
 frontend/*.tsbuildinfo
 frontend/next-env.d.ts

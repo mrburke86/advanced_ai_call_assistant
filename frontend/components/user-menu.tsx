@@ -2,8 +2,8 @@
 "use client";
 
 import Image from "next/image";
-import { type Session } from "next-auth";
-import { signOut } from "next-auth/react";
+// import { type Session } from "next-auth";
+// import { signOut } from "next-auth/react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -15,8 +15,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { IconExternalLink } from "@/components/ui/icons";
 
-export interface UserMenuProps {
-  user: Session["user"];
+// export interface UserMenuProps {
+//   user: Session["user"];
+// }
+
+interface UserMenuProps {
+  user: { id: string }; // Updated type for default user
 }
 
 function getUserInitials(name: string) {
@@ -30,6 +34,13 @@ export function UserMenu({ user }: UserMenuProps) {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="pl-0">
+            {/* Use default values for user details */}
+            <div className="flex items-center justify-center text-xs font-medium uppercase rounded-full select-none size-7 shrink-0 bg-muted/50 text-muted-foreground">
+              {getUserInitials("Local User")}
+            </div>
+            <span className="ml-2">Local User</span>
+          </Button>
+          {/* <Button variant="ghost" className="pl-0">
             {user?.image ? (
               <Image
                 className="size-6 transition-opacity duration-300 rounded-full select-none ring-1 ring-zinc-100/10 hover:opacity-80"
@@ -44,12 +55,17 @@ export function UserMenu({ user }: UserMenuProps) {
               </div>
             )}
             <span className="ml-2">{user?.name}</span>
-          </Button>
+          </Button> */}
         </DropdownMenuTrigger>
         <DropdownMenuContent sideOffset={8} align="start" className="w-[180px]">
-          <DropdownMenuItem className="flex-col items-start">
+          {/* <DropdownMenuItem className="flex-col items-start">
             <div className="text-xs font-medium">{user?.name}</div>
             <div className="text-xs text-zinc-500">{user?.email}</div>
+          </DropdownMenuItem> */}
+          <DropdownMenuItem className="flex-col items-start">
+            {/* Use default values for user details */}
+            <div className="text-xs font-medium">Local User</div>
+            <div className="text-xs text-zinc-500">local-user@example.com</div>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem asChild>
@@ -63,7 +79,7 @@ export function UserMenu({ user }: UserMenuProps) {
               <IconExternalLink className="size-3 ml-auto" />
             </a>
           </DropdownMenuItem>
-          <DropdownMenuItem
+          {/* <DropdownMenuItem
             onClick={() =>
               signOut({
                 callbackUrl: "/",
@@ -72,7 +88,7 @@ export function UserMenu({ user }: UserMenuProps) {
             className="text-xs"
           >
             Log Out
-          </DropdownMenuItem>
+          </DropdownMenuItem> */}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

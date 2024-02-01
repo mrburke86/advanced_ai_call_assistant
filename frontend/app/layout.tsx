@@ -1,9 +1,8 @@
 // frontend\app\layout.tsx
 import { Toaster } from "react-hot-toast";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { Inter as FontSans } from "next/font/google";
 
-import "@/app/globals.css";
+import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { Providers } from "@/components/providers";
@@ -23,6 +22,11 @@ export const metadata = {
   },
 };
 
+export const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
@@ -37,13 +41,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "font-sans antialiased",
-          GeistSans.variable,
-          GeistMono.variable
-        )}
-      >
+      <body className={cn("font-sans antialiased", fontSans.variable)}>
         <Toaster />
         <Providers
           attribute="class"

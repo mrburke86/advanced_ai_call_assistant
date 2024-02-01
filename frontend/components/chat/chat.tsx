@@ -4,10 +4,10 @@
 import { useChat, type Message } from "ai/react";
 
 import { cn } from "@/lib/utils";
-import { ChatList } from "@/components/chat-list";
-import { ChatPanel } from "@/components/chat-panel";
+import { ChatList } from "@/components/chat/chat-list";
+import { ChatPanel } from "@/components/chat/chat-panel";
 import { EmptyScreen } from "@/components/empty-screen";
-import { ChatScrollAnchor } from "@/components/chat-scroll-anchor";
+import { ChatScrollAnchor } from "@/components/chat/chat-scroll-anchor";
 import { useLocalStorage } from "@/lib/hooks/use-local-storage";
 import {
   Dialog,
@@ -18,8 +18,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { useState } from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { toast } from "react-hot-toast";
 import { usePathname, useRouter } from "next/navigation";
 

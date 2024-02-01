@@ -3,7 +3,7 @@ import * as React from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { auth } from "@/auth";
+// import { auth } from "@/auth";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   IconGitHub,
@@ -12,15 +12,17 @@ import {
   IconVercel,
 } from "@/components/ui/icons";
 import { UserMenu } from "@/components/user-menu";
-import { SidebarMobile } from "./sidebar-mobile";
-import { SidebarToggle } from "./sidebar-toggle";
-import { ChatHistory } from "./chat-history";
+import { SidebarMobile } from "@/components/sidebar/sidebar-mobile";
+import { SidebarToggle } from "@/components/sidebar/sidebar-toggle";
+import { ChatHistory } from "@/components/chat/chat-history";
+
+const defaultUserId = "local-user"; // Define the default user ID
 
 async function UserOrLogin() {
-  const session = await auth();
+  // const session = await auth();
   return (
     <>
-      {session?.user ? (
+      {/* {session?.user ? (
         <>
           <SidebarMobile>
             <ChatHistory userId={session.user.id} />
@@ -42,6 +44,14 @@ async function UserOrLogin() {
             <Link href="/sign-in?callbackUrl=/">Login</Link>
           </Button>
         )}
+      </div> */}
+      <SidebarMobile>
+        <ChatHistory userId={defaultUserId} /> {/* Use defaultUserId here */}
+      </SidebarMobile>
+      <SidebarToggle />
+      <div className="flex items-center">
+        <IconSeparator className="size-6 text-muted-foreground/50" />
+        <UserMenu user={{ id: defaultUserId }} /> {/* Use defaultUserId here */}
       </div>
     </>
   );
