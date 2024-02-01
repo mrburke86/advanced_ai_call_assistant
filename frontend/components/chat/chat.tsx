@@ -8,6 +8,8 @@ import { ChatList } from "@/components/chat/chat-list";
 import { ChatPanel } from "@/components/chat/chat-panel";
 import { EmptyScreen } from "@/components/empty-screen";
 import { ChatScrollAnchor } from "@/components/chat/chat-scroll-anchor";
+import { toast } from "react-hot-toast";
+// import { usePathname } from "next/navigation";
 import { useLocalStorage } from "@/lib/hooks/use-local-storage";
 import {
   Dialog,
@@ -20,7 +22,6 @@ import {
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { toast } from "react-hot-toast";
 import { usePathname, useRouter } from "next/navigation";
 
 const IS_PREVIEW = process.env.VERCEL_ENV === "preview";
@@ -30,15 +31,15 @@ export interface ChatProps extends React.ComponentProps<"div"> {
 }
 
 export function Chat({ id, initialMessages, className }: ChatProps) {
-  const router = useRouter();
   const path = usePathname();
+  const router = useRouter();
   const [previewToken, setPreviewToken] = useLocalStorage<string | null>(
     "ai-token",
     null
   );
   const [previewTokenDialog, setPreviewTokenDialog] = useState(IS_PREVIEW);
   const [previewTokenInput, setPreviewTokenInput] = useState(
-    previewToken ?? ""
+    previewToken ?? "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"
   );
   const { messages, append, reload, stop, isLoading, input, setInput } =
     useChat({
@@ -102,7 +103,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
           </DialogHeader>
           <Input
             value={previewTokenInput}
-            placeholder="OpenAI API key"
+            placeholder="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"
             onChange={(e) => setPreviewTokenInput(e.target.value)}
           />
           <DialogFooter className="items-center">
