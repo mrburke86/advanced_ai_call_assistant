@@ -1,0 +1,21 @@
+{
+  "name": "advanced_ai_call_assistant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-python": "conda deactivate && conda activate advanced_ai_call_assistant && python backend/main.py",
+    "start-next": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run start-python\" \"npm run start-next\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.18.0",
+    "ioredis": "^5.3.2"
+  }
+}

@@ -12,5 +12,10 @@ ORIGINAL_RECORDINGS_DIR = os.path.join("backend", "data", "recordings")
 PROFILER_DIR = os.path.join("backend", "data", "profiler")
 LOGS_DIR = os.path.join("backend", "logs")
 
+# TRANSCRIPT_DIR = os.path.join("data", "transcriptions")
+# ORIGINAL_RECORDINGS_DIR = os.path.join("data", "recordings")
+# PROFILER_DIR = os.path.join("data", "profiler")
+# LOGS_DIR = os.path.join("logs")
+
 MODEL_NAME = "base"
 # RECORDINGS_DIR = os.path.join("backend", "data", "recordings")

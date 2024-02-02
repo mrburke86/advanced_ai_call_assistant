@@ -22,7 +22,7 @@ class TranscriberService:
         logger.debug("Transcriber service initialized.")
 
     def send_data_to_nextjs(self, data):
-        url = "http://localhost:3000/api/receive-data"  # Update with your Next.js API route
+        url = "http://localhost:3000/api/receive-data"
         logger.debug(f"Sending data to Next.js API at {url}")
         try:
             response = requests.post(url, json=data)
@@ -48,7 +48,9 @@ class TranscriberService:
             audio = whisper.load_audio(file_path)
             audio = whisper.pad_or_trim(audio)
             audio_tensor = torch.from_numpy(audio).to(self.whisper_model.device)
-            mel = whisper.log_mel_spectrogram(audio_tensor).to(self.whisper_model.device)
+            mel = whisper.log_mel_spectrogram(audio_tensor).to(
+                self.whisper_model.device
+            )
             logger.info("Audio file processed successfully.")
             return mel
         except Exception as e:
