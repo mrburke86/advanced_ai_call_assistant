@@ -11655,3 +11655,98 @@ Traceback (most recent call last):
     except transcription_queue.Empty:
 AttributeError: 'Queue' object has no attribute 'Empty'
 2024-02-04 16:46:06,894 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-04 18:39:02,232 | INFO | __main__ | 
+
+
+
+2024-02-04 18:39:02,232 | INFO | __main__ | Starting main program...
+2024-02-04 18:39:02,241 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-04 18:39:02,241 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-04 18:39:02,242 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-04 18:39:02,242 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-04 18:39:02,242 | INFO | __main__ | Audio capture thread started.
+2024-02-04 18:39:02,260 | INFO | __main__ | Transcription worker process started.
+2024-02-04 18:39:02,267 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-04 18:39:05,410 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-04 18:39:05,410 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-04 18:39:05,411 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-04 18:39:05,411 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-04 18:39:05,411 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-04 18:39:05,411 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-04 18:39:06,802 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-04 18:39:06,802 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-04 18:39:06,802 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-04 18:39:06,802 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-04 18:39:06,802 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-04 18:40:44,289 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-04 18:41:03,269 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-04 18:41:03.269081
+2024-02-04 18:41:03,269 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-04_18-41-03.wav
+2024-02-04 18:41:03,289 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-04_18-41-03.wav
+2024-02-04 18:41:03,291 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-04_18-41-03.wav
+2024-02-04 18:41:03,291 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 17.5 seconds
+2024-02-04 18:41:03,291 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-04 18:41:03,292 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-04_18-41-03.wav', datetime.datetime(2024, 2, 4, 18, 41, 3, 269081), 132.5587033, 17.5)
+2024-02-04 18:41:03,292 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-04 18:41:03,292 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-04_18-41-03.wav
+2024-02-04 18:41:03,292 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-04_18-41-03.wav
+2024-02-04 18:41:03,583 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-04 18:41:08,826 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-04 18:41:08.826983
+2024-02-04 18:41:08,826 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-04 18:41:03.269081
+2024-02-04 18:41:08,827 | INFO | transcriber.transcriber_service | ###### Transcription time: -6.004619599999984 seconds
+2024-02-04 18:41:08,827 | INFO | transcriber.transcriber_service | ###### Transcription result: Yeah, I think Jason's going to keep working on actually making this work. But the other thing that I wanted to look at is in the other application. So this was main talk. The other one is second screen. So the idea would be main talk would be showing the actual
+2024-02-04 18:41:08,828 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://localhost:8000/rest/v1/transcriptions_table
+2024-02-04 18:41:08,828 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-04 18:41:08,828 | DEBUG | transcriber.transcriber_service | Request Payload: {"user_id": "871fc14a-d733-4a5c-bc8e-1b21dab46a7b", "content": "Yeah, I think Jason's going to keep working on actually making this work. But the other thing that I wanted to look at is in the other application. So this was main talk. The other one is second screen. So the idea would be main talk would be showing the actual", "speech_end_timestamp": "2024-02-04T18:41:03.269081", "transcription_end_timestamp": "2024-02-04T18:41:08.826983", "transcription_time": -6.004619599999984, "speech_length": 17.5, "audio_file_url": "backend\\data\\recordings\\2024-02-04_18-41-03.wav", "data_sent_timestamp": "2024-02-04T18:41:08.827525"}
+2024-02-04 18:41:08,843 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): localhost:8000
+2024-02-04 18:41:08,961 | DEBUG | urllib3.connectionpool | http://localhost:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-04 18:41:08,962 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-04 18:41:08,962 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-04 18:41:08,963 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-04_18-41-03.wav completed.
+2024-02-04 18:41:08,963 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-04 18:41:41,039 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-04 18:41:41,040 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-04 18:41:41,040 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-04 18:41:41,040 | INFO | __main__ | Main application terminated.
+2024-02-04 18:41:41,041 | ERROR | __mp_main__ | Error occurred in transcription worker: 'Queue' object has no attribute 'Empty'
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 31, in transcription_worker
+    item = transcription_queue.get()
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\multiprocessing\queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\multiprocessing\connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 53, in transcription_worker
+    except transcription_queue.Empty:
+AttributeError: 'Queue' object has no attribute 'Empty'
+2024-02-04 18:41:41,051 | ERROR | __main__ | Error occurred in audio capture and processing: Error querying host API -10000
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 29, in capture_and_process_stream
+    original_audio, overflowed = stream.read(int(SAMPLE_RATE * CHUNK_DURATION_SECS))
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 1456, in read
+    data, overflowed = RawInputStream.read(self, frames)
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 1236, in read
+    _check(err)
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 2745, in _check
+    raise PortAudioError(errormsg, err, hosterror_info)
+sounddevice.PortAudioError: <unprintable PortAudioError object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 77, in audio_capture_and_processing_wrapper
+    for (
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 44, in capture_and_process_stream
+    logger.error(f"Error in audio stream processing: {e}")
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 2226, in __str__
+    hostname = query_hostapis(host_api)['name']
+  File "C:\Users\markb\miniconda3\envs\advanced_ai_call_assistant\lib\site-packages\sounddevice.py", line 646, in query_hostapis
+    raise PortAudioError(f'Error querying host API {index}')
+sounddevice.PortAudioError: Error querying host API -10000
+2024-02-04 18:41:41,070 | DEBUG | __main__ | Audio capture and processing stream has ended.
+2024-02-04 18:41:41,078 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-04 18:41:41,362 | INFO | utils.utils | Signal received. Initiating shutdown sequence...

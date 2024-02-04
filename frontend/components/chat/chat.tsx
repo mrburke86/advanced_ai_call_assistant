@@ -7,10 +7,51 @@ import { EmptyScreen } from "@/components/empty-screen";
 import { FC, HTMLAttributes, useEffect, useState } from "react";
 import { Message } from "ai";
 import ChatInput from "../new-chat/ChatInput";
+import { createClient } from "@supabase/supabase-js";
+import { channel } from "diagnostics_channel";
+
+const SUPABASE_ACCESS_TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA";
+
+const SUPABASE_URL = "http://localhost:8000";
 
 // export interface ChatInputProps extends HTMLAttributes<HTMLDivElement> {}
-
+const supabase = createClient(SUPABASE_URL || "", SUPABASE_ACCESS_TOKEN || "");
 const Chat: FC = () => {
+  // State to store the payloads
+  const [payloads, setPayloads] = useState<any[]>([]);
+
+  const handleInserts = (payload: any) => {
+    console.log("Change received!", payload);
+    // Update state with the new payload
+    setPayloads((prevPayloads) => [...prevPayloads, payload]);
+  };
+
+  useEffect(() => {
+    // Subscribe to Supabase channel
+    const subscription = supabase
+      .channel("transcriptions_table")
+      .on(
+        "postgres_changes",
+        { event: "INSERT", schema: "public", table: "transcriptions_table" },
+        handleInserts
+      )
+      .subscribe();
+
+    // Clean up subscription on component unmount
+    return () => {
+      subscription.untrack(subscription);
+    };
+  }, []);
+  // useEffect(() => {
+  //   const mySubscription = supabase.from("transcriptions_table").on("INSERT", payload => {
+  //     console.log("Change received!", payload);
+  //   }).subscribe()
+
+  //   return () => {
+  //     supabase.removeSubscription(mySubscription)
+  //   }
+  // }, []);
   // const [input, setInput] = useState<Message>
 
   // useEffect(() => {
@@ -34,6 +75,15 @@ const Chat: FC = () => {
       <div className="border-2 border-blue-400 pb-[200px] pt-4 md:pt-10">
         <ChatList />
         <ChatInput />
+        {/* Render the payloads */}
+        <div>
+          {payloads.map((payload, index) => (
+            <div key={index}>
+              {/* Render your payload data as needed */}
+              {JSON.stringify(payload)}
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
