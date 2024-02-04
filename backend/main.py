@@ -12,9 +12,7 @@ from utils.utils import signal_handling
 from config import ORIGINAL_RECORDINGS_DIR
 from recorder import AudioCaptureProcessor, AudioSegmentManager
 from transcriber import TranscriberService
-from utils import (
-    setup_logging
-)
+from utils import setup_logging
 
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -34,8 +32,8 @@ async def transcription_worker(transcription_queue):
                 logger.debug(f"Received file_path from queue: {item}")
 
                 if item is None:
-                # file_path = transcription_queue.get()
-                # if file_path is None:
+                    # file_path = transcription_queue.get()
+                    # if file_path is None:
                     logger.debug(
                         "Termination signal received. Exiting transcription worker."
                     )
@@ -47,8 +45,10 @@ async def transcription_worker(transcription_queue):
 
                 # logger.debug(f"Transcription for {file_path} started.")
 
-                file_path, end_time, buffer_length = item
-                await transcriber.transcribe(file_path, end_time, buffer_length)
+                file_path, speech_end_timestamp, speech_end_clock, buffer_length = item
+                await transcriber.transcribe(
+                    file_path, speech_end_timestamp, speech_end_clock, buffer_length
+                )
                 logger.debug(f"Transcription for {file_path} completed.")
             except transcription_queue.Empty:
                 logger.debug("Queue is empty, checking for termination signal...")
@@ -74,13 +74,18 @@ def audio_capture_and_processing_wrapper(transcription_queue):
         audio_capture_processor = AudioCaptureProcessor()
         audio_segment_manager = AudioSegmentManager(transcription_queue)
 
-        for original_audio, is_speech_detected in audio_capture_processor.capture_and_process_stream():
+        for (
+            original_audio,
+            is_speech_detected,
+        ) in audio_capture_processor.capture_and_process_stream():
             # logger.debug("Processing audio chunk.")
             audio_segment_manager.process_audio_chunk(
                 original_audio, is_speech_detected
             )
     except Exception as e:
-        logger.error(f"Error occurred in audio capture and processing: {e}", exc_info=True)
+        logger.error(
+            f"Error occurred in audio capture and processing: {e}", exc_info=True
+        )
     finally:
         logger.debug("Audio capture and processing stream has ended.")
 
@@ -112,9 +117,9 @@ if __name__ == "__main__":
         logger.info("KeyboardInterrupt received. Stopping processes.")
         transcription_queue.put(None)
         logger.info("Termination signal sent to transcription worker.")
-        transcription_worker_process.join()
-        logger.info("Transcription worker process terminated.")
-        audio_thread.join()
+        # transcription_worker_process.join()
+        # logger.info("Transcription worker process terminated.")
+        # audio_thread.join()
     except Exception as e:
         logger.error(f"Unexpected error: {e}", exc_info=True)
     finally:

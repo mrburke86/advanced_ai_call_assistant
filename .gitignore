@@ -41,3 +41,6 @@ frontend/.turbo
 # Typescript
 frontend/*.tsbuildinfo
 frontend/next-env.d.ts
+
+# Misc
+test.json

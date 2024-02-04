@@ -42,7 +42,9 @@ class AudioSegmentManager:
                 and (time.time() - self.last_speech_time) > SPEECH_BREAK_SECS
             ):
                 self.speech_detected = False
-                speech_end_time = datetime.datetime.now()
+                speech_end_clock = time.perf_counter()
+                speech_end_timestamp = datetime.datetime.utcnow()
+                logger.info(f"###### Speech Finish Time: {speech_end_timestamp}")
                 buffer_length_seconds = len(self.audio_buffer.buffer) / SAMPLE_RATE
                 # logger.debug(f"Speech end detected | Time: {speech_end_time}")
 
@@ -52,9 +54,16 @@ class AudioSegmentManager:
                 # Send Audio Buffer to Transcription Queue
                 if file_path:
                     self.transcription_queue.put(
-                        (file_path, speech_end_time, buffer_length_seconds)
+                        (
+                            file_path,
+                            speech_end_timestamp,
+                            speech_end_clock,
+                            buffer_length_seconds,
+                        )
                     )
-                    logger.info(f"Buffer saved to Transcription Queue | File Path: {file_path}")
+                    logger.info(
+                        f"Buffer saved to Transcription Queue | File Path: {file_path}"
+                    )
                 else:
                     logger.error("Failed to save buffer to file.")
 
@@ -81,6 +90,9 @@ class AudioSegmentManager:
             return None
 
     def create_filename(self):
-        filename = os.path.join(ORIGINAL_RECORDINGS_DIR, f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.wav")
+        filename = os.path.join(
+            ORIGINAL_RECORDINGS_DIR,
+            f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.wav",
+        )
         logger.debug(f"Created filename for recording: {filename}")
         return filename

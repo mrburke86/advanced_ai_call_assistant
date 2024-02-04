@@ -12,14 +12,13 @@ def setup_logging():
 
     if not root_logger.handlers:
         log_file_path = os.path.join(
-            LOGS_DIR, f"current_ai_audio_assistant_2024-02-01.log"
+            LOGS_DIR, f"current_ai_audio_assistant_2024-02-04.log"
         )
 
         # Define formatter for the file handler
         file_formatter = logging.Formatter(
             "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
         )
-
 
         # File handler - captures all logs
         file_handler = logging.FileHandler(log_file_path)
@@ -40,5 +39,6 @@ def setup_logging():
         # Set the root logger's level to DEBUG
         root_logger.setLevel(logging.DEBUG)  # Root logger captures all logs
         root_logger.addHandler(file_handler)
+
 
 setup_logging()
