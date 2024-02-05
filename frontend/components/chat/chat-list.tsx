@@ -1,18 +1,26 @@
 // frontend\components\chat\chat-list.tsx
-import { type Message } from "ai";
 
 import { Separator } from "@/components/ui/separator";
 import { ChatMessage } from "@/components/chat/chat-message";
+import type { Message } from "@/lib/validators/message";
 
 export interface ChatList {
   messages: Message[];
 }
 
-export function ChatList() {
+export function ChatList({ messages }: ChatList) {
+  if (!messages.length) {
+    return null;
+  }
+  console.log("[ChatList] Messages: ", messages);
+
   return (
     <div className="relative mx-auto max-w-2xl px-4 border-2 border-red-400">
-      {" "}
-      Chat List
+      {messages.map((message, index) => (
+        <div key={index}>
+          <ChatMessage message={message} />
+        </div>
+      ))}
     </div>
   );
 }

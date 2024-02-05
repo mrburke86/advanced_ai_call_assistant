@@ -5,26 +5,46 @@ import { cn } from "@/lib/utils";
 import { ChatList } from "@/components/chat/chat-list";
 import { EmptyScreen } from "@/components/empty-screen";
 import { FC, HTMLAttributes, useEffect, useState } from "react";
-import { Message } from "ai";
-import ChatInput from "../new-chat/ChatInput";
+// import ChatInput from "../new-chat/ChatInput";
 import { createClient } from "@supabase/supabase-js";
-import { channel } from "diagnostics_channel";
+// import { channel } from "diagnostics_channel";
+// import TextareaAutosize from "react-textarea-autosize";
+import { Message } from "@/lib/validators/message";
 
 const SUPABASE_ACCESS_TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA";
 
 const SUPABASE_URL = "http://localhost:8000";
 
-// export interface ChatInputProps extends HTMLAttributes<HTMLDivElement> {}
+export interface ChatProps extends React.ComponentProps<"div"> {
+  initialMessages?: Message[];
+  id?: string;
+}
 const supabase = createClient(SUPABASE_URL || "", SUPABASE_ACCESS_TOKEN || "");
-const Chat: FC = () => {
-  // State to store the payloads
-  const [payloads, setPayloads] = useState<any[]>([]);
+
+export function Chat({ id, initialMessages, className }: ChatProps) {
+  const [payloads, setPayloads] = useState<Message[]>([]);
 
   const handleInserts = (payload: any) => {
     console.log("Change received!", payload);
+
+    // Convert payload to match the Message type structure
+    const updatedPayload: Message = {
+      id: payload.new.id,
+      isUserMessage: true,
+      content: payload.new.content,
+      create_at: payload.new.create_at,
+      data_sent_timestamp: payload.new.data_sent_timestamp,
+      speech_end_timestamp: payload.new.speech_end_timestamp,
+      speech_length: payload.new.speech_length,
+      transcription_end_timestamp: payload.new.transcription_end_timestamp,
+      transcription_id: payload.new.transcription_id,
+      transcription_time: payload.new.transcription_timestamp,
+      user_id: payload.new.user_id,
+    };
+
     // Update state with the new payload
-    setPayloads((prevPayloads) => [...prevPayloads, payload]);
+    setPayloads((prevPayloads) => [...prevPayloads, updatedPayload]);
   };
 
   useEffect(() => {
@@ -37,59 +57,28 @@ const Chat: FC = () => {
         handleInserts
       )
       .subscribe();
+    console.log("[Chat] Subscription: ", subscription);
+    console.log("[Chat] Payloads: ", payloads);
 
     // Clean up subscription on component unmount
     return () => {
       subscription.untrack(subscription);
     };
-  }, []);
-  // useEffect(() => {
-  //   const mySubscription = supabase.from("transcriptions_table").on("INSERT", payload => {
-  //     console.log("Change received!", payload);
-  //   }).subscribe()
-
-  //   return () => {
-  //     supabase.removeSubscription(mySubscription)
-  //   }
-  // }, []);
-  // const [input, setInput] = useState<Message>
-
-  // useEffect(() => {
-  //   const eventSource = new EventSource(`/api/receive-data`);
-
-  //   eventSource.onmessage = (event) => {
-  //     const newData = JSON.parse(event.data);
-  //     setMessages((prevMessages) => [...prevMessages, newData]);
-  //   };
-
-  //   return () => eventSource.close();
-  // }, []);
-
-  // Optional: Function to handle setting input, if you have an input field
-  // const setInput = (inputValue) => {
-  //   // handle input change here
-  // };
+  }, [payloads]);
 
   return (
     <>
-      <div className="border-2 border-blue-400 pb-[200px] pt-4 md:pt-10">
-        <ChatList />
-        <ChatInput />
-        {/* Render the payloads */}
-        <div>
-          {payloads.map((payload, index) => (
-            <div key={index}>
-              {/* Render your payload data as needed */}
-              {JSON.stringify(payload)}
-            </div>
-          ))}
-        </div>
+      <div
+        className={cn(
+          "border-2 border-blue-400 pb-[200px] pt-4 md:pt-10",
+          className
+        )}
+      >
+        <ChatList messages={payloads} />
       </div>
     </>
   );
-};
-
-export default Chat;
+}
 
 // "use client";
 

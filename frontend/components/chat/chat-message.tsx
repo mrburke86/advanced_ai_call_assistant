@@ -3,7 +3,6 @@
 // @see https://github.com/mckaywrigley/chatbot-ui/blob/main/components/Chat/ChatMessage.tsx
 
 import React, { FC } from "react";
-import { Message } from "ai";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 
@@ -12,26 +11,31 @@ import { CodeBlock } from "@/components/ui/codeblock";
 import { MemoizedReactMarkdown } from "@/components/chat/markdown";
 import { IconOpenAI, IconUser } from "@/components/ui/icons";
 import { ChatMessageActions } from "@/components/chat/chat-message-actions";
+import { Message } from "@/lib/validators/message";
 
 export interface ChatMessageProps {
   message: Message;
 }
 
 export function ChatMessage({ message, ...props }: ChatMessageProps) {
+  const isUserMessage = message.isUserMessage;
+
   return (
+    // Chat Message Container
     <div
-      className={cn("group relative mb-4 flex items-start md:-ml-12")}
+      className={cn(
+        "group relative mb-4 flex items-start md:-ml-12 rounded-md px-2 py-2",
+        isUserMessage ? "ml-auto bg-blue-600" : "mr-auto"
+      )}
       {...props}
     >
       <div
         className={cn(
           "flex size-8 shrink-0 select-none items-center justify-center rounded-md border shadow",
-          message.role === "user"
-            ? "bg-background"
-            : "bg-primary text-primary-foreground"
+          isUserMessage ? "bg-background" : "bg-primary text-primary-foreground"
         )}
       >
-        {message.role === "user" ? <IconUser /> : <IconOpenAI />}
+        {isUserMessage ? <IconUser /> : <IconOpenAI />}
       </div>
       <div className="flex-1 px-1 ml-4 space-y-2 overflow-hidden">
         <MemoizedReactMarkdown
@@ -84,7 +88,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
         >
           {message.content}
         </MemoizedReactMarkdown>
-        <ChatMessageActions message={message} />
+        {/* <ChatMessageActions message={message} /> */}
       </div>
     </div>
   );
