@@ -10,6 +10,7 @@ import { createClient } from "@supabase/supabase-js";
 // import { channel } from "diagnostics_channel";
 // import TextareaAutosize from "react-textarea-autosize";
 import { Message } from "@/lib/validators/message";
+import { useMutation } from "@tanstack/react-query";
 
 const SUPABASE_ACCESS_TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA";
@@ -65,6 +66,25 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
       subscription.untrack(subscription);
     };
   }, [payloads]);
+
+  const { mutate: updatedPayload, isLoading } = useMutation({
+    mutationFn: async (updatedPayload: Message) => {
+      const response = await fetch("/api/message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: "hello",
+        }),
+      });
+
+      return response.body;
+    },
+    onSuccess: () => {
+      console.log("Message sent successfully!");
+    },
+  });
 
   return (
     <>
