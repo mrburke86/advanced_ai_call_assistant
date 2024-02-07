@@ -3,6 +3,11 @@
 import { Separator } from "@/components/ui/separator";
 import { ChatMessage } from "@/components/chat/chat-message";
 import type { Message } from "@/lib/validators/message";
+import { MessagesContext } from "@/context/messages";
+import { cn } from "@/lib/utils";
+import { FC, HTMLAttributes, useContext } from "react";
+
+interface ChatMessagesProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface ChatList {
   messages: Message[];
