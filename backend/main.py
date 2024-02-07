@@ -41,13 +41,13 @@ async def transcription_worker(transcription_queue):
 
                 # Create dummy "end_time" and "buffer_length"
                 # end_time = datetime.datetime.now()
-                # buffer_length = 12.7
+                # buffer_length = 12.7 
 
                 # logger.debug(f"Transcription for {file_path} started.")
 
-                file_path, speech_end_timestamp, speech_end_clock, buffer_length = item
+                file_path, speech_end_timestamp, buffer_length = item
                 await transcriber.transcribe(
-                    file_path, speech_end_timestamp, speech_end_clock, buffer_length
+                    file_path, speech_end_timestamp, buffer_length
                 )
                 logger.debug(f"Transcription for {file_path} completed.")
             except transcription_queue.Empty:

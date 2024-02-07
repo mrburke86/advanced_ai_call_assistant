@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { CodeBlock } from "@/components/ui/codeblock";
 import { MemoizedReactMarkdown } from "@/components/chat/markdown";
 import { IconOpenAI, IconUser } from "@/components/ui/icons";
-import { ChatMessageActions } from "@/components/chat/chat-message-actions";
+// import { ChatMessageActions } from "@/components/chat/chat-message-actions";
 import { Message } from "@/lib/validators/message";
 
 export interface ChatMessageProps {
@@ -88,6 +88,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
         >
           {message.content}
         </MemoizedReactMarkdown>
+        <div className={cn("text-xs text-gray-400")}>Transcription Time: {message.transcription_time.toFixed(2)} secs</div>
         {/* <ChatMessageActions message={message} /> */}
       </div>
     </div>

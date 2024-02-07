@@ -1,59 +1,27 @@
 // frontend\components\chat\chat-list.tsx
 
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 import { ChatMessage } from "@/components/chat/chat-message";
-import type { Message } from "@/lib/validators/message";
 import { MessagesContext } from "@/context/messages";
-import { cn } from "@/lib/utils";
-import { FC, HTMLAttributes, useContext } from "react";
+import { FC, HTMLAttributes, JSX, useContext } from "react";
+// import { cn } from "@/lib/utils";
+// import { FC, HTMLAttributes, useContext } from "react";
 
-interface ChatMessagesProps extends HTMLAttributes<HTMLDivElement> {}
+interface ChatListProps extends HTMLAttributes<HTMLDivElement> {}
 
-export interface ChatList {
-  messages: Message[];
-}
 
-export function ChatList({ messages }: ChatList) {
-  if (!messages.length) {
-    return null;
-  }
+export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
+  const { messages } = useContext(MessagesContext)
+  const inverseMessages = [...messages].reverse()
   console.log("[ChatList] Messages: ", messages);
 
   return (
-    <div className="relative mx-auto max-w-2xl px-4 border-2 border-red-400">
-      {messages.map((message, index) => (
-        <div key={index}>
+    <div {...props} className="relative mx-auto max-w-2xl px-4 border-2 border-red-400">
+      {inverseMessages.map((message) => (
+        <div key={`${message.id}-${message.id}`}>
           <ChatMessage message={message} />
         </div>
       ))}
     </div>
   );
 }
-
-// import { type Message } from "ai";
-
-// import { Separator } from "@/components/ui/separator";
-// import { ChatMessage } from "@/components/chat/chat-message";
-
-// export interface ChatList {
-//   messages: Message[];
-// }
-
-// export function ChatList({ messages }: ChatList) {
-//   if (!messages.length) {
-//     return null;
-//   }
-
-//   return (
-//     <div className="relative mx-auto max-w-2xl px-4">
-//       {messages.map((message, index) => (
-//         <div key={index}>
-//           <ChatMessage message={message} />
-//           {index < messages.length - 1 && (
-//             <Separator className="my-4 md:my-8" />
-//           )}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }

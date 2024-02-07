@@ -53,7 +53,7 @@ class TranscriberService:
     #     }
 
     def add_transcription_to_table(self, data):
-        url = "http://localhost:8000/rest/v1/transcriptions_table"
+        url = "http://192.168.1.26:8000/rest/v1/transcriptions_table"
         logger.debug(f"Sending data to Supabase API at {url}")
         headers = {
             "apikey": SUPABASE_ANON_KEY,
@@ -83,13 +83,6 @@ class TranscriberService:
             logger.error(f"Error sending data to Supabase: {e}", exc_info=True)
         return None
 
-    # curl -X POST 'https://localhost:8000/rest/v1/transcriptions_table' \
-    # -H "apikey: SUPABASE_CLIENT_ANON_KEY" \
-    # -H "Authorization: Bearer SUPABASE_CLIENT_ANON_KEY" \
-    # -H "Content-Type: application/json" \
-    # -H "Prefer: return=minimal" \
-    # -d '{ "some_column": "someValue", "other_column": "otherValue" }'
-
     def load_model(self):
         logger.debug(f"Loading Whisper model: {MODEL_NAME}")
         try:
@@ -114,7 +107,7 @@ class TranscriberService:
             return None
 
     async def transcribe(
-        self, file_path, speech_end_timestamp, speech_end_clock, buffer_length
+        self, file_path, speech_end_timestamp, buffer_length
     ):
         logger.debug(f"Starting transcription for file: {file_path}")
         try:
@@ -125,7 +118,7 @@ class TranscriberService:
 
             options = whisper.DecodingOptions(language="en", fp16=False)
             result = whisper.decode(self.whisper_model, mel, options)
-            transcription_end_clock = time.perf_counter()
+            # transcription_end_clock = datetime.datetime.utcnow()
             transcription_end_timestamp = datetime.datetime.utcnow()
             logger.info(
                 f"###### Transcription Finish Time: {transcription_end_timestamp}"
@@ -134,7 +127,7 @@ class TranscriberService:
             # logger.debug(f"Transcription Complete | Time: {transcription_end_time}")
 
             # Calculate and log the transcription time
-            transcription_time = transcription_end_clock - speech_end_clock
+            transcription_time = transcription_end_timestamp - speech_end_timestamp
             logger.info(f"###### Speech End Time: {speech_end_timestamp}")
             # time_in_seconds = time_difference.total_seconds()
             # formatted_time = "{:.2f}".format(time_in_seconds)
@@ -149,7 +142,7 @@ class TranscriberService:
                     "content": result.text,
                     "speech_end_timestamp": speech_end_timestamp.isoformat(),
                     "transcription_end_timestamp": transcription_end_timestamp.isoformat(),
-                    "transcription_time": transcription_time,
+                    "transcription_time": transcription_time.total_seconds(),
                     "speech_length": buffer_length,
                     "audio_file_url": file_path,
                     "data_sent_timestamp": datetime.datetime.utcnow().isoformat(),

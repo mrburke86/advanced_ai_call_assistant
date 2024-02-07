@@ -42,7 +42,7 @@ class AudioSegmentManager:
                 and (time.time() - self.last_speech_time) > SPEECH_BREAK_SECS
             ):
                 self.speech_detected = False
-                speech_end_clock = time.perf_counter()
+                # speech_end_clock = time.perf_counter()
                 speech_end_timestamp = datetime.datetime.utcnow()
                 logger.info(f"###### Speech Finish Time: {speech_end_timestamp}")
                 buffer_length_seconds = len(self.audio_buffer.buffer) / SAMPLE_RATE
@@ -57,7 +57,6 @@ class AudioSegmentManager:
                         (
                             file_path,
                             speech_end_timestamp,
-                            speech_end_clock,
                             buffer_length_seconds,
                         )
                     )
