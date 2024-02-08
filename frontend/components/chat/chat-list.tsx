@@ -53,7 +53,7 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
       addMessage(message);
     },
 
-    // onError Function
+    // onSuccess Function
     onSuccess: async (stream) => {
       console.log(
         `[ChatList] ${getFormattedTimestamp()} - onSuccess - stream received:`,
@@ -61,20 +61,24 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
       );
       if (!stream) throw new Error("No stream!");
       const message_id = nanoid();
-      console.log(
-        `[ChatList] ${getFormattedTimestamp()} - onSuccess - generated message ID:`,
-        message_id
-      );
-
+      
+      
       const responseMessage: Message = {
         message_id,
-        isUserMessage: true,
+        isUserMessage: false,
         content: "",
         speech_end_timestamp: "",
         transcription_time: 0,
         messageType: "chatBotResponse",
       };
-
+      console.log(
+        `[ChatList] ${getFormattedTimestamp()} - onSuccess - generated message ID:`,
+        message_id
+      );
+      console.log(
+        `[ChatList] ${getFormattedTimestamp()} - Message ID: ${message_id} | Response Message:`, responseMessage
+      );
+      
       // Add message to context
       addMessage(responseMessage);
       setIsMessageUpdating(true);

@@ -34,17 +34,27 @@ export function useChatSubscription(onNewMessage: (message: Message) => void) {
         const isExistingMessage = messages.some(message => message.message_id === newMessage.message_id);
 
         if (!isExistingMessage) {
-          if (newMessage.messageType === "user") {
-            console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Received user message: ${JSON.stringify(newMessage)}`);
-            onNewMessage(newMessage); // Trigger the generation of chatBotResponse
-          } else {
-            console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Received chatBot message: ${JSON.stringify(newMessage)}`);
-            addMessage(newMessage); // Directly add the message without further action
+          console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Received message: ${JSON.stringify(newMessage)}`);
+        
+          switch (newMessage.messageType) {
+            case "user":
+              // This message is from a user, trigger the generation of chatBotResponse
+              onNewMessage(newMessage);
+              break;
+            case "chatBotResponse":
+              // This message is a response from the chatBot, add it directly without triggering further actions
+              console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Received chatBot message: ${JSON.stringify(newMessage)}`);
+              addMessage(newMessage);
+              break;
+            default:
+              // Handle any other types of messages or log an unexpected message type
+              console.warn(`[useChatSubscription] ${getFormattedTimestamp()} - Received message with unexpected type: ${newMessage.messageType}`);
+              break;
           }
         } else {
           console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Duplicate message ignored: ${newMessage.message_id}`);
         }
-      })
+              })
       .subscribe();
 
     return () => {
