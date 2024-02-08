@@ -11,7 +11,7 @@ const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const supabase = createClient(SUPABASE_URL, SUPABASE_ACCESS_TOKEN);
 
 export function useChatSubscription(onNewMessage: (message: Message) => void) {
-  const { addMessage } = useContext(MessagesContext);
+  const { messages, addMessage } = useContext(MessagesContext);
 
   useEffect(() => {
     const channelName = "transcriptions_table";
@@ -29,33 +29,22 @@ export function useChatSubscription(onNewMessage: (message: Message) => void) {
             transcription_time: payload.new.transcription_time,
             messageType: payload.new.messageType,
           };
-          console.log(
-            `[useChatSubscription] ${getFormattedTimestamp()} - New message received:`,
-            newMessage
-          );
-          addMessage(newMessage);
-          console.log(
-            `[useChatSubscription] ${getFormattedTimestamp()} - New message added to context:`,
-            newMessage
-          );
 
-          // Only trigger the callback if the message is from the user (or adjust based on your criteria)
+          // Check if the message_id already exists in the context
+        const isExistingMessage = messages.some(message => message.message_id === newMessage.message_id);
+
+        if (!isExistingMessage) {
           if (newMessage.messageType === "user") {
-            console.log(
-              `[useChatSubscription] ${getFormattedTimestamp()} - Received user message: ${JSON.stringify(
-                newMessage
-              )}`
-            );
-            onNewMessage(newMessage);
+            console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Received user message: ${JSON.stringify(newMessage)}`);
+            onNewMessage(newMessage); // Trigger the generation of chatBotResponse
           } else {
-            console.log(
-              `[useChatSubscription] ${getFormattedTimestamp()} - Received bot message: ${JSON.stringify(
-                newMessage
-              )}`
-            );
+            console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Received chatBot message: ${JSON.stringify(newMessage)}`);
+            addMessage(newMessage); // Directly add the message without further action
           }
+        } else {
+          console.log(`[useChatSubscription] ${getFormattedTimestamp()} - Duplicate message ignored: ${newMessage.message_id}`);
         }
-      )
+      })
       .subscribe();
 
     return () => {

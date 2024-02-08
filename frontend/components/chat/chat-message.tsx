@@ -12,6 +12,7 @@ import { MemoizedReactMarkdown } from "@/components/chat/markdown";
 import { IconOpenAI, IconUser } from "@/components/ui/icons";
 // import { ChatMessageActions } from "@/components/chat/chat-message-actions";
 import { Message } from "@/lib/validators/message";
+import MarkdownLite from "./MarkdownLite";
 
 export interface ChatMessageProps {
   message: Message;
@@ -38,7 +39,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
         {isUserMessage ? <IconUser /> : <IconOpenAI />}
       </div>
       <div className="flex-1 px-1 ml-4 space-y-2 overflow-hidden">
-        <MemoizedReactMarkdown
+        {/* <MemoizedReactMarkdown
           className="prose break-words dark:prose-invert prose-p:leading-relaxed prose-pre:p-0"
           remarkPlugins={[remarkGfm, remarkMath]}
           components={{
@@ -87,7 +88,8 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
           }}
         >
           {message.content}
-        </MemoizedReactMarkdown>
+        </MemoizedReactMarkdown> */}
+        <MarkdownLite text={message.content} />
         <div className={cn("text-xs text-gray-400")}>
           Transcription Time: {message.transcription_time.toFixed(2)} secs
         </div>

@@ -1,4 +1,4 @@
-// frontend\app\api\message\route.ts
+// frontend\app\api\message\route.ts 
 import { chatbotPrompt } from "@/helpers/constants/chatbot-prompt";
 import {
   ChatGPTMessage,
@@ -8,7 +8,9 @@ import {
 import { MessageArraySchema } from "@/lib/validators/message";
 
 export async function POST(req: Request) {
+  try {
   const { messages } = await req.json();
+  console.log("[Messages Route] Received messages:", messages);
 
   const parsedMessages = MessageArraySchema.parse(messages);
 
@@ -23,6 +25,7 @@ export async function POST(req: Request) {
     role: "system",
     content: chatbotPrompt,
   });
+  console.log("[Messages Route] Outbound messages:", outboundMessages);
 
   const payload: OpenAIStreamPayload = {
     model: "gpt-3.5-turbo",
@@ -36,7 +39,15 @@ export async function POST(req: Request) {
     n: 1,
   };
 
-  const stream = await OpenAIStream(payload);
-
-  return new Response(stream);
+  try {
+    const stream = await OpenAIStream(payload);
+    return new Response(stream);
+  } catch (streamError) {
+    console.error("Error initiating OpenAI stream:", streamError);
+    return new Response(JSON.stringify({ error: "Failed to initiate chatbot stream" }), { status: 500 });
+  }
+} catch (error) {
+  console.error("Unexpected error in POST function:", error);
+  return new Response(JSON.stringify({ error: "Unexpected server error" }), { status: 500 });
+}
 }

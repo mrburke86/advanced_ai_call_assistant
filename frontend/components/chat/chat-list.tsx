@@ -9,6 +9,7 @@ import { useMutation } from "@tanstack/react-query";
 import { FC, HTMLAttributes, JSX, useContext } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
+import { Readable } from 'stream';
 
 interface ChatListProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -22,11 +23,9 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
     setIsMessageUpdating,
   } = useContext(MessagesContext);
 
-  console.log(
-    `[ChatList] ${getFormattedTimestamp()} - Rendering ChatList component`
-  );
-
   const { mutate: sendMessageMutation, isPending } = useMutation({
+
+    // Mutate Function
     mutationFn: async (_message: Message) => {
       console.log(
         `[ChatList] ${getFormattedTimestamp()} - Mutation function called with message:`,
@@ -37,13 +36,15 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: _message }), // Ensure this matches your backend expectation
+        body: JSON.stringify({ messages }), // Ensure this matches your backend expectation
       });
       console.log(
         `[ChatList] ${getFormattedTimestamp()} - Fetch response received`
       );
       return response.body;
     },
+
+    // onMutate Function
     onMutate(message) {
       console.log(
         `[ChatList] ${getFormattedTimestamp()} - onMutate - message being added:`,
@@ -51,6 +52,8 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
       );
       addMessage(message);
     },
+
+    // onError Function
     onSuccess: async (stream) => {
       console.log(
         `[ChatList] ${getFormattedTimestamp()} - onSuccess - stream received:`,
@@ -98,6 +101,8 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
         `[ChatList] ${getFormattedTimestamp()} - onSuccess - Stream processing complete`
       );
     },
+
+    // onError Function
     onError: (_, message) => {
       console.error(
         `[ChatList] ${getFormattedTimestamp()} - onError - Error occurred`,
@@ -116,14 +121,13 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
   useChatSubscription(sendMessageMutation);
 
   const inverseMessages = [...messages].reverse();
-  console.log(`[ChatList] ${getFormattedTimestamp()} - Messages: `, messages);
 
   return (
     <div
       {...props}
       className="relative mx-auto max-w-2xl px-4 border-2 border-red-400"
     >
-      {inverseMessages.map((message) => (
+      {messages.map((message) => (
         <div key={`${message.message_id}-${message.message_id}`}>
           <ChatMessage message={message} />
         </div>
@@ -132,7 +136,18 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
   );
 };
 
-// I need help with my code. I just cannot get it right. I'm going to tell you a little bit about my app and then show you some code
+// async function fetchChatBotResponse(userMessageContent: string): Promise<string> {
+//   const response = await fetch("/api/messages", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ userMessageContent }),
+//   });
+//   return Promise.resolve(response);
+// }
+
+// Generate a formatted timestamp for logging
 function getFormattedTimestamp(): string {
   const now = new Date();
   const timeWithMilliseconds =

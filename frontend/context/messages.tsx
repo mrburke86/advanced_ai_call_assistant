@@ -5,6 +5,7 @@ import { Message } from "@/lib/validators/message";
 const defaultValue = [
   {
     message_id: "",
+    messageType: "",
     isUserMessage: false,
     content: "Lets fucking go, boy!!",
     speech_end_timestamp: "",

@@ -3,11 +3,11 @@ import { z } from "zod";
 
 export const MessageSchema = z.object({
   message_id: z.string(),
+  messageType: z.string(),
   isUserMessage: z.boolean(),
   content: z.string(),
   speech_end_timestamp: z.string(),
   transcription_time: z.number(),
-  messageType: z.string(),
   // transcription_id: z.string(),
   // data_sent_timestamp: z.string().optional(),
   // create_at: z.string(),

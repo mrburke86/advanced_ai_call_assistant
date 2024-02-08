@@ -4,6 +4,7 @@
 import { ChatList } from "@/components/chat/chat-list";
 import { Message } from "@/lib/validators/message";
 import { cn } from "@/lib/utils";
+import ChatMessages from "./ChatMessages";
 // import { useChatSubscription } from "@/lib/hooks/useSupabaseSubscriptions";
 // import { useMutation } from "@tanstack/react-query";
 // import { usePathname, useRouter } from "next/navigation";
