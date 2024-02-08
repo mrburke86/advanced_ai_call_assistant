@@ -1,23 +1,20 @@
 // frontend\components\chat\chat.tsx
 "use client";
 
-import { cn } from "@/lib/utils";
 import { ChatList } from "@/components/chat/chat-list";
-// import { FC, HTMLAttributes, useEffect, useState } from "react";
 import { Message } from "@/lib/validators/message";
-import { useChatSubscription } from "@/lib/hooks/useSupabaseSubscriptions";
-import { useMutation } from "@tanstack/react-query";
-// import { EmptyScreen } from "@/components/empty-screen";
+import { cn } from "@/lib/utils";
+// import { useChatSubscription } from "@/lib/hooks/useSupabaseSubscriptions";
+// import { useMutation } from "@tanstack/react-query";
+// import { usePathname, useRouter } from "next/navigation";
+// import { useContext, useEffect } from "react";
+// import { MessagesContext } from "@/context/messages";
 
 export interface ChatProps extends React.ComponentProps<"div"> {
+  chat_id?: string;
   initialMessages?: Message[];
-  id?: string;
 }
-export function Chat({ id, className }: ChatProps) {
-  const {} = useMutation({})
-  const messages = useChatSubscription("transcriptions_table");
-  // console.log("[Chat] ID: ", id)
-
+export function Chat({ chat_id, className }: ChatProps) {
   return (
     <>
       <div
@@ -26,7 +23,7 @@ export function Chat({ id, className }: ChatProps) {
           className
         )}
       >
-        <ChatList messages={messages} />
+        <ChatList />
       </div>
     </>
   );

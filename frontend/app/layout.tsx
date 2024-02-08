@@ -1,7 +1,6 @@
 // frontend\app\layout.tsx
-import { Toaster } from "react-hot-toast";
 import { Inter as FontSans } from "next/font/google";
-
+import { Toaster } from "@/components/ui/toaster";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { TailwindIndicator } from "@/components/tailwind-indicator";

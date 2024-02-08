@@ -1,43 +1,59 @@
 // frontend\lib\hooks\useSupabaseSubscriptions.ts
+"use client";
 import { createClient } from "@supabase/supabase-js";
 import { useContext, useEffect } from "react";
 import { Message } from "../validators/message";
 import { MessagesContext } from "@/context/messages";
 
-// const SUPABASE_URL = process.env.SUPABASE_URL || "";
-// const SUPABASE_ACCESS_TOKEN = process.env.SUPABASE_ACCESS_TOKEN || "";
 const SUPABASE_ACCESS_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA";
-const SUPABASE_URL = "http://192.168.1.26:8000";
+  process.env.NEXT_PUBLIC_SUPABASE_ACCESS_TOKEN || "";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const supabase = createClient(SUPABASE_URL, SUPABASE_ACCESS_TOKEN);
 
-export function useChatSubscription(channelName = "transcriptions_table") {
-  // const [messages, setMessages] = useState<Message[]>([]);
+export function useChatSubscription(onNewMessage: (message: Message) => void) {
   const { addMessage } = useContext(MessagesContext);
 
   useEffect(() => {
+    const channelName = "transcriptions_table";
     const subscription = supabase
       .channel(channelName)
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: channelName },
         (payload) => {
-          console.log("[useChatSubscription] Change received!", payload);
           const newMessage: Message = {
-            id: payload.new.id,
+            message_id: payload.new.transcription_id,
             isUserMessage: true,
             content: payload.new.content,
             speech_end_timestamp: payload.new.speech_end_timestamp,
-            transcription_id: payload.new.transcription_id,
             transcription_time: payload.new.transcription_time,
-            // create_at: payload.new.create_at,
-            // data_sent_timestamp: payload.new.data_sent_timestamp,
-            // speech_length: payload.new.speech_length,
-            // transcription_end_timestamp:
-            //   payload.new.transcription_end_timestamp,
-            // user_id: payload.new.user_id,
+            messageType: payload.new.messageType,
           };
+          console.log(
+            `[useChatSubscription] ${getFormattedTimestamp()} - New message received:`,
+            newMessage
+          );
           addMessage(newMessage);
+          console.log(
+            `[useChatSubscription] ${getFormattedTimestamp()} - New message added to context:`,
+            newMessage
+          );
+
+          // Only trigger the callback if the message is from the user (or adjust based on your criteria)
+          if (newMessage.messageType === "user") {
+            console.log(
+              `[useChatSubscription] ${getFormattedTimestamp()} - Received user message: ${JSON.stringify(
+                newMessage
+              )}`
+            );
+            onNewMessage(newMessage);
+          } else {
+            console.log(
+              `[useChatSubscription] ${getFormattedTimestamp()} - Received bot message: ${JSON.stringify(
+                newMessage
+              )}`
+            );
+          }
         }
       )
       .subscribe();
@@ -45,5 +61,20 @@ export function useChatSubscription(channelName = "transcriptions_table") {
     return () => {
       subscription.unsubscribe();
     };
-  }, [channelName, addMessage]);
+  }, [addMessage, onNewMessage]); // Include onNewMessage in the dependencies array
+}
+
+function getFormattedTimestamp(): string {
+  const now = new Date();
+  const timeWithMilliseconds =
+    now.toLocaleTimeString("en-US", {
+      hour12: false,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }) +
+    "." +
+    String(now.getMilliseconds()).padStart(3, "0");
+  const date = now.toLocaleDateString("en-US");
+  return `${date}, ${timeWithMilliseconds}`;
 }

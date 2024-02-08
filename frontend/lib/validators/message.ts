@@ -2,12 +2,13 @@
 import { z } from "zod";
 
 export const MessageSchema = z.object({
-  id: z.string(),
+  message_id: z.string(),
   isUserMessage: z.boolean(),
   content: z.string(),
   speech_end_timestamp: z.string(),
-  transcription_id: z.string(),
   transcription_time: z.number(),
+  messageType: z.string(),
+  // transcription_id: z.string(),
   // data_sent_timestamp: z.string().optional(),
   // create_at: z.string(),
   // speech_length: z.number().optional(),
@@ -20,9 +21,8 @@ export const MessageArraySchema = z.array(MessageSchema);
 
 export type Message = z.infer<typeof MessageSchema>;
 
-// export const MessageSchema = z.object({ 
+// export const MessageSchema = z.object({
 //   id: z.string(),
 //   text: z.string(),
 //   isUserMessage: z.boolean(),
 // });
-

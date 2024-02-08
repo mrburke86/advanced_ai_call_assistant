@@ -24,7 +24,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
     // Chat Message Container
     <div
       className={cn(
-        "group relative mb-4 flex items-start md:-ml-12 rounded-md px-2 py-2",
+        "group relative mb-4 flex items-start md:-ml-12 rounded-md px-2 py-2 border bg-zinc-700 text-white",
         isUserMessage ? "ml-auto bg-blue-600" : "mr-auto"
       )}
       {...props}
@@ -88,7 +88,9 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
         >
           {message.content}
         </MemoizedReactMarkdown>
-        <div className={cn("text-xs text-gray-400")}>Transcription Time: {message.transcription_time.toFixed(2)} secs</div>
+        <div className={cn("text-xs text-gray-400")}>
+          Transcription Time: {message.transcription_time.toFixed(2)} secs
+        </div>
         {/* <ChatMessageActions message={message} /> */}
       </div>
     </div>

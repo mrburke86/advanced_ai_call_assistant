@@ -3,7 +3,7 @@ import { nanoid } from "@/lib/utils";
 import { Chat } from "@/components/chat/chat";
 
 export default function IndexPage() {
-  const id = nanoid();
+  const chat_id = nanoid();
 
-  return <Chat id={id} />;
+  return <Chat chat_id={chat_id} />;
 }

@@ -1,6 +1,8 @@
 // frontend\lib\utils.ts
+// import { MessagesContext } from "@/context/messages";
 import { clsx, type ClassValue } from "clsx";
 import { customAlphabet } from "nanoid";
+// import { useContext, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -42,3 +44,13 @@ export function formatDate(input: string | number | Date): string {
     year: "numeric",
   });
 }
+
+// export const LogMessagesContext = () => {
+//   const context = useContext(MessagesContext);
+
+//   useEffect(() => {
+//     console.log("MessagesContext has changed:", context);
+//   }, [context]); // This effect will run whenever the context changes
+
+//   return null; // This component doesn't render anything
+// };

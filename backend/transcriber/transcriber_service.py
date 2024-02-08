@@ -21,37 +21,6 @@ class TranscriberService:
         self.whisper_model = None
         logger.debug("Transcriber service initialized.")
 
-    # def send_data_to_nextjs(self, data):
-    #     url = "http://localhost:3000/api/receive-data"
-    #     logger.debug(f"Sending data to Next.js API at {url}")
-    #     try:
-    #         response = requests.post(url, json=data)
-    #         logger.info(
-    #             f"Data sent to Next.js | Status Code: {response.status_code} | Response: {response.json()}"
-    #         )
-    #         return response.status_code, response.json()
-    #     except Exception as e:
-    #         logger.error(f"Error sending data to Next.js: {e}", exc_info=True)
-    #         return None
-
-    # def add_transcription_to_table(
-    #     speech_end_time,
-    #     transcription_end_time,
-    #     transcription_time,
-    #     speech_length,
-    #     transcription,
-    # ):
-    #     # Prepare the data
-    #     data = {
-    #         "speech_end_time": speech_end_time.strftime("%Y-%m-%d | %H:%M:%S.%f")[:-3],
-    #         "transcription_end_time": transcription_end_time.strftime(
-    #             "%Y-%m-%d | %H:%M:%S.%f"
-    #         )[:-3],
-    #         "transcription_time": f"{transcription_time} seconds",
-    #         "speech_length": f"{speech_length} seconds",
-    #         "transcription": transcription,
-    #     }
-
     def add_transcription_to_table(self, data):
         url = "http://192.168.1.26:8000/rest/v1/transcriptions_table"
         logger.debug(f"Sending data to Supabase API at {url}")
@@ -106,9 +75,7 @@ class TranscriberService:
             logger.error(f"Error while processing audio file: {e}", exc_info=True)
             return None
 
-    async def transcribe(
-        self, file_path, speech_end_timestamp, buffer_length
-    ):
+    async def transcribe(self, file_path, speech_end_timestamp, buffer_length):
         logger.debug(f"Starting transcription for file: {file_path}")
         try:
             mel = self.process_audio_file(file_path)
@@ -138,14 +105,13 @@ class TranscriberService:
 
                 # Create a data dictionary
                 data = {
-                    "user_id": "871fc14a-d733-4a5c-bc8e-1b21dab46a7b",
                     "content": result.text,
                     "speech_end_timestamp": speech_end_timestamp.isoformat(),
-                    "transcription_end_timestamp": transcription_end_timestamp.isoformat(),
                     "transcription_time": transcription_time.total_seconds(),
-                    "speech_length": buffer_length,
-                    "audio_file_url": file_path,
-                    "data_sent_timestamp": datetime.datetime.utcnow().isoformat(),
+                    # "transcription_end_timestamp": transcription_end_timestamp.isoformat(),
+                    # "speech_length": buffer_length,
+                    # "audio_file_url": file_path,
+                    # "data_sent_timestamp": datetime.datetime.utcnow().isoformat(),
                 }
                 print("Data:")
                 print(data)

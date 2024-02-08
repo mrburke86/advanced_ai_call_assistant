@@ -33497,3 +33497,1137 @@ sounddevice.PortAudioError: PortAudio not initialized [PaErrorCode -10000]
 sounddevice.PortAudioError: PortAudio not initialized [PaErrorCode -10000]
 
 2024-02-07 17:59:53,139 | ERROR | recorder.audio_capture_processor | Error in audio stream processing: PortAudio not initialized [PaErrorCode -10000]
+2024-02-07 19:56:36,587 | INFO | __main__ | 
+
+
+
+2024-02-07 19:56:36,587 | INFO | __main__ | Starting main program...
+2024-02-07 19:56:36,603 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-07 19:56:36,604 | INFO | __main__ | Audio capture thread started.
+2024-02-07 19:56:36,604 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-07 19:56:36,604 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-07 19:56:36,604 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-07 19:56:36,635 | INFO | __main__ | Transcription worker process started.
+2024-02-07 19:56:36,658 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-07 19:56:45,244 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-07 19:56:45,246 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-07 19:56:45,251 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-07 19:56:45,251 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-07 19:56:45,251 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-07 19:56:45,251 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-07 19:56:48,488 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-07 19:56:49,174 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-07 19:56:49,599 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-07 19:56:49,599 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-07 19:56:49,599 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 19:56:56,684 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 19:57:11,705 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 19:57:11.705820
+2024-02-07 19:57:11,706 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_19-57-11.wav
+2024-02-07 19:57:11,742 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_19-57-11.wav
+2024-02-07 19:57:11,749 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_19-57-11.wav
+2024-02-07 19:57:11,751 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 14.0 seconds
+.wav', datetime.datetime(2024, 2, 7, 19, 57, 11, 705820), 14.0)
+2024-02-07 19:57:11,751 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_19-57-11.wav
+2024-02-07 19:57:11,752 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 19:57:11,752 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_19-57-11.wav
+2024-02-07 19:57:11,753 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 19:57:12,990 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 19:57:17,366 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 19:57:17.365513
+2024-02-07 19:57:17,366 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 19:57:11.705820
+2024-02-07 19:57:17,366 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.659693 seconds
+2024-02-07 19:57:17,366 | INFO | transcriber.transcriber_service | ###### Transcription result: of the England players on since English rugby began so all of us 1870 were you you're going to be more in three seconds to find Tinzer because he said I was 2000 and he was third down the list there.
+2024-02-07 19:57:17,367 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 19:57:17,367 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 19:57:17,367 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "of the England players on since English rugby began so all of us 1870 were you you're going to be more in three seconds to find Tinzer because he said I was 2000 and he was third down the list there.", "speech_end_timestamp": "2024-02-07T19:57:11.705820", "transcription_end_timestamp": "2024-02-07T19:57:17.365513", "transcription_time": 5.659693}
+2024-02-07 19:57:17,398 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 19:57:20,384 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 400 None
+2024-02-07 19:57:20,386 | DEBUG | transcriber.transcriber_service | Response Status Code: 400
+2024-02-07 19:57:20,387 | DEBUG | transcriber.transcriber_service | Response Body: {"code":"PGRST204","details":null,"hint":null,"message":"Column 'transcription_end_timestamp' of relation 'transcriptions_table' does not exist"}
+2024-02-07 19:57:20,388 | ERROR | transcriber.transcriber_service | Non-successful response: {"code":"PGRST204","details":null,"hint":null,"message":"Column 'transcription_end_timestamp' of relation 'transcriptions_table' does not exist"}
+2024-02-07 19:57:20,433 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_19-57-11.wav completed.
+2024-02-07 19:57:20,433 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 19:58:41,185 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 19:58:55,194 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 19:58:55.194464
+2024-02-07 19:58:55,195 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_19-58-55.wav
+2024-02-07 19:58:55,216 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_19-58-55.wav
+2024-02-07 19:58:55,216 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_19-58-55.wav
+2024-02-07 19:58:55,217 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 13.0 seconds
+2024-02-07 19:58:55,217 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_19-58-55.wav', datetime.datetime(2024, 2, 7, 19, 58, 55, 194464), 13.0)
+2024-02-07 19:58:55,217 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 19:58:55,217 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_19-58-55.wav
+2024-02-07 19:58:55,218 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_19-58-55.wav
+2024-02-07 19:58:55,218 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 19:58:55,639 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 19:59:00,143 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 19:59:00.143882
+2024-02-07 19:59:00,144 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 19:58:55.194464
+2024-02-07 19:59:00,144 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.949418 seconds
+2024-02-07 19:59:00,144 | INFO | transcriber.transcriber_service | ###### Transcription result: J-10 Dog West Hamaski. Before Michael Brown, there is James J. W. I am going to be on the next page here and I was there, Jonathan J. Mase. Thank you very much, Johnny May Tours. You've got a job.
+2024-02-07 19:59:00,145 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 19:59:00,146 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 19:59:00,146 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "J-10 Dog West Hamaski. Before Michael Brown, there is James J. W. I am going to be on the next page here and I was there, Jonathan J. Mase. Thank you very much, Johnny May Tours. You've got a job.", "speech_end_timestamp": "2024-02-07T19:58:55.194464", "transcription_end_timestamp": "2024-02-07T19:59:00.143882", "transcription_time": 4.949418}
+2024-02-07 19:59:00,149 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 19:59:00,197 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 400 None
+2024-02-07 19:59:00,199 | DEBUG | transcriber.transcriber_service | Response Status Code: 400
+2024-02-07 19:59:00,199 | DEBUG | transcriber.transcriber_service | Response Body: {"code":"PGRST204","details":null,"hint":null,"message":"Column 'transcription_end_timestamp' of relation 'transcriptions_table' does not exist"}
+2024-02-07 19:59:00,199 | ERROR | transcriber.transcriber_service | Non-successful response: {"code":"PGRST204","details":null,"hint":null,"message":"Column 'transcription_end_timestamp' of relation 'transcriptions_table' does not exist"}
+2024-02-07 19:59:00,199 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_19-58-55.wav completed.
+2024-02-07 19:59:00,200 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:00:07,155 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-07 20:00:07,155 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-07 20:00:07,156 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-07 20:00:07,156 | INFO | __main__ | Main application terminated.
+2024-02-07 20:00:07,156 | ERROR | __mp_main__ | Error occurred in transcription worker: 'Queue' object has no attribute 'Empty'
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 31, in transcription_worker
+    item = transcription_queue.get()
+  File "C:\Python399\lib\multiprocessing\queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "C:\Python399\lib\multiprocessing\connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "C:\Python399\lib\multiprocessing\connection.py", line 310, in _recv_bytes
+    waitres = _winapi.WaitForMultipleObjects(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 53, in transcription_worker
+    except transcription_queue.Empty:
+AttributeError: 'Queue' object has no attribute 'Empty'
+2024-02-07 20:00:07,300 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-07 20:00:07,688 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-07 20:00:43,859 | INFO | __main__ | 
+
+
+
+2024-02-07 20:00:43,859 | INFO | __main__ | Starting main program...
+2024-02-07 20:00:43,873 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-07 20:00:43,873 | INFO | __main__ | Audio capture thread started.
+2024-02-07 20:00:43,873 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-07 20:00:43,874 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-07 20:00:43,874 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-07 20:00:43,906 | INFO | __main__ | Transcription worker process started.
+2024-02-07 20:00:43,918 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-07 20:00:48,434 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:00:50,623 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-07 20:00:50,623 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-07 20:00:50,625 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-07 20:00:50,625 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-07 20:00:50,625 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-07 20:00:50,625 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-07 20:00:53,827 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-07 20:00:53,827 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-07 20:00:53,827 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-07 20:00:53,828 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-07 20:00:53,828 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:01:13,437 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:01:13.437644
+2024-02-07 20:01:13,438 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-01-13.wav
+2024-02-07 20:01:13,511 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-01-13.wav
+2024-02-07 20:01:13,517 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-01-13.wav
+2024-02-07 20:01:13,518 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-01-13.wav', datetime.datetime(2024, 2, 7, 20, 1, 13, 437644), 24.0)
+2024-02-07 20:01:13,518 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 24.0 seconds
+2024-02-07 20:01:13,518 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-01-13.wav
+2024-02-07 20:01:13,518 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-01-13.wav
+2024-02-07 20:01:13,518 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:01:13,521 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:01:13,950 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:01:22,485 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:01:22.485024
+2024-02-07 20:01:22,486 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:01:13.437644
+2024-02-07 20:01:22,486 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:09.047380 seconds
+2024-02-07 20:01:22,486 | INFO | transcriber.transcriber_service | ###### Transcription result: Bob, when you finally hang up your booze, Bob Robby Museum, stadium tour, courtesy of Johnny May. I think it's time to record the pod. So welcome inside, here we are in the inner sanctum. You will be there and done it. For those of us who sit on the outside, it's quite exciting to be in the England chamber. It's quite medicinal. Lots of red, lots of white easier to imagine. A big analysis screen at the back of their baths and all sorts around the back. There's a big list with every
+2024-02-07 20:01:22,486 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 20:01:22,487 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 20:01:22,487 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Bob, when you finally hang up your booze, Bob Robby Museum, stadium tour, courtesy of Johnny May. I think it's time to record the pod. So welcome inside, here we are in the inner sanctum. You will be there and done it. For those of us who sit on the outside, it's quite exciting to be in the England chamber. It's quite medicinal. Lots of red, lots of white easier to imagine. A big analysis screen at the back of their baths and all sorts around the back. There's a big list with every", "speech_end_timestamp": "2024-02-07T20:01:13.437644", "transcription_end_timestamp": "2024-02-07T20:01:22.485024", "transcription_time": 9.04738}
+2024-02-07 20:01:22,491 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 20:01:22,514 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 400 None
+2024-02-07 20:01:22,515 | DEBUG | transcriber.transcriber_service | Response Status Code: 400
+2024-02-07 20:01:22,515 | DEBUG | transcriber.transcriber_service | Response Body: {"code":"PGRST204","details":null,"hint":null,"message":"Column 'transcription_end_timestamp' of relation 'transcriptions_table' does not exist"}
+2024-02-07 20:01:22,515 | ERROR | transcriber.transcriber_service | Non-successful response: {"code":"PGRST204","details":null,"hint":null,"message":"Column 'transcription_end_timestamp' of relation 'transcriptions_table' does not exist"}
+2024-02-07 20:01:22,515 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-01-13.wav completed.
+2024-02-07 20:01:22,515 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:05:41,008 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-07 20:05:41,009 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-07 20:05:41,009 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-07 20:05:41,010 | INFO | __main__ | Main application terminated.
+2024-02-07 20:05:41,009 | ERROR | __mp_main__ | Error occurred in transcription worker: 'Queue' object has no attribute 'Empty'
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 31, in transcription_worker
+    item = transcription_queue.get()
+  File "C:\Python399\lib\multiprocessing\queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "C:\Python399\lib\multiprocessing\connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "C:\Python399\lib\multiprocessing\connection.py", line 310, in _recv_bytes
+    waitres = _winapi.WaitForMultipleObjects(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 53, in transcription_worker
+    except transcription_queue.Empty:
+AttributeError: 'Queue' object has no attribute 'Empty'
+2024-02-07 20:05:41,088 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-07 20:05:41,452 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-07 20:06:04,957 | INFO | __main__ | 
+
+
+
+2024-02-07 20:06:04,958 | INFO | __main__ | Starting main program...
+2024-02-07 20:06:04,963 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-07 20:06:04,963 | INFO | __main__ | Audio capture thread started.
+2024-02-07 20:06:04,964 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-07 20:06:04,964 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-07 20:06:04,964 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-07 20:06:04,976 | INFO | __main__ | Transcription worker process started.
+2024-02-07 20:06:05,007 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-07 20:06:11,162 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-07 20:06:11,162 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-07 20:06:11,164 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-07 20:06:11,164 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-07 20:06:11,164 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-07 20:06:11,164 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-07 20:06:14,674 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-07 20:06:14,674 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-07 20:06:14,674 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-07 20:06:14,674 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-07 20:06:14,674 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:06:28,027 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:06:42,045 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:06:42.045248
+2024-02-07 20:06:42,045 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-06-42.wav
+2024-02-07 20:06:42,053 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-06-42.wav
+2024-02-07 20:06:42,054 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-06-42.wav
+2024-02-07 20:06:42,054 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 13.5 seconds
+2024-02-07 20:06:42,054 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:06:42,054 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-06-42.wav', datetime.datetime(2024, 2, 7, 20, 6, 42, 45248), 13.5)
+2024-02-07 20:06:42,054 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-06-42.wav
+2024-02-07 20:06:42,054 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:06:42,054 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-06-42.wav
+2024-02-07 20:06:42,233 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:06:46,903 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:06:46.903706
+2024-02-07 20:06:46,903 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:06:42.045248
+2024-02-07 20:06:46,903 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.858458 seconds
+2024-02-07 20:06:46,903 | INFO | transcriber.transcriber_service | ###### Transcription result: Everyone's debut dates on the side. All the England players do ever represent their country up there. What are you going to say? Johnny, when I came in, he said, ah, I didn't make any of the special boards. You can't see that in each position, there's some notable people like Dylan.
+2024-02-07 20:06:46,905 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 20:06:46,905 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 20:06:46,905 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Everyone's debut dates on the side. All the England players do ever represent their country up there. What are you going to say? Johnny, when I came in, he said, ah, I didn't make any of the special boards. You can't see that in each position, there's some notable people like Dylan.", "speech_end_timestamp": "2024-02-07T20:06:42.045248", "transcription_time": 4.858458}
+2024-02-07 20:06:46,912 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 20:06:47,043 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 20:06:47,043 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 20:06:47,043 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 20:06:47,044 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-06-42.wav completed.
+2024-02-07 20:06:47,044 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:32:29,035 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:32:39,514 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:32:39.514262
+2024-02-07 20:32:39,514 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-32-39.wav
+2024-02-07 20:32:39,521 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-32-39.wav
+2024-02-07 20:32:39,521 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-32-39.wav
+2024-02-07 20:32:39,521 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 9.5 seconds
+2024-02-07 20:32:39,521 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:32:39,523 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:32:39,523 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-32-39.wav', datetime.datetime(2024, 2, 7, 20, 32, 39, 514262), 9.5)
+2024-02-07 20:32:39,523 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-32-39.wav
+2024-02-07 20:32:39,523 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-32-39.wav
+2024-02-07 20:32:39,677 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:32:43,018 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:32:43.018781
+2024-02-07 20:32:43,018 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:32:39.514262
+2024-02-07 20:32:43,018 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:03.504519 seconds
+2024-02-07 20:32:43,019 | INFO | transcriber.transcriber_service | ###### Transcription result: Heart the over there and tens and tens to inspire you if you're playing for those who've gone before. I was thought I was too missing off the top of my head as
+2024-02-07 20:32:43,019 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 20:32:43,019 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 20:32:43,019 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Heart the over there and tens and tens to inspire you if you're playing for those who've gone before. I was thought I was too missing off the top of my head as", "speech_end_timestamp": "2024-02-07T20:32:39.514262", "transcription_time": 3.504519}
+2024-02-07 20:32:43,021 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 20:32:43,103 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 20:32:43,105 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 20:32:43,105 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 20:32:43,105 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-32-39.wav completed.
+2024-02-07 20:32:43,106 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:41:01,525 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:41:04,026 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:41:04.025886
+2024-02-07 20:41:04,026 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-41-04.wav
+2024-02-07 20:41:04,040 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-41-04.wav
+2024-02-07 20:41:04,043 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-41-04.wav
+2024-02-07 20:41:04,043 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 1.5 seconds
+2024-02-07 20:41:04,044 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:41:04,044 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:41:04,046 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-41-04.wav', datetime.datetime(2024, 2, 7, 20, 41, 4, 25886), 1.5)
+2024-02-07 20:41:04,047 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-41-04.wav
+2024-02-07 20:41:04,047 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-41-04.wav
+2024-02-07 20:41:04,329 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:41:06,237 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:41:06.237402
+2024-02-07 20:41:06,237 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:41:04.025886
+2024-02-07 20:41:06,237 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.211516 seconds
+2024-02-07 20:41:06,237 | WARNING | transcriber.transcriber_service | No speech detected or skipping the recording.
+2024-02-07 20:41:06,238 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-41-04.wav completed.
+2024-02-07 20:41:06,238 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:51:59,565 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:52:14,565 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:52:14.565066
+2024-02-07 20:52:14,565 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-52-14.wav
+2024-02-07 20:52:14,584 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-52-14.wav
+2024-02-07 20:52:14,586 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-52-14.wav
+2024-02-07 20:52:14,586 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 14.0 seconds
+2024-02-07 20:52:14,588 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-52-14.wav', datetime.datetime(2024, 2, 7, 20, 52, 14, 565066), 14.0)
+2024-02-07 20:52:14,587 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:52:14,589 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-52-14.wav
+2024-02-07 20:52:14,589 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-52-14.wav
+2024-02-07 20:52:14,590 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:52:14,862 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:52:20,539 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:52:20.539998
+2024-02-07 20:52:20,539 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:52:14.565066
+2024-02-07 20:52:20,541 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.974932 seconds
+2024-02-07 20:52:20,541 | INFO | transcriber.transcriber_service | ###### Transcription result: Hasgan, Rob Shaw. Yeah. But then I want to know who writes, who's in chart? Is it very... Who's in chart? Yeah, this list is something that is inspiring for us before we plet... Like, you change with the... So do you.
+2024-02-07 20:52:20,549 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 20:52:20,550 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 20:52:20,550 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Hasgan, Rob Shaw. Yeah. But then I want to know who writes, who's in chart? Is it very... Who's in chart? Yeah, this list is something that is inspiring for us before we plet... Like, you change with the... So do you.", "speech_end_timestamp": "2024-02-07T20:52:14.565066", "transcription_time": 5.974932}
+2024-02-07 20:52:20,556 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 20:52:20,861 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 20:52:20,862 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 20:52:20,862 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 20:52:20,863 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-52-14.wav completed.
+2024-02-07 20:52:20,863 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:54:09,084 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:54:15,074 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:54:15.074649
+2024-02-07 20:54:15,075 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-54-15.wav
+2024-02-07 20:54:15,084 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-54-15.wav
+2024-02-07 20:54:15,085 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-54-15.wav
+2024-02-07 20:54:15,085 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 5.5 seconds
+2024-02-07 20:54:15,085 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:54:15,085 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-54-15.wav', datetime.datetime(2024, 2, 7, 20, 54, 15, 74649), 5.5)
+2024-02-07 20:54:15,086 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:54:15,086 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-54-15.wav
+2024-02-07 20:54:15,086 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-54-15.wav
+2024-02-07 20:54:15,336 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:54:17,816 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:54:17.816140
+2024-02-07 20:54:17,816 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:54:15.074649
+2024-02-07 20:54:17,817 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.741491 seconds
+2024-02-07 20:54:17,817 | INFO | transcriber.transcriber_service | ###### Transcription result: more listening or both where we change.
+2024-02-07 20:54:17,817 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 20:54:17,818 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 20:54:17,818 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "more listening or both where we change.", "speech_end_timestamp": "2024-02-07T20:54:15.074649", "transcription_time": 2.741491}
+2024-02-07 20:54:17,821 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 20:54:17,950 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 20:54:17,951 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 20:54:17,952 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 20:54:17,952 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-54-15.wav completed.
+2024-02-07 20:54:17,952 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:56:27,074 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:56:36,595 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:56:36.595028
+2024-02-07 20:56:36,595 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-56-36.wav
+2024-02-07 20:56:36,604 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-56-36.wav
+2024-02-07 20:56:36,605 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-56-36.wav
+2024-02-07 20:56:36,605 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 9.0 seconds
+2024-02-07 20:56:36,605 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:56:36,605 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-56-36.wav', datetime.datetime(2024, 2, 7, 20, 56, 36, 595028), 9.0)
+2024-02-07 20:56:36,605 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:56:36,605 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-56-36.wav
+2024-02-07 20:56:36,606 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-56-36.wav
+2024-02-07 20:56:36,762 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:56:40,044 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:56:40.044592
+2024-02-07 20:56:40,045 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:56:36.595028
+2024-02-07 20:56:40,045 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:03.449564 seconds
+2024-02-07 20:56:40,045 | INFO | transcriber.transcriber_service | ###### Transcription result: List of like You've been here before yeah people who have been there before you the before the legends, but who've been there before you So you feel connected to the shirt and
+2024-02-07 20:56:40,045 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 20:56:40,046 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 20:56:40,046 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "List of like You've been here before yeah people who have been there before you the before the legends, but who've been there before you So you feel connected to the shirt and", "speech_end_timestamp": "2024-02-07T20:56:36.595028", "transcription_time": 3.449564}
+2024-02-07 20:56:40,049 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 20:56:40,188 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 20:56:40,190 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 20:56:40,190 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 20:56:40,191 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-56-36.wav completed.
+2024-02-07 20:56:40,191 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:57:18,074 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:57:27,076 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:57:27.076304
+2024-02-07 20:57:27,077 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-57-27.wav
+2024-02-07 20:57:27,103 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-57-27.wav
+2024-02-07 20:57:27,105 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-57-27.wav
+2024-02-07 20:57:27,106 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 8.5 seconds
+2024-02-07 20:57:27,106 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-57-27.wav', datetime.datetime(2024, 2, 7, 20, 57, 27, 76304), 8.5)
+2024-02-07 20:57:27,107 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-57-27.wav
+2024-02-07 20:57:27,107 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:57:27,108 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-57-27.wav
+2024-02-07 20:57:27,304 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:57:31,097 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:57:31.097050
+2024-02-07 20:57:31,097 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:57:27.076304
+2024-02-07 20:57:31,097 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.020746 seconds
+2024-02-07 20:57:31,097 | INFO | transcriber.transcriber_service | ###### Transcription result: and the history of the team and stuff. Does the genuinely inspire you? No, it's something like... It's still quite like it.
+2024-02-07 20:57:31,098 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 20:57:31,098 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 20:57:31,098 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "and the history of the team and stuff. Does the genuinely inspire you? No, it's something like... It's still quite like it.", "speech_end_timestamp": "2024-02-07T20:57:27.076304", "transcription_time": 4.020746}
+2024-02-07 20:57:31,101 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 20:57:31,190 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 20:57:31,191 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 20:57:31,191 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 20:57:31,192 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-57-27.wav completed.
+2024-02-07 20:57:31,192 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 20:59:16,076 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 20:59:19,084 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 20:59:19.084494
+2024-02-07 20:59:19,084 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_20-59-19.wav
+2024-02-07 20:59:19,087 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_20-59-19.wav
+2024-02-07 20:59:19,088 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_20-59-19.wav
+2024-02-07 20:59:19,088 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 2.0 seconds
+2024-02-07 20:59:19,088 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_20-59-19.wav', datetime.datetime(2024, 2, 7, 20, 59, 19, 84494), 2.0)
+2024-02-07 20:59:19,088 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 20:59:19,088 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_20-59-19.wav
+2024-02-07 20:59:19,088 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 20:59:19,089 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_20-59-19.wav
+2024-02-07 20:59:19,368 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 20:59:21,665 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 20:59:21.665405
+2024-02-07 20:59:21,665 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 20:59:19.084494
+2024-02-07 20:59:21,665 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.580911 seconds
+2024-02-07 20:59:21,666 | WARNING | transcriber.transcriber_service | No speech detected or skipping the recording.
+2024-02-07 20:59:21,666 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_20-59-19.wav completed.
+2024-02-07 20:59:21,666 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 21:13:17,595 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 21:13:35,085 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 21:13:35.085129
+2024-02-07 21:13:35,086 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_21-13-35.wav
+2024-02-07 21:13:35,122 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_21-13-35.wav
+2024-02-07 21:13:35,123 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_21-13-35.wav
+2024-02-07 21:13:35,124 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 16.5 seconds
+2024-02-07 21:13:35,125 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 21:13:35,125 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_21-13-35.wav', datetime.datetime(2024, 2, 7, 21, 13, 35, 85129), 16.5)
+2024-02-07 21:13:35,125 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 21:13:35,126 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_21-13-35.wav
+2024-02-07 21:13:35,126 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_21-13-35.wav
+2024-02-07 21:13:35,630 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 21:13:39,698 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 21:13:39.698524
+2024-02-07 21:13:39,698 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 21:13:35.085129
+2024-02-07 21:13:39,699 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.613395 seconds
+2024-02-07 21:13:39,699 | INFO | transcriber.transcriber_service | ###### Transcription result: You look at it every I don't really know what's going on in my head before I play not like too much not enough But it's something that you read yeah for sure and then you think like it's your part of that things so for me I'd have been coming on there rory underwear
+2024-02-07 21:13:39,699 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 21:13:39,699 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 21:13:39,700 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "You look at it every I don't really know what's going on in my head before I play not like too much not enough But it's something that you read yeah for sure and then you think like it's your part of that things so for me I'd have been coming on there rory underwear", "speech_end_timestamp": "2024-02-07T21:13:35.085129", "transcription_time": 4.613395}
+2024-02-07 21:13:39,703 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 21:13:39,795 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 21:13:39,796 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 21:13:39,796 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 21:13:39,797 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_21-13-35.wav completed.
+2024-02-07 21:13:39,797 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 22:05:52,104 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 22:06:03,603 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 22:06:03.603731
+2024-02-07 22:06:03,604 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_22-06-03.wav
+2024-02-07 22:06:03,636 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_22-06-03.wav
+2024-02-07 22:06:03,637 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_22-06-03.wav
+2024-02-07 22:06:03,638 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 11.0 seconds
+2024-02-07 22:06:03,639 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 22:06:03,640 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_22-06-03.wav', datetime.datetime(2024, 2, 7, 22, 6, 3, 603731), 11.0)
+2024-02-07 22:06:03,640 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 22:06:03,640 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_22-06-03.wav
+2024-02-07 22:06:03,640 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_22-06-03.wav
+2024-02-07 22:06:04,045 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 22:06:08,399 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 22:06:08.399677
+2024-02-07 22:06:08,399 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 22:06:03.603731
+2024-02-07 22:06:08,399 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.795946 seconds
+2024-02-07 22:06:08,400 | INFO | transcriber.transcriber_service | ###### Transcription result: For Rory Underwood. David Duckham, people from back in the zone. What a legend David Duckham. Or Blensky. I mean, to double like Jason Robinson, of course.
+2024-02-07 22:06:08,400 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 22:06:08,401 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 22:06:08,402 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "For Rory Underwood. David Duckham, people from back in the zone. What a legend David Duckham. Or Blensky. I mean, to double like Jason Robinson, of course.", "speech_end_timestamp": "2024-02-07T22:06:03.603731", "transcription_time": 4.795946}
+2024-02-07 22:06:08,404 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 22:06:08,499 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 22:06:08,500 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 22:06:08,501 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 22:06:08,501 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_22-06-03.wav completed.
+2024-02-07 22:06:08,501 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 22:15:47,092 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 22:15:55,590 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 22:15:55.590202
+2024-02-07 22:15:55,591 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_22-15-55.wav
+2024-02-07 22:15:55,601 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_22-15-55.wav
+2024-02-07 22:15:55,602 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_22-15-55.wav
+2024-02-07 22:15:55,603 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 7.5 seconds
+2024-02-07 22:15:55,603 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 22:15:55,603 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_22-15-55.wav', datetime.datetime(2024, 2, 7, 22, 15, 55, 590202), 7.5)
+2024-02-07 22:15:55,604 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_22-15-55.wav
+2024-02-07 22:15:55,604 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_22-15-55.wav
+2024-02-07 22:15:55,605 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 22:15:55,805 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 22:15:59,092 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 22:15:59.092021
+2024-02-07 22:15:59,093 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 22:15:55.590202
+2024-02-07 22:15:59,093 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:03.501819 seconds
+2024-02-07 22:15:59,093 | INFO | transcriber.transcriber_service | ###### Transcription result: But then obviously, Tins is on there for the centres and then the back row, no Rob Shaw has got there.
+2024-02-07 22:15:59,094 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 22:15:59,094 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 22:15:59,094 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "But then obviously, Tins is on there for the centres and then the back row, no Rob Shaw has got there.", "speech_end_timestamp": "2024-02-07T22:15:55.590202", "transcription_time": 3.501819}
+2024-02-07 22:15:59,101 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 22:15:59,252 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 22:15:59,252 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 22:15:59,253 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 22:15:59,254 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_22-15-55.wav completed.
+2024-02-07 22:15:59,255 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 22:19:22,112 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 22:19:41,612 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 22:19:41.612694
+2024-02-07 22:19:41,614 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_22-19-41.wav
+2024-02-07 22:19:41,692 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_22-19-41.wav
+2024-02-07 22:19:41,692 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_22-19-41.wav
+2024-02-07 22:19:41,693 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 19.0 seconds
+2024-02-07 22:19:41,693 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 22:19:41,693 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_22-19-41.wav', datetime.datetime(2024, 2, 7, 22, 19, 41, 612694), 19.0)
+2024-02-07 22:19:41,693 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_22-19-41.wav
+2024-02-07 22:19:41,693 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 22:19:41,693 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_22-19-41.wav
+2024-02-07 22:19:41,891 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 22:19:48,312 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 22:19:48.311146
+2024-02-07 22:19:48,312 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 22:19:41.612694
+2024-02-07 22:19:48,312 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:06.698452 seconds
+2024-02-07 22:19:48,312 | INFO | transcriber.transcriber_service | ###### Transcription result: Good news, it might be the list. It might take a head of Fisher Maggie Elfonsey, Richard Hill, Georgia Stevens, Tim Robber, Tim Robber Mike Tee, obviously great players, octopus Gammelin, what a name that is. I'm not, it's a sad to know, I didn't make the cut, but it's not personal or anything, but I'd begin to think it might be.
+2024-02-07 22:19:48,313 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 22:19:48,313 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 22:19:48,313 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Good news, it might be the list. It might take a head of Fisher Maggie Elfonsey, Richard Hill, Georgia Stevens, Tim Robber, Tim Robber Mike Tee, obviously great players, octopus Gammelin, what a name that is. I'm not, it's a sad to know, I didn't make the cut, but it's not personal or anything, but I'd begin to think it might be.", "speech_end_timestamp": "2024-02-07T22:19:41.612694", "transcription_time": 6.698452}
+2024-02-07 22:19:48,316 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 22:19:48,413 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 22:19:48,413 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 22:19:48,413 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 22:19:48,415 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_22-19-41.wav completed.
+2024-02-07 22:19:48,415 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-07 22:22:55,592 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-07 22:23:05,111 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-07 22:23:05.111225
+2024-02-07 22:23:05,111 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-07_22-23-05.wav
+2024-02-07 22:23:05,127 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-07_22-23-05.wav
+2024-02-07 22:23:05,127 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-07_22-23-05.wav
+2024-02-07 22:23:05,128 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 8.5 seconds
+2024-02-07 22:23:05,128 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-07_22-23-05.wav', datetime.datetime(2024, 2, 7, 22, 23, 5, 111225), 8.5)
+2024-02-07 22:23:05,128 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-07 22:23:05,129 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-07_22-23-05.wav
+2024-02-07 22:23:05,129 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-07_22-23-05.wav
+2024-02-07 22:23:05,129 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-07 22:23:05,389 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-07 22:23:09,306 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-07 22:23:09.304950
+2024-02-07 22:23:09,306 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-07 22:23:05.111225
+2024-02-07 22:23:09,306 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.193725 seconds
+2024-02-07 22:23:09,306 | INFO | transcriber.transcriber_service | ###### Transcription result: I tell you, we'll get you a marker pen and you can just add it. I would do it, that's what I think. Well, is it like for you being back in here so soon after so?
+2024-02-07 22:23:09,306 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-07 22:23:09,307 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-07 22:23:09,307 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "I tell you, we'll get you a marker pen and you can just add it. I would do it, that's what I think. Well, is it like for you being back in here so soon after so?", "speech_end_timestamp": "2024-02-07T22:23:05.111225", "transcription_time": 4.193725}
+2024-02-07 22:23:09,309 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-07 22:23:09,414 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-07 22:23:09,414 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-07 22:23:09,415 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-07 22:23:09,416 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-07_22-23-05.wav completed.
+2024-02-07 22:23:09,416 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 01:21:19,096 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 01:21:22,111 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 01:21:22.111009
+2024-02-08 01:21:22,113 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_01-21-22.wav
+2024-02-08 01:21:22,128 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_01-21-22.wav
+2024-02-08 01:21:22,129 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_01-21-22.wav
+2024-02-08 01:21:22,136 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 2.0 seconds
+2024-02-08 01:21:22,136 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 01:21:22,136 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 01:21:22,168 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_01-21-22.wav', datetime.datetime(2024, 2, 8, 1, 21, 22, 111009), 2.0)
+2024-02-08 01:21:22,182 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_01-21-22.wav
+2024-02-08 01:21:22,182 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_01-21-22.wav
+2024-02-08 01:21:22,432 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 01:21:26,331 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 01:21:26.331020
+2024-02-08 01:21:26,331 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 01:21:22.111009
+2024-02-08 01:21:26,331 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.220011 seconds
+2024-02-08 01:21:26,331 | WARNING | transcriber.transcriber_service | No speech detected or skipping the recording.
+2024-02-08 01:21:26,332 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_01-21-22.wav completed.
+2024-02-08 01:21:26,332 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 01:21:39,602 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 01:21:46,100 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 01:21:46.100592
+2024-02-08 01:21:46,101 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_01-21-46.wav
+2024-02-08 01:21:46,122 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_01-21-46.wav
+2024-02-08 01:21:46,123 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_01-21-46.wav
+2024-02-08 01:21:46,124 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 6.0 seconds
+2024-02-08 01:21:46,124 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_01-21-46.wav', datetime.datetime(2024, 2, 8, 1, 21, 46, 100592), 6.0)
+2024-02-08 01:21:46,125 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 01:21:46,125 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_01-21-46.wav
+2024-02-08 01:21:46,125 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+ecordings\2024-02-08_01-21-46.wav
+2024-02-08 01:21:46,578 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 01:21:46,601 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 01:21:50,243 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 01:21:50.243062
+2024-02-08 01:21:50,244 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 01:21:46.100592
+2024-02-08 01:21:50,244 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.142470 seconds
+2024-02-08 01:21:50,244 | INFO | transcriber.transcriber_service | ###### Transcription result: Let me remove this that just looks really bad and let's just put the actual curly braces
+2024-02-08 01:21:50,252 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 01:21:50,255 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 01:21:50,259 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Let me remove this that just looks really bad and let's just put the actual curly braces", "speech_end_timestamp": "2024-02-08T01:21:46.100592", "transcription_time": 4.14247}
+2024-02-08 01:21:50,289 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 01:21:50,606 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 01:21:50,610 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 01:21:50,610 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 01:21:50,623 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_01-21-46.wav completed.
+2024-02-08 01:21:50,624 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 01:21:58,611 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 01:21:58.611116
+2024-02-08 01:21:58,612 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_01-21-58.wav
+2024-02-08 01:21:58,643 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_01-21-58.wav
+2024-02-08 01:21:58,644 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_01-21-58.wav
+2024-02-08 01:21:58,645 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_01-21-58.wav', datetime.datetime(2024, 2, 8, 1, 21, 58, 611116), 11.0)
+2024-02-08 01:21:58,645 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 11.0 seconds
+2024-02-08 01:21:58,645 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+scription for file: backend\data\recordings\2024-02-08_01-21-58.wav
+2024-02-08 01:21:58,645 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_01-21-58.wav
+2024-02-08 01:21:58,646 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 01:21:58,995 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 01:22:03,829 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 01:22:03.828971
+2024-02-08 01:22:03,830 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 01:21:58.611116
+2024-02-08 01:22:03,830 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.217855 seconds
+2024-02-08 01:22:03,831 | INFO | transcriber.transcriber_service | ###### Transcription result: in here like that. So we can define that something we want to receive on the back and as the post request body for example can only contain probe one that is a string for example and probe two
+2024-02-08 01:22:03,833 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 01:22:03,833 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 01:22:03,833 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "in here like that. So we can define that something we want to receive on the back and as the post request body for example can only contain probe one that is a string for example and probe two", "speech_end_timestamp": "2024-02-08T01:21:58.611116", "transcription_time": 5.217855}
+2024-02-08 01:22:03,838 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 01:22:04,018 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 01:22:04,020 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 01:22:04,020 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 01:22:04,021 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_01-21-58.wav completed.
+2024-02-08 01:22:04,023 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:06:22,036 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-08 08:06:22,051 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-08 08:06:22,055 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-08 08:06:22,055 | INFO | __main__ | Main application terminated.
+2024-02-08 08:06:22,070 | ERROR | __mp_main__ | Error occurred in transcription worker: 'Queue' object has no attribute 'Empty'
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 31, in transcription_worker
+    item = transcription_queue.get()
+  File "C:\Python399\lib\multiprocessing\queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "C:\Python399\lib\multiprocessing\connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "C:\Python399\lib\multiprocessing\connection.py", line 310, in _recv_bytes
+    waitres = _winapi.WaitForMultipleObjects(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 53, in transcription_worker
+    except transcription_queue.Empty:
+AttributeError: 'Queue' object has no attribute 'Empty'
+2024-02-08 08:06:22,157 | ERROR | __main__ | Error occurred in audio capture and processing: Error querying host API 0
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 29, in capture_and_process_stream
+    original_audio, overflowed = stream.read(int(SAMPLE_RATE * CHUNK_DURATION_SECS))
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 1456, in read
+    data, overflowed = RawInputStream.read(self, frames)
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 1236, in read
+    _check(err)
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 2745, in _check
+    raise PortAudioError(errormsg, err, hosterror_info)
+sounddevice.PortAudioError: <unprintable PortAudioError object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 77, in audio_capture_and_processing_wrapper
+    for (
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 44, in capture_and_process_stream
+    logger.error(f"Error in audio stream processing: {e}")
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 2226, in __str__
+    hostname = query_hostapis(host_api)['name']
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 646, in query_hostapis
+    raise PortAudioError(f'Error querying host API {index}')
+sounddevice.PortAudioError: Error querying host API 0
+2024-02-08 08:06:22,223 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-08 08:06:22,270 | DEBUG | __main__ | Audio capture and processing stream has ended.
+2024-02-08 08:06:22,335 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-08 08:08:10,163 | INFO | __main__ | 
+
+
+
+2024-02-08 08:08:10,164 | INFO | __main__ | Starting main program...
+2024-02-08 08:08:10,180 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-02-08 08:08:10,180 | INFO | __main__ | Audio capture thread started.
+2024-02-08 08:08:10,180 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-02-08 08:08:10,181 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-02-08 08:08:10,181 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-02-08 08:08:10,213 | INFO | __main__ | Transcription worker process started.
+2024-02-08 08:08:10,236 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-02-08 08:08:14,804 | DEBUG | __mp_main__ | Worker main function started.
+2024-02-08 08:08:14,804 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-02-08 08:08:14,806 | DEBUG | __mp_main__ | Transcription worker started.
+2024-02-08 08:08:14,806 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-02-08 08:08:14,806 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-02-08 08:08:14,806 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-02-08 08:08:17,189 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-02-08 08:08:17,189 | INFO | utils.load_model | CUDA not available, loaded Whisper model onto CPU.
+2024-02-08 08:08:17,190 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-02-08 08:08:17,190 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-02-08 08:08:17,190 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:08:32,297 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 08:08:47,777 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 08:08:47.777406
+2024-02-08 08:08:47,778 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_08-08-47.wav
+2024-02-08 08:08:47,796 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_08-08-47.wav
+2024-02-08 08:08:47,799 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_08-08-47.wav
+2024-02-08 08:08:47,800 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_08-08-47.wav', datetime.datetime(2024, 2, 8, 8, 8, 47, 777406), 15.0)
+2024-02-08 08:08:47,800 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 15.0 seconds
+2024-02-08 08:08:47,800 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_08-08-47.wav
+2024-02-08 08:08:47,800 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 08:08:47,800 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_08-08-47.wav
+2024-02-08 08:08:47,801 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 08:08:48,377 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 08:08:55,814 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 08:08:55.814494
+2024-02-08 08:08:55,814 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 08:08:47.777406
+2024-02-08 08:08:55,814 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:08.037088 seconds
+2024-02-08 08:08:55,815 | INFO | transcriber.transcriber_service | ###### Transcription result: As it back to the user, it's going to be hosted under slash API slash message. Now, before we're going to take a look at all the other stuff that react query provides to us, we're just going to make sure that this endpoint works. This fetch request is going to be of method.
+2024-02-08 08:08:55,815 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 08:08:55,815 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 08:08:55,815 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "As it back to the user, it's going to be hosted under slash API slash message. Now, before we're going to take a look at all the other stuff that react query provides to us, we're just going to make sure that this endpoint works. This fetch request is going to be of method.", "speech_end_timestamp": "2024-02-08T08:08:47.777406", "transcription_time": 8.037088}
+2024-02-08 08:08:55,832 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 08:08:55,979 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 08:08:55,979 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 08:08:55,979 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 08:08:55,980 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_08-08-47.wav completed.
+2024-02-08 08:08:55,980 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:18:34,267 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 08:18:54,779 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 08:18:54.779211
+2024-02-08 08:18:54,779 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_08-18-54.wav
+2024-02-08 08:18:54,833 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_08-18-54.wav
+2024-02-08 08:18:54,833 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_08-18-54.wav
+2024-02-08 08:18:54,834 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 20.0 seconds
+2024-02-08 08:18:54,835 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 08:18:54,835 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_08-18-54.wav', datetime.datetime(2024, 2, 8, 8, 18, 54, 779211), 20.0)
+2024-02-08 08:18:54,836 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_08-18-54.wav
+2024-02-08 08:18:54,836 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_08-18-54.wav
+2024-02-08 08:18:54,837 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 08:18:55,049 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 08:18:58,898 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 08:18:58.897281
+2024-02-08 08:18:58,898 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 08:18:54.779211
+2024-02-08 08:18:58,898 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:04.118070 seconds
+2024-02-08 08:18:58,898 | INFO | transcriber.transcriber_service | ###### Transcription result: be equal to a weight, fetch and the route we're going to use to generate the readable stream and pass it back to the user is going to be hosted under slash API slash message. Now, before we're going to take a look at all the other stuff that react query provides to us, we're just going to make sure that this endpoint works.
+2024-02-08 08:18:58,898 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 08:18:58,899 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 08:18:58,899 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "be equal to a weight, fetch and the route we're going to use to generate the readable stream and pass it back to the user is going to be hosted under slash API slash message. Now, before we're going to take a look at all the other stuff that react query provides to us, we're just going to make sure that this endpoint works.", "speech_end_timestamp": "2024-02-08T08:18:54.779211", "transcription_time": 4.11807}
+2024-02-08 08:18:58,901 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 08:18:59,014 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 08:18:59,014 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 08:18:59,014 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 08:18:59,015 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_08-18-54.wav completed.
+2024-02-08 08:18:59,015 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:21:10,797 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 08:21:23,278 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 08:21:23.278730
+2024-02-08 08:21:23,279 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_08-21-23.wav
+2024-02-08 08:21:23,312 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_08-21-23.wav
+2024-02-08 08:21:23,314 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_08-21-23.wav
+2024-02-08 08:21:23,316 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 12.0 seconds
+2024-02-08 08:21:23,316 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_08-21-23.wav', datetime.datetime(2024, 2, 8, 8, 21, 23, 278730), 12.0)
+2024-02-08 08:21:23,317 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_08-21-23.wav
+2024-02-08 08:21:23,318 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_08-21-23.wav
+2024-02-08 08:21:23,318 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 08:21:23,876 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 08:21:28,533 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 08:21:28.533985
+2024-02-08 08:21:28,535 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 08:21:23.278730
+2024-02-08 08:21:28,535 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.255255 seconds
+2024-02-08 08:21:28,535 | INFO | transcriber.transcriber_service | ###### Transcription result: going to be of method post because we want to submit the message data the user gave us with the headers of object and then inside of here
+2024-02-08 08:21:28,535 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 08:21:28,536 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 08:21:28,536 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "going to be of method post because we want to submit the message data the user gave us with the headers of object and then inside of here", "speech_end_timestamp": "2024-02-08T08:21:23.278730", "transcription_time": 5.255255}
+2024-02-08 08:21:28,539 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 08:21:28,674 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 08:21:28,675 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 08:21:28,675 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 08:21:28,676 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_08-21-23.wav completed.
+2024-02-08 08:21:28,676 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:34:09,787 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 08:34:21,798 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 08:34:21.798193
+2024-02-08 08:34:21,799 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_08-34-21.wav
+2024-02-08 08:34:21,819 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_08-34-21.wav
+2024-02-08 08:34:21,820 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_08-34-21.wav
+2024-02-08 08:34:21,820 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 11.0 seconds
+2024-02-08 08:34:21,820 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 08:34:21,820 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 08:34:21,821 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_08-34-21.wav', datetime.datetime(2024, 2, 8, 8, 34, 21, 798193), 11.0)
+2024-02-08 08:34:21,822 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_08-34-21.wav
+2024-02-08 08:34:21,822 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_08-34-21.wav
+2024-02-08 08:34:21,993 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 08:34:24,309 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 08:34:24.309377
+2024-02-08 08:34:24,309 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 08:34:21.798193
+2024-02-08 08:34:24,309 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.511184 seconds
+2024-02-08 08:34:24,309 | INFO | transcriber.transcriber_service | ###### Transcription result: The content-type is going to be of application-json and the body we're going to pass into this post request.
+2024-02-08 08:34:24,310 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 08:34:24,310 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 08:34:24,310 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "The content-type is going to be of application-json and the body we're going to pass into this post request.", "speech_end_timestamp": "2024-02-08T08:34:21.798193", "transcription_time": 2.511184}
+2024-02-08 08:34:24,312 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 08:34:24,408 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 08:34:24,409 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 08:34:24,409 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 08:34:24,410 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_08-34-21.wav completed.
+2024-02-08 08:34:24,410 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:49:14,306 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 08:49:26,299 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 08:49:26.299725
+2024-02-08 08:49:26,300 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_08-49-26.wav
+2024-02-08 08:49:26,331 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_08-49-26.wav
+2024-02-08 08:49:26,332 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_08-49-26.wav
+2024-02-08 08:49:26,333 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 10.5 seconds
+2024-02-08 08:49:26,334 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 08:49:26,334 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_08-49-26.wav', datetime.datetime(2024, 2, 8, 8, 49, 26, 299725), 10.5)
+2024-02-08 08:49:26,335 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_08-49-26.wav
+2024-02-08 08:49:26,335 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 08:49:26,335 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_08-49-26.wav
+2024-02-08 08:49:26,633 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 08:49:28,795 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 08:49:28.795355
+2024-02-08 08:49:28,796 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 08:49:26.299725
+2024-02-08 08:49:28,796 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.495630 seconds
+2024-02-08 08:49:28,796 | INFO | transcriber.transcriber_service | ###### Transcription result: It's going to be Jason dot stringify the okay the messages well, I was a bit too fast here the messages is something we don't have
+2024-02-08 08:49:28,796 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 08:49:28,796 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 08:49:28,797 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "It's going to be Jason dot stringify the okay the messages well, I was a bit too fast here the messages is something we don't have", "speech_end_timestamp": "2024-02-08T08:49:26.299725", "transcription_time": 2.49563}
+2024-02-08 08:49:28,799 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 08:49:28,874 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 08:49:28,874 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 08:49:28,875 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 08:49:28,876 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_08-49-26.wav completed.
+2024-02-08 08:49:28,876 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:55:54,297 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 08:56:34,299 | DEBUG | recorder.audio_buffer | Buffer trimmed to maximum length: 1280000
+2024-02-08 08:56:34,803 | DEBUG | recorder.audio_buffer | Buffer trimmed to maximum length: 1280000
+2024-02-08 08:56:35,293 | DEBUG | recorder.audio_buffer | Buffer trimmed to maximum length: 1280000
+2024-02-08 08:56:35,789 | DEBUG | recorder.audio_buffer | Buffer trimmed to maximum length: 1280000
+2024-02-08 08:56:36,312 | DEBUG | recorder.audio_buffer | Buffer trimmed to maximum length: 1280000
+2024-02-08 08:56:37,796 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 08:56:37.796954
+2024-02-08 08:56:37,796 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_08-56-37.wav
+2024-02-08 08:56:37,829 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_08-56-37.wav
+2024-02-08 08:56:37,830 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_08-56-37.wav
+2024-02-08 08:56:37,830 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 40.0 seconds
+2024-02-08 08:56:37,830 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 08:56:37,830 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_08-56-37.wav', datetime.datetime(2024, 2, 8, 8, 56, 37, 796954), 40.0)
+2024-02-08 08:56:37,831 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_08-56-37.wav
+2024-02-08 08:56:37,831 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_08-56-37.wav
+2024-02-08 08:56:37,831 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 08:56:38,014 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 08:56:42,909 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 08:56:42.909643
+2024-02-08 08:56:42,909 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 08:56:37.796954
+2024-02-08 08:56:42,909 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.112689 seconds
+2024-02-08 08:56:42,909 | WARNING | transcriber.transcriber_service | No speech detected or skipping the recording.
+2024-02-08 08:56:42,909 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_08-56-37.wav completed.
+2024-02-08 08:56:42,910 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 08:59:12,318 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 08:59:29,797 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 08:59:29.797153
+2024-02-08 08:59:29,797 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_08-59-29.wav
+2024-02-08 08:59:29,808 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_08-59-29.wav
+2024-02-08 08:59:29,809 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_08-59-29.wav
+2024-02-08 08:59:29,809 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 16.5 seconds
+2024-02-08 08:59:29,810 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 08:59:29,810 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 08:59:29,810 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_08-59-29.wav', datetime.datetime(2024, 2, 8, 8, 59, 29, 797153), 16.5)
+2024-02-08 08:59:29,810 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_08-59-29.wav
+2024-02-08 08:59:29,810 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_08-59-29.wav
+2024-02-08 08:59:29,927 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 08:59:33,066 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 08:59:33.066363
+2024-02-08 08:59:33,066 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 08:59:29.797153
+2024-02-08 08:59:33,066 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:03.269210 seconds
+2024-02-08 08:59:33,066 | INFO | transcriber.transcriber_service | ###### Transcription result: It's query by the way. So if everything goes smoothly with this request, we can just console log a message called success from the API endpoint. Now currently this set message is never being invoked and realistically when should it be invoked?
+2024-02-08 08:59:33,066 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 08:59:33,067 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 08:59:33,067 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "It's query by the way. So if everything goes smoothly with this request, we can just console log a message called success from the API endpoint. Now currently this set message is never being invoked and realistically when should it be invoked?", "speech_end_timestamp": "2024-02-08T08:59:29.797153", "transcription_time": 3.26921}
+2024-02-08 08:59:33,070 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 08:59:33,153 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 08:59:33,153 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 08:59:33,153 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 08:59:33,154 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_08-59-29.wav completed.
+2024-02-08 08:59:33,154 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 09:12:21,308 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 09:12:55,799 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 09:12:55.799194
+2024-02-08 09:12:55,800 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_09-12-55.wav
+2024-02-08 09:12:55,846 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_09-12-55.wav
+2024-02-08 09:12:55,846 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_09-12-55.wav
+2024-02-08 09:12:55,847 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 34.0 seconds
+2024-02-08 09:12:55,847 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 09:12:55,847 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_09-12-55.wav', datetime.datetime(2024, 2, 8, 9, 12, 55, 799194), 34.0)
+2024-02-08 09:12:55,848 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 09:12:55,848 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_09-12-55.wav
+2024-02-08 09:12:55,848 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_09-12-55.wav
+2024-02-08 09:12:56,035 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 09:13:01,852 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 09:13:01.852944
+2024-02-08 09:13:01,852 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 09:12:55.799194
+2024-02-08 09:13:01,852 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:06.053750 seconds
+2024-02-08 09:13:01,853 | WARNING | transcriber.transcriber_service | No speech detected or skipping the recording.
+2024-02-08 09:13:01,853 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_09-12-55.wav completed.
+2024-02-08 09:13:01,853 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 09:14:32,286 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 09:14:43,286 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 09:14:43.286849
+2024-02-08 09:14:43,287 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_09-14-43.wav
+2024-02-08 09:14:43,299 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_09-14-43.wav
+2024-02-08 09:14:43,299 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_09-14-43.wav
+2024-02-08 09:14:43,300 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 10.0 seconds
+2024-02-08 09:14:43,300 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_09-14-43.wav', datetime.datetime(2024, 2, 8, 9, 14, 43, 286849), 10.0)
+2024-02-08 09:14:43,300 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 09:14:43,300 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_09-14-43.wav
+2024-02-08 09:14:43,301 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_09-14-43.wav
+2024-02-08 09:14:43,301 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 09:14:43,516 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 09:14:45,739 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 09:14:45.739061
+2024-02-08 09:14:45,740 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 09:14:43.286849
+2024-02-08 09:14:45,740 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.452212 seconds
+2024-02-08 09:14:45,740 | INFO | transcriber.transcriber_service | ###### Transcription result: First off, let's check if the key is the enter key and we can do that by saying e dot key if that is triple equal to enter with a key.
+2024-02-08 09:14:45,740 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 09:14:45,740 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 09:14:45,740 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "First off, let's check if the key is the enter key and we can do that by saying e dot key if that is triple equal to enter with a key.", "speech_end_timestamp": "2024-02-08T09:14:43.286849", "transcription_time": 2.452212}
+2024-02-08 09:14:45,745 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 09:14:45,824 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 09:14:45,825 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 09:14:45,825 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 09:14:45,825 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_09-14-43.wav completed.
+2024-02-08 09:14:45,825 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 09:20:35,306 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 09:20:49,817 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 09:20:49.817058
+2024-02-08 09:20:49,817 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_09-20-49.wav
+2024-02-08 09:20:49,826 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_09-20-49.wav
+2024-02-08 09:20:49,827 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_09-20-49.wav
+2024-02-08 09:20:49,827 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 13.5 seconds
+2024-02-08 09:20:49,827 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 09:20:49,827 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 09:20:49,828 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_09-20-49.wav', datetime.datetime(2024, 2, 8, 9, 20, 49, 817058), 13.5)
+2024-02-08 09:20:49,828 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_09-20-49.wav
+2024-02-08 09:20:49,828 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_09-20-49.wav
+2024-02-08 09:20:49,981 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 09:20:52,626 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 09:20:52.626170
+2024-02-08 09:20:52,626 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 09:20:49.817058
+2024-02-08 09:20:52,626 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.809112 seconds
+2024-02-08 09:20:52,626 | INFO | transcriber.transcriber_service | ###### Transcription result: capital E and this is not the E dot shift key. So if the user is pressing enter and shift, that means they want I keep doing that. They want to move into a new line whereas if they just
+2024-02-08 09:20:52,627 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 09:20:52,627 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 09:20:52,627 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "capital E and this is not the E dot shift key. So if the user is pressing enter and shift, that means they want I keep doing that. They want to move into a new line whereas if they just", "speech_end_timestamp": "2024-02-08T09:20:49.817058", "transcription_time": 2.809112}
+2024-02-08 09:20:52,629 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 09:20:52,696 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 09:20:52,697 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 09:20:52,697 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 09:20:52,698 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_09-20-49.wav completed.
+2024-02-08 09:20:52,698 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 09:24:11,308 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 09:24:26,297 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 09:24:26.297219
+2024-02-08 09:24:26,297 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_09-24-26.wav
+2024-02-08 09:24:26,308 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_09-24-26.wav
+2024-02-08 09:24:26,309 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_09-24-26.wav
+2024-02-08 09:24:26,309 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 14.5 seconds
+2024-02-08 09:24:26,309 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 09:24:26,309 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 09:24:26,309 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_09-24-26.wav', datetime.datetime(2024, 2, 8, 9, 24, 26, 297219), 14.5)
+2024-02-08 09:24:26,309 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_09-24-26.wav
+2024-02-08 09:24:26,310 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_09-24-26.wav
+2024-02-08 09:24:26,438 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 09:24:29,428 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 09:24:29.428329
+2024-02-08 09:24:29,428 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 09:24:26.297219
+2024-02-08 09:24:29,428 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:03.131110 seconds
+2024-02-08 09:24:29,428 | INFO | transcriber.transcriber_service | ###### Transcription result: press enter, they want to submit their message. It's a very common thing you'll see in messaging apps. A shift in the enter new line and regular enter send message. Very very common thing. First, let's prevent the default on the event by saying e.default.
+2024-02-08 09:24:29,429 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 09:24:29,429 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 09:24:29,429 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "press enter, they want to submit their message. It's a very common thing you'll see in messaging apps. A shift in the enter new line and regular enter send message. Very very common thing. First, let's prevent the default on the event by saying e.default.", "speech_end_timestamp": "2024-02-08T09:24:26.297219", "transcription_time": 3.13111}
+2024-02-08 09:24:29,431 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 09:24:29,496 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 09:24:29,496 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 09:24:29,497 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 09:24:29,497 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_09-24-26.wav completed.
+2024-02-08 09:24:29,497 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 09:27:11,796 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 09:27:25,796 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 09:27:25.796828
+2024-02-08 09:27:25,796 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_09-27-25.wav
+2024-02-08 09:27:25,815 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_09-27-25.wav
+2024-02-08 09:27:25,815 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_09-27-25.wav
+2024-02-08 09:27:25,815 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 13.0 seconds
+2024-02-08 09:27:25,815 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+backend\\data\\recordings\\2024-02-08_09-27-25.wav', datetime.datetime(2024, 2, 8, 9, 27, 25, 796828), 13.0)
+2024-02-08 09:27:25,815 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_09-27-25.wav
+2024-02-08 09:27:25,815 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_09-27-25.wav
+2024-02-08 09:27:25,816 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 09:27:25,949 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 09:27:28,228 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 09:27:28.228734
+2024-02-08 09:27:28,228 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 09:27:25.796828
+2024-02-08 09:27:28,228 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.431906 seconds
+2024-02-08 09:27:28,228 | INFO | transcriber.transcriber_service | ###### Transcription result: And then let's construct the message we're going to send to the back end. Cons message is going to be equal to. And then we need to think about what should a message really contain.
+2024-02-08 09:27:28,229 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 09:27:28,229 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 09:27:28,229 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "And then let's construct the message we're going to send to the back end. Cons message is going to be equal to. And then we need to think about what should a message really contain.", "speech_end_timestamp": "2024-02-08T09:27:25.796828", "transcription_time": 2.431906}
+2024-02-08 09:27:28,230 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 09:27:28,302 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 09:27:28,302 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 09:27:28,302 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 09:27:28,303 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_09-27-25.wav completed.
+2024-02-08 09:27:28,303 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 10:09:40,296 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 10:09:52,322 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 10:09:52.322429
+2024-02-08 10:09:52,323 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_10-09-52.wav
+2024-02-08 10:09:52,368 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_10-09-52.wav
+2024-02-08 10:09:52,369 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_10-09-52.wav
+2024-02-08 10:09:52,370 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 11.5 seconds
+2024-02-08 10:09:52,370 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 10:09:52,370 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 10:09:52,371 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_10-09-52.wav', datetime.datetime(2024, 2, 8, 10, 9, 52, 322429), 11.5)
+2024-02-08 10:09:52,372 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_10-09-52.wav
+2024-02-08 10:09:52,372 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_10-09-52.wav
+2024-02-08 10:09:52,717 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 10:09:57,813 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 10:09:57.813867
+2024-02-08 10:09:57,814 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 10:09:52.322429
+2024-02-08 10:09:57,814 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.491438 seconds
+2024-02-08 10:09:57,814 | INFO | transcriber.transcriber_service | ###### Transcription result: And there are three key things a message should have. One, it just needs an ID. And to generate the unique identifier for each message, we're going to use a package called nanoID.
+2024-02-08 10:09:57,815 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 10:09:57,815 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 10:09:57,815 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "And there are three key things a message should have. One, it just needs an ID. And to generate the unique identifier for each message, we're going to use a package called nanoID.", "speech_end_timestamp": "2024-02-08T10:09:52.322429", "transcription_time": 5.491438}
+2024-02-08 10:09:57,820 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 10:09:57,900 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 10:09:57,901 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 10:09:57,901 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 10:09:57,902 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_10-09-52.wav completed.
+2024-02-08 10:09:57,902 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 10:13:13,296 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 10:13:31,307 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 10:13:31.307810
+2024-02-08 10:13:31,308 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_10-13-31.wav
+2024-02-08 10:13:31,330 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_10-13-31.wav
+2024-02-08 10:13:31,330 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_10-13-31.wav
+2024-02-08 10:13:31,331 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 17.0 seconds
+2024-02-08 10:13:31,331 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 10:13:31,331 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_10-13-31.wav', datetime.datetime(2024, 2, 8, 10, 13, 31, 307810), 17.0)
+2024-02-08 10:13:31,332 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_10-13-31.wav
+2024-02-08 10:13:31,332 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_10-13-31.wav
+2024-02-08 10:13:31,332 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 10:13:31,482 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 10:13:35,116 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 10:13:35.116682
+2024-02-08 10:13:35,116 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 10:13:31.307810
+2024-02-08 10:13:35,117 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:03.808872 seconds
+2024-02-08 10:13:35,117 | INFO | transcriber.transcriber_service | ###### Transcription result: Very lightweight has millions of installs, it's very good. Yarn add nano ID or NPM installed nano ID. And then we're going to import that as a named import. And it probably will do that automatically. It will, great. And then the second thing we want on the message is
+2024-02-08 10:13:35,118 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 10:13:35,118 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 10:13:35,118 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Very lightweight has millions of installs, it's very good. Yarn add nano ID or NPM installed nano ID. And then we're going to import that as a named import. And it probably will do that automatically. It will, great. And then the second thing we want on the message is", "speech_end_timestamp": "2024-02-08T10:13:31.307810", "transcription_time": 3.808872}
+2024-02-08 10:13:35,120 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 10:13:35,197 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 10:13:35,197 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 10:13:35,197 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 10:13:35,198 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_10-13-31.wav completed.
+2024-02-08 10:13:35,198 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 10:21:42,817 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 10:22:00,307 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 10:22:00.307411
+2024-02-08 10:22:00,307 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_10-22-00.wav
+2024-02-08 10:22:00,319 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_10-22-00.wav
+2024-02-08 10:22:00,320 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_10-22-00.wav
+2024-02-08 10:22:00,320 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 17.0 seconds
+2024-02-08 10:22:00,320 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 10:22:00,320 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_10-22-00.wav', datetime.datetime(2024, 2, 8, 10, 22, 0, 307411), 17.0)
+2024-02-08 10:22:00,320 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 10:22:00,320 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_10-22-00.wav
+2024-02-08 10:22:00,320 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_10-22-00.wav
+2024-02-08 10:22:00,461 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 10:22:05,926 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 10:22:05.926181
+2024-02-08 10:22:05,927 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 10:22:00.307411
+2024-02-08 10:22:05,927 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.618770 seconds
+2024-02-08 10:22:05,927 | INFO | transcriber.transcriber_service | ###### Transcription result: We need to know if this is a user input or not because we're going to define them or style them differently. If it's a user input, it's going to be on the right side of the chat and in blue. And if it's a bot output, then it's going to be on the left hand side and in gray. So is user input?
+2024-02-08 10:22:05,928 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 10:22:05,928 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 10:22:05,928 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "We need to know if this is a user input or not because we're going to define them or style them differently. If it's a user input, it's going to be on the right side of the chat and in blue. And if it's a bot output, then it's going to be on the left hand side and in gray. So is user input?", "speech_end_timestamp": "2024-02-08T10:22:00.307411", "transcription_time": 5.61877}
+2024-02-08 10:22:05,932 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 10:22:06,003 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 10:22:06,003 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 10:22:06,003 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 10:22:06,004 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_10-22-00.wav completed.
+2024-02-08 10:22:06,004 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 10:23:59,799 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 10:24:13,796 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 10:24:13.796697
+2024-02-08 10:24:13,796 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_10-24-13.wav
+2024-02-08 10:24:13,808 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_10-24-13.wav
+2024-02-08 10:24:13,808 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_10-24-13.wav
+2024-02-08 10:24:13,809 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 13.0 seconds
+2024-02-08 10:24:13,809 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 10:24:13,809 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_10-24-13.wav', datetime.datetime(2024, 2, 8, 10, 24, 13, 796697), 13.0)
+2024-02-08 10:24:13,809 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_10-24-13.wav
+2024-02-08 10:24:13,809 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 10:24:13,809 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_10-24-13.wav
+2024-02-08 10:24:13,989 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 10:24:16,528 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 10:24:16.528204
+2024-02-08 10:24:16,528 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 10:24:13.796697
+2024-02-08 10:24:16,528 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.731507 seconds
+2024-02-08 10:24:16,528 | INFO | transcriber.transcriber_service | ###### Transcription result: is going to be true because this is what the user wrote and then the text is going to be the actual input and those are the three properties we need on each message and then
+2024-02-08 10:24:16,528 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 10:24:16,528 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 10:24:16,528 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "is going to be true because this is what the user wrote and then the text is going to be the actual input and those are the three properties we need on each message and then", "speech_end_timestamp": "2024-02-08T10:24:13.796697", "transcription_time": 2.731507}
+2024-02-08 10:24:16,530 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 10:24:16,603 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 10:24:16,604 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 10:24:16,604 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 10:24:16,605 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_10-24-13.wav completed.
+2024-02-08 10:24:16,605 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 10:39:43,287 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 10:39:55,796 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 10:39:55.796705
+2024-02-08 10:39:55,796 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_10-39-55.wav
+2024-02-08 10:39:55,806 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_10-39-55.wav
+2024-02-08 10:39:55,806 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_10-39-55.wav
+2024-02-08 10:39:55,806 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 11.0 seconds
+2024-02-08 10:39:55,808 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 10:39:55,808 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 10:39:55,808 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_10-39-55.wav', datetime.datetime(2024, 2, 8, 10, 39, 55, 796705), 11.0)
+2024-02-08 10:39:55,808 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_10-39-55.wav
+2024-02-08 10:39:55,808 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_10-39-55.wav
+2024-02-08 10:39:55,943 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 10:39:58,591 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 10:39:58.591021
+2024-02-08 10:39:58,591 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 10:39:55.796705
+2024-02-08 10:39:58,591 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.794316 seconds
+2024-02-08 10:39:58,591 | INFO | transcriber.transcriber_service | ###### Transcription result: We can send the message and pass the message. Remember this is the mutation we have put way up here. And the TypeScript is going to be complaining because
+2024-02-08 10:39:58,591 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 10:39:58,591 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 10:39:58,591 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "We can send the message and pass the message. Remember this is the mutation we have put way up here. And the TypeScript is going to be complaining because", "speech_end_timestamp": "2024-02-08T10:39:55.796705", "transcription_time": 2.794316}
+2024-02-08 10:39:58,592 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 10:39:58,642 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 10:39:58,643 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 10:39:58,643 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 10:39:58,644 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_10-39-55.wav completed.
+2024-02-08 10:39:58,644 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 11:00:59,788 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-02-08 11:01:24,307 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-02-08 11:01:24.307156
+2024-02-08 11:01:24,308 | DEBUG | recorder.audio_segment_manager | Created filename for recording: backend\data\recordings\2024-02-08_11-01-24.wav
+2024-02-08 11:01:24,341 | INFO | recorder.audio_segment_manager | Audio segment saved: backend\data\recordings\2024-02-08_11-01-24.wav
+2024-02-08 11:01:24,342 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: backend\data\recordings\2024-02-08_11-01-24.wav
+2024-02-08 11:01:24,342 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 24.0 seconds
+2024-02-08 11:01:24,343 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-02-08 11:01:24,343 | DEBUG | __mp_main__ | Received file_path from queue: ('backend\\data\\recordings\\2024-02-08_11-01-24.wav', datetime.datetime(2024, 2, 8, 11, 1, 24, 307156), 24.0)
+2024-02-08 11:01:24,343 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-02-08 11:01:24,343 | DEBUG | transcriber.transcriber_service | Starting transcription for file: backend\data\recordings\2024-02-08_11-01-24.wav
+2024-02-08 11:01:24,344 | DEBUG | transcriber.transcriber_service | Processing audio file: backend\data\recordings\2024-02-08_11-01-24.wav
+2024-02-08 11:01:24,672 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-02-08 11:01:29,718 | INFO | transcriber.transcriber_service | ###### Transcription Finish Time: 2024-02-08 11:01:29.718248
+2024-02-08 11:01:29,719 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-02-08 11:01:24.307156
+2024-02-08 11:01:29,719 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:05.411092 seconds
+2024-02-08 11:01:29,719 | INFO | transcriber.transcriber_service | ###### Transcription result: Currently, it's not expecting anything here and this will be expecting a message. However, if I just put a message and not type this explicitly with the TypeScript, it's going to say void because the TypeScript doesn't know what type the property has that we're going to pass inside of this function. So we need to tell TypeScript. This is going to be of type message TypeScript. You need to know that.
+2024-02-08 11:01:29,720 | DEBUG | transcriber.transcriber_service | Sending data to Supabase API at http://192.168.1.26:8000/rest/v1/transcriptions_table
+2024-02-08 11:01:29,721 | DEBUG | transcriber.transcriber_service | Request Headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICJyb2xlIjogInNlcnZpY2Vfcm9sZSIsCiAgImlzcyI6ICJzdXBhYmFzZSIsCiAgImlhdCI6IDE3MDY5MTg0MDAsCiAgImV4cCI6IDE4NjQ3NzEyMDAKfQ.I6ZIUDFnXtjzNjkLPj_1B8BThU9ZdrNaZhXpG-5_KeA', 'Content-Type': 'application/json', 'Prefer': 'return=minimal'}
+2024-02-08 11:01:29,721 | DEBUG | transcriber.transcriber_service | Request Payload: {"content": "Currently, it's not expecting anything here and this will be expecting a message. However, if I just put a message and not type this explicitly with the TypeScript, it's going to say void because the TypeScript doesn't know what type the property has that we're going to pass inside of this function. So we need to tell TypeScript. This is going to be of type message TypeScript. You need to know that.", "speech_end_timestamp": "2024-02-08T11:01:24.307156", "transcription_time": 5.411092}
+2024-02-08 11:01:29,724 | DEBUG | urllib3.connectionpool | Starting new HTTP connection (1): 192.168.1.26:8000
+2024-02-08 11:01:29,791 | DEBUG | urllib3.connectionpool | http://192.168.1.26:8000 "POST /rest/v1/transcriptions_table HTTP/1.1" 201 None
+2024-02-08 11:01:29,792 | DEBUG | transcriber.transcriber_service | Response Status Code: 201
+2024-02-08 11:01:29,792 | DEBUG | transcriber.transcriber_service | Response Body: 
+2024-02-08 11:01:29,793 | DEBUG | __mp_main__ | Transcription for backend\data\recordings\2024-02-08_11-01-24.wav completed.
+2024-02-08 11:01:29,793 | DEBUG | __mp_main__ | Waiting for file_path from queue...
+2024-02-08 11:02:33,548 | INFO | utils.utils | Signal received. Initiating shutdown sequence...
+2024-02-08 11:02:33,552 | INFO | __main__ | KeyboardInterrupt received. Stopping processes.
+2024-02-08 11:02:33,554 | INFO | __main__ | Termination signal sent to transcription worker.
+2024-02-08 11:02:33,555 | INFO | __main__ | Main application terminated.
+2024-02-08 11:02:33,535 | ERROR | __mp_main__ | Error occurred in transcription worker: 'Queue' object has no attribute 'Empty'
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 31, in transcription_worker
+    item = transcription_queue.get()
+  File "C:\Python399\lib\multiprocessing\queues.py", line 103, in get
+    res = self._recv_bytes()
+  File "C:\Python399\lib\multiprocessing\connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "C:\Python399\lib\multiprocessing\connection.py", line 310, in _recv_bytes
+    waitres = _winapi.WaitForMultipleObjects(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 53, in transcription_worker
+    except transcription_queue.Empty:
+AttributeError: 'Queue' object has no attribute 'Empty'
+2024-02-08 11:02:33,661 | DEBUG | __mp_main__ | Worker main function ended.
+2024-02-08 11:02:33,625 | ERROR | __main__ | Error occurred in audio capture and processing: Error querying host API 0
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 29, in capture_and_process_stream
+    original_audio, overflowed = stream.read(int(SAMPLE_RATE * CHUNK_DURATION_SECS))
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 1456, in read
+    data, overflowed = RawInputStream.read(self, frames)
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 1236, in read
+    _check(err)
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 2745, in _check
+    raise PortAudioError(errormsg, err, hosterror_info)
+sounddevice.PortAudioError: <unprintable PortAudioError object>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\main.py", line 77, in audio_capture_and_processing_wrapper
+    for (
+  File "C:\Users\markb\coding\full_stack_apps\advanced_ai_call_assistant\backend\recorder\audio_capture_processor.py", line 44, in capture_and_process_stream
+    logger.error(f"Error in audio stream processing: {e}")
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 2226, in __str__
+    hostname = query_hostapis(host_api)['name']
+  File "C:\Python399\lib\site-packages\sounddevice.py", line 646, in query_hostapis
+    raise PortAudioError(f'Error querying host API {index}')
+sounddevice.PortAudioError: Error querying host API 0
+2024-02-08 11:02:33,724 | DEBUG | __main__ | Audio capture and processing stream has ended.
+2024-02-08 11:02:34,537 | INFO | utils.utils | Signal received. Initiating shutdown sequence...

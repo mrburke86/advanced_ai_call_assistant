@@ -1,22 +1,14 @@
 // frontend\context\messages.tsx
 import { createContext, useState } from "react";
-import { nanoid } from "nanoid";
 import { Message } from "@/lib/validators/message";
 
 const defaultValue = [
   {
-    id: nanoid(),
+    message_id: "",
     isUserMessage: false,
-    content: "",
-    // content: "Hello, how can I help you?",
-    // create_at: "",
-    // data_sent_timestamp: "",
-    // speech_end_timestamp: "",
-    // speech_length: 0,
-    // transcription_end_timestamp: "",
-    // transcription_id: "",
-    // transcription_time: "",
-    // user_id: "",
+    content: "Lets fucking go, boy!!",
+    speech_end_timestamp: "",
+    transcription_time: 0,
   },
 ];
 
@@ -45,7 +37,7 @@ export function MessagesProvider({ children }: { children: React.ReactNode }) {
   };
 
   const removeMessage = (id: string) => {
-    setMessages((prev) => prev.filter((message) => message.id !== id));
+    setMessages((prev) => prev.filter((message) => message.message_id !== id));
   };
 
   const updateMessage = (
@@ -54,7 +46,7 @@ export function MessagesProvider({ children }: { children: React.ReactNode }) {
   ) => {
     setMessages((prev) =>
       prev.map((message) => {
-        if (message.id === id) {
+        if (message.message_id === id) {
           return { ...message, text: updateFn(message.content) };
         }
         return message;
