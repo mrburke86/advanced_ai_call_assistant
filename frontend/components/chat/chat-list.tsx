@@ -3,13 +3,14 @@
 import { ChatMessage } from "@/components/chat/chat-message";
 import { MessagesContext } from "@/context/messages";
 import { useChatSubscription } from "@/lib/hooks/useSupabaseSubscriptions";
-import { nanoid } from "@/lib/utils";
+import { cn, getFormattedTimestamp, nanoid } from "@/lib/utils";
 import { Message } from "@/lib/validators/message";
 import { useMutation } from "@tanstack/react-query";
 import { FC, HTMLAttributes, JSX, useContext } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
-import { Readable } from 'stream';
+import { Readable } from "stream";
+import { Separator } from "../ui/separator";
 
 interface ChatListProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -24,7 +25,6 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
   } = useContext(MessagesContext);
 
   const { mutate: sendMessageMutation, isPending } = useMutation({
-
     // Mutate Function
     mutationFn: async (_message: Message) => {
       console.log(
@@ -61,8 +61,7 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
       );
       if (!stream) throw new Error("No stream!");
       const message_id = nanoid();
-      
-      
+
       const responseMessage: Message = {
         message_id,
         isUserMessage: false,
@@ -76,9 +75,10 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
         message_id
       );
       console.log(
-        `[ChatList] ${getFormattedTimestamp()} - Message ID: ${message_id} | Response Message:`, responseMessage
+        `[ChatList] ${getFormattedTimestamp()} - Message ID: ${message_id} | Response Message:`,
+        responseMessage
       );
-      
+
       // Add message to context
       addMessage(responseMessage);
       setIsMessageUpdating(true);
@@ -127,51 +127,31 @@ export const ChatList: FC<ChatListProps> = ({ className, ...props }) => {
   const inverseMessages = [...messages].reverse();
 
   return (
-    <div
-      {...props}
-      className="relative mx-auto max-w-2xl px-4 border-2 border-red-400"
-    >
-      {messages.map((message) => (
+    <div {...props} className="relative mx-auto max-w-2xl px-4">
+      {messages.map((message, index) => (
         <div key={`${message.message_id}-${message.message_id}`}>
           <ChatMessage message={message} />
+          {index < messages.length - 1 && (
+            <Separator className="my-4 md:my-8" />
+          )}
         </div>
       ))}
     </div>
   );
 };
 
-// async function fetchChatBotResponse(userMessageContent: string): Promise<string> {
-//   const response = await fetch("/api/messages", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({ userMessageContent }),
-//   });
-//   return Promise.resolve(response);
-// }
-
 // Generate a formatted timestamp for logging
-function getFormattedTimestamp(): string {
-  const now = new Date();
-  const timeWithMilliseconds =
-    now.toLocaleTimeString("en-US", {
-      hour12: false,
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    }) +
-    "." +
-    String(now.getMilliseconds()).padStart(3, "0");
-  const date = now.toLocaleDateString("en-US");
-  return `${date}, ${timeWithMilliseconds}`;
-}
-
-// async function fetchChatBotResponse(
-//   userMessageContent: string
-// ): Promise<string> {
-//   // Simulate an API call to generate a response based on the userMessageContent
-//   // This is where you'd call OpenAI or another service
-//   const response = "Generated response based on: " + userMessageContent;
-//   return Promise.resolve(response);
+// function getFormattedTimestamp(): string {
+//   const now = new Date();
+//   const timeWithMilliseconds =
+//     now.toLocaleTimeString("en-US", {
+//       hour12: false,
+//       hour: "2-digit",
+//       minute: "2-digit",
+//       second: "2-digit",
+//     }) +
+//     "." +
+//     String(now.getMilliseconds()).padStart(3, "0");
+//   const date = now.toLocaleDateString("en-US");
+//   return `${date}, ${timeWithMilliseconds}`;
 // }

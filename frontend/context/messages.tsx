@@ -7,7 +7,7 @@ const defaultValue = [
     message_id: "",
     messageType: "",
     isUserMessage: false,
-    content: "Lets fucking go, boy!!",
+    content: "Are you ready to get started?",
     speech_end_timestamp: "",
     transcription_time: 0,
   },
@@ -18,7 +18,10 @@ export const MessagesContext = createContext<{
   isMessageUpdating: boolean;
   addMessage: (message: Message) => void;
   removeMessage: (message_id: string) => void;
-  updateMessage: (message_id: string, updateFn: (prevText: string) => string) => void;
+  updateMessage: (
+    message_id: string,
+    updateFn: (prevText: string) => string
+  ) => void;
   setIsMessageUpdating: (isUpdating: boolean) => void;
 }>({
   messages: [],
@@ -40,10 +43,12 @@ export function MessagesProvider({ children }: { children: React.ReactNode }) {
 
   // Remove Message
   const removeMessage = (message_id: string) => {
-    setMessages((prev) => prev.filter((message) => message.message_id !== message_id));
+    setMessages((prev) =>
+      prev.filter((message) => message.message_id !== message_id)
+    );
   };
 
-  // Update Messageq
+  // Update Message
   const updateMessage = (
     message_id: string,
     updateFn: (prevText: string) => string

@@ -25,8 +25,8 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
     // Chat Message Container
     <div
       className={cn(
-        "group relative mb-4 flex items-start md:-ml-12 rounded-md px-2 py-2 border bg-zinc-700 text-white",
-        isUserMessage ? "ml-auto bg-blue-600" : "mr-auto"
+        "group relative mb-4 flex items-start rounded-md px-2 py-2 border bg-zinc-700 text-white",
+        isUserMessage ? "ml-auto md:-ml-10 bg-blue-600" : "mr-auto md:-mr-10"
       )}
       {...props}
     >
@@ -39,7 +39,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
         {isUserMessage ? <IconUser /> : <IconOpenAI />}
       </div>
       <div className="flex-1 px-1 ml-4 space-y-2 overflow-hidden">
-        {/* <MemoizedReactMarkdown
+        <MemoizedReactMarkdown
           className="prose break-words dark:prose-invert prose-p:leading-relaxed prose-pre:p-0"
           remarkPlugins={[remarkGfm, remarkMath]}
           components={{
@@ -88,8 +88,8 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
           }}
         >
           {message.content}
-        </MemoizedReactMarkdown> */}
-        <MarkdownLite text={message.content} />
+        </MemoizedReactMarkdown>
+        {/* <MarkdownLite text={message.content} /> */}
         <div className={cn("text-xs text-gray-400")}>
           Transcription Time: {message.transcription_time.toFixed(2)} secs
         </div>

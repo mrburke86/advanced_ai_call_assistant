@@ -45,6 +45,21 @@ export function formatDate(input: string | number | Date): string {
   });
 }
 
+export function getFormattedTimestamp(): string {
+  const now = new Date();
+  const timeWithMilliseconds =
+    now.toLocaleTimeString("en-US", {
+      hour12: false,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }) +
+    "." +
+    String(now.getMilliseconds()).padStart(3, "0");
+  const date = now.toLocaleDateString("en-US");
+  return `${date}, ${timeWithMilliseconds}`;
+}
+
 // export const LogMessagesContext = () => {
 //   const context = useContext(MessagesContext);
 
