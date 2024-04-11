@@ -1,11 +1,4 @@
 // frontend\app\api\message\route.ts
-
-/**
- * This module handles the API route for processing messages and interacting with the OpenAI API.
- * It receives an array of messages, validates them, and sends them to the OpenAI API to generate a response.
- * The response is then streamed back to the client.
- */
-
 import { chatbotPrompt } from "@/helpers/constants/chatbot-prompt";
 import {
   ChatGPTMessage,
@@ -13,6 +6,12 @@ import {
   OpenAIStreamPayload,
 } from "@/lib/openai-stream";
 import { MessageArraySchema } from "@/lib/validators/message";
+
+/**
+ * This module handles the API route for processing messages and interacting with the OpenAI API.
+ * It receives an array of messages, validates them, and sends them to the OpenAI API to generate a response.
+ * The response is then streamed back to the client.
+ */
 
 // Get the OpenAI API model from environment variables or use a default value
 const OPENAI_API_MODEL = process.env.OPENAI_API_MODEL || "";
