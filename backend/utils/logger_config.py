@@ -11,9 +11,13 @@ def setup_logging():
     root_logger = logging.getLogger()
 
     if not root_logger.handlers:
-        log_file_path = os.path.join(
-            LOGS_DIR, f"current_ai_audio_assistant_2024-02-06.log"
-        )
+        # Generate today's log file name
+        today = datetime.date.today()
+        log_file_name = f"current_ai_audio_assistant_{today.strftime('%Y-%m-%d')}.log"
+        log_file_path = os.path.join(LOGS_DIR, log_file_name)
+
+        # Create the logs directory if it doesn't exist
+        os.makedirs(LOGS_DIR, exist_ok=True)
 
         # Define formatter for the file handler
         file_formatter = logging.Formatter(

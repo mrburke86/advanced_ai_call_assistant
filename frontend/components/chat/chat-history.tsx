@@ -1,8 +1,12 @@
 // frontend\components\chat\chat-history.tsx
+
+/**
+ * This module contains the ChatHistory component, which displays a list of chat conversations
+ * and a button to start a new chat. It uses the SidebarList component to render the chat history.
+ */
+
 import * as React from "react";
-
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
 import { SidebarList } from "@/components/sidebar/sidebar-list";
 import { buttonVariants } from "@/components/ui/button";
@@ -12,9 +16,15 @@ interface ChatHistoryProps {
   userId?: string;
 }
 
+/**
+ * ChatHistory component displays a list of chat conversations and a button to start a new chat.
+ * @param {ChatHistoryProps} props - The props object containing the userId.
+ * @returns {JSX.Element} - The rendered ChatHistory component.
+ */
 export async function ChatHistory({ userId }: ChatHistoryProps) {
   return (
     <div className="flex flex-col h-full">
+      {/* New Chat button */}
       <div className="px-2 my-4">
         <Link
           href="/"
@@ -27,8 +37,11 @@ export async function ChatHistory({ userId }: ChatHistoryProps) {
           New Chat
         </Link>
       </div>
+
+      {/* Chat history list */}
       <React.Suspense
         fallback={
+          // Fallback loading state
           <div className="flex flex-col flex-1 px-4 space-y-4 overflow-auto">
             {Array.from({ length: 10 }).map((_, i) => (
               <div
@@ -39,6 +52,7 @@ export async function ChatHistory({ userId }: ChatHistoryProps) {
           </div>
         }
       >
+        {/* Render the SidebarList component */}
         {/* @ts-ignore */}
         <SidebarList userId={userId} />
       </React.Suspense>
