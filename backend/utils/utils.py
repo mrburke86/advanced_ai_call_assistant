@@ -93,6 +93,17 @@ def signal_handling(signum, frame):
     logger.info("Signal received. Initiating shutdown sequence...")
     raise KeyboardInterrupt
 
+# Added graceful_shutdown function to handle shutdown cleanly.
+def graceful_shutdown(signum, frame, transcription_queue, shutdown_event, processes):
+    logger.info("Graceful shutdown initiated...")
+    shutdown_event.set()
+    transcription_queue.put(None)
+
+    for process in processes:
+        process.join()
+
+    logger.info("All processes and threads have been shut down.")
+    exit(0)
 
 # Setup and Start Recording Environment
 def setup_recording_environment(directory):

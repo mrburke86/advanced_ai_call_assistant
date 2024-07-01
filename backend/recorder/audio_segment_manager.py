@@ -6,6 +6,7 @@ import time
 import traceback  # for detailed error tracing
 
 import wavio as wv
+from colorama import Fore, Style
 
 from config import ORIGINAL_RECORDINGS_DIR, SAMPLE_RATE, SPEECH_BREAK_SECS
 from recorder import AudioBuffer
@@ -23,18 +24,17 @@ class AudioSegmentManager:
         logger.info("Audio segment manager initialized.")
 
     def process_audio_chunk(self, original_audio, is_speech_detected):
-        # logger.debug("Processing audio chunk...")
         try:
             # Speech detected
             if is_speech_detected:
                 # First Speech detected
                 if not self.speech_detected:
+                    print(Fore.BLUE + "Started recording.")
                     logger.info("Speech detected for the first time.")
                     self.speech_detected = True
 
                 self.last_speech_time = time.time()
                 self.audio_buffer.append_chunk(original_audio)
-                # logger.debug("Appended audio chunk to buffer.")
 
             # Speech finished
             elif (
@@ -42,11 +42,11 @@ class AudioSegmentManager:
                 and (time.time() - self.last_speech_time) > SPEECH_BREAK_SECS
             ):
                 self.speech_detected = False
-                # speech_end_clock = time.perf_counter()
                 speech_end_timestamp = datetime.datetime.utcnow()
                 logger.info(f"###### Speech Finish Time: {speech_end_timestamp}")
+                print(Fore.BLUE + "Stopped recording.")
                 buffer_length_seconds = len(self.audio_buffer.buffer) / SAMPLE_RATE
-                # logger.debug(f"Speech end detected | Time: {speech_end_time}")
+                print(Fore.BLUE + f"Recording length: {buffer_length_seconds:.2f} seconds.")
 
                 # Save the speech segment to a file
                 file_path = self.save_speech_segment()
@@ -64,6 +64,7 @@ class AudioSegmentManager:
                         f"Buffer saved to Transcription Queue | File Path: {file_path}"
                     )
                 else:
+                    print(Fore.RED + "Failed to save buffer to file.")
                     logger.error("Failed to save buffer to file.")
 
                 logger.info(
@@ -74,18 +75,22 @@ class AudioSegmentManager:
                 self.audio_buffer.reset_buffer()
                 logger.debug("Audio buffer reset after processing.")
         except Exception as e:
+            print(Fore.RED + f"Error during processing buffer: {e}")
             logger.error(f"Error during processing buffer: {e}", exc_info=True)
-            logger.error(traceback.format_exc())  # For detailed stack trace
+            logger.error(traceback.format_exc()) 
 
     def save_speech_segment(self):
         try:
             filename = self.create_filename()
+            # Ensure the directory exists
+            os.makedirs(os.path.dirname(filename), exist_ok=True)
             wv.write(filename, self.audio_buffer.buffer, SAMPLE_RATE, sampwidth=2)
             logger.info(f"Audio segment saved: {filename}")
             return filename
         except Exception as e:
+            print(Fore.RED + f"Error saving audio segment: {e}")
             logger.error(f"Error saving audio segment: {e}")
-            logger.error(traceback.format_exc())  # For detailed stack trace
+            logger.error(traceback.format_exc()) 
             return None
 
     def create_filename(self):

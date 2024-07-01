@@ -1,0 +1,359 @@
+2024-07-01 10:43:06,611 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-07-01 10:43:06,646 | INFO | websockets.server | server listening on 127.0.0.1:8765
+2024-07-01 10:43:06,646 | INFO | websockets.server | server listening on [::1]:8765
+2024-07-01 10:43:07,070 | INFO | __main__ | 
+
+
+
+2024-07-01 10:43:07,070 | INFO | __main__ | Starting main program...
+2024-07-01 10:43:07,077 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-07-01 10:43:07,077 | INFO | __main__ | Audio capture thread started.
+2024-07-01 10:43:07,077 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-07-01 10:43:07,077 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-07-01 10:43:07,077 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-07-01 10:43:07,084 | INFO | __main__ | Transcription worker process started.
+2024-07-01 10:43:07,094 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-07-01 10:43:08,273 | DEBUG | websockets.server | = connection is CONNECTING
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < GET / HTTP/1.1
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Host: localhost:8765
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Connection: Upgrade
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Pragma: no-cache
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Cache-Control: no-cache
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Accept-Language: en-GB,en
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Upgrade: websocket
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Origin: http://localhost:3000
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Sec-WebSocket-Version: 13
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Accept-Encoding: gzip, deflate, br, zstd
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Cookie: NEXT_LOCALE=fr; _ga=GA1.1.1062565612.1719374133; _ga_SJ4N0KDS43=GS1.1.1719644199.12.0.1719644199.0.0.0
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Sec-WebSocket-Key: OpKgqWcNDawMGaYbgMOZLA==
+2024-07-01 10:43:08,275 | DEBUG | websockets.server | < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:43:08,276 | DEBUG | websockets.server | > HTTP/1.1 101 Switching Protocols
+2024-07-01 10:43:08,276 | DEBUG | websockets.server | > Upgrade: websocket
+2024-07-01 10:43:08,276 | DEBUG | websockets.server | > Connection: Upgrade
+2024-07-01 10:43:08,276 | DEBUG | websockets.server | > Sec-WebSocket-Accept: WhkXCpg7xzXXZVr12QQ3QWF30SA=
+2024-07-01 10:43:08,276 | DEBUG | websockets.server | > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:43:08,276 | DEBUG | websockets.server | > Date: Mon, 01 Jul 2024 09:43:08 GMT
+2024-07-01 10:43:08,276 | DEBUG | websockets.server | > Server: Python/3.12 websockets/12.0
+2024-07-01 10:43:08,277 | INFO | websockets.server | connection open
+2024-07-01 10:43:08,277 | DEBUG | websockets.server | = connection is OPEN
+2024-07-01 10:43:08,277 | DEBUG | __main__ | New client connected: ('::1', 65314, 0, 0)
+2024-07-01 10:43:10,551 | DEBUG | __mp_main__ | Transcription worker started.
+2024-07-01 10:43:10,551 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-07-01 10:43:10,551 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-07-01 10:43:10,551 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-07-01 10:43:11,788 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-07-01 10:43:11,790 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-07-01 10:43:11,790 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-07-01 10:43:11,790 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-07-01 10:43:38,285 | DEBUG | websockets.server | % sending keepalive ping
+2024-07-01 10:43:38,285 | DEBUG | websockets.server | > PING af d7 d7 92 [binary, 4 bytes]
+2024-07-01 10:43:38,286 | DEBUG | websockets.server | < PONG af d7 d7 92 [binary, 4 bytes]
+2024-07-01 10:43:38,286 | DEBUG | websockets.server | % received keepalive pong
+2024-07-01 10:44:08,286 | DEBUG | websockets.server | % sending keepalive ping
+2024-07-01 10:44:08,286 | DEBUG | websockets.server | > PING a4 fd 02 c0 [binary, 4 bytes]
+2024-07-01 10:44:08,286 | DEBUG | websockets.server | < PONG a4 fd 02 c0 [binary, 4 bytes]
+2024-07-01 10:44:08,287 | DEBUG | websockets.server | % received keepalive pong
+2024-07-01 10:44:38,302 | DEBUG | websockets.server | % sending keepalive ping
+2024-07-01 10:44:38,302 | DEBUG | websockets.server | > PING bb bf 53 ee [binary, 4 bytes]
+2024-07-01 10:44:38,302 | DEBUG | websockets.server | < PONG bb bf 53 ee [binary, 4 bytes]
+2024-07-01 10:44:38,302 | DEBUG | websockets.server | % received keepalive pong
+2024-07-01 10:44:55,923 | INFO | utils.utils | Graceful shutdown initiated...
+2024-07-01 10:44:55,923 | INFO | websockets.server | server closing
+2024-07-01 10:44:55,923 | DEBUG | websockets.server | = connection is CLOSING
+2024-07-01 10:44:55,924 | INFO | __mp_main__ | KeyboardInterrupt caught in transcription worker.
+2024-07-01 10:44:55,924 | DEBUG | __mp_main__ | Transcription worker ended.
+2024-07-01 10:44:55,924 | DEBUG | websockets.server | < CLOSE 1001 (going away) [2 bytes]
+2024-07-01 10:44:55,924 | DEBUG | websockets.server | x half-closing TCP connection
+2024-07-01 10:44:55,925 | DEBUG | websockets.server | = connection is CLOSED
+2024-07-01 10:44:55,925 | INFO | websockets.server | connection closed
+2024-07-01 10:44:55,925 | INFO | websockets.server | server closed
+2024-07-01 10:44:56,135 | DEBUG | __main__ | Audio capture and processing stream has ended.
+2024-07-01 10:44:56,805 | INFO | utils.utils | All processes and threads have been shut down.
+2024-07-01 10:44:56,805 | INFO | __main__ | Main application terminated.
+2024-07-01 10:45:19,622 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-07-01 10:45:19,672 | INFO | websockets.server | server listening on 127.0.0.1:8765
+2024-07-01 10:45:19,672 | INFO | websockets.server | server listening on [::1]:8765
+2024-07-01 10:45:20,136 | INFO | __main__ | 
+
+
+
+2024-07-01 10:45:20,137 | INFO | __main__ | Starting main program...
+2024-07-01 10:45:20,140 | DEBUG | __main__ | Audio capture and processing wrapper started.
+2024-07-01 10:45:20,140 | INFO | __main__ | Audio capture thread started.
+2024-07-01 10:45:20,140 | DEBUG | root | Audio Stream Processor initialized | Sample Rate: 32000, Chunk Duration = 0.5 seconds
+2024-07-01 10:45:20,141 | DEBUG | recorder.audio_buffer | AudioBuffer initialized with buffer duration: 40 secs, sample rate: 32000
+2024-07-01 10:45:20,141 | INFO | recorder.audio_segment_manager | Audio segment manager initialized.
+2024-07-01 10:45:20,150 | INFO | __main__ | Transcription worker process started.
+2024-07-01 10:45:20,157 | INFO | recorder.audio_capture_processor | Audio stream opened successfully. Recording started.
+2024-07-01 10:45:24,261 | DEBUG | __mp_main__ | Transcription worker started.
+2024-07-01 10:45:24,262 | DEBUG | transcriber.transcriber_service | Transcriber service initialized.
+2024-07-01 10:45:24,262 | DEBUG | transcriber.transcriber_service | Loading Whisper model: base
+2024-07-01 10:45:24,262 | DEBUG | utils.load_model | Attempting to load the Whisper model: base
+2024-07-01 10:45:25,569 | INFO | utils.load_model | Whisper model base loaded successfully.
+2024-07-01 10:45:25,571 | INFO | utils.load_model | Loaded Whisper model onto CUDA (GPU).
+2024-07-01 10:45:25,571 | INFO | transcriber.transcriber_service | Whisper model loaded successfully.
+2024-07-01 10:45:25,571 | DEBUG | __mp_main__ | Transcriber model loaded.
+2024-07-01 10:45:33,177 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-07-01 10:45:33,249 | DEBUG | websockets.server | = connection is CONNECTING
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < GET / HTTP/1.1
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Host: localhost:8765
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Connection: Upgrade
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Pragma: no-cache
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Cache-Control: no-cache
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Accept-Language: en-GB,en
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Upgrade: websocket
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Origin: http://localhost:3000
+2024-07-01 10:45:33,250 | DEBUG | websockets.server | < Sec-WebSocket-Version: 13
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | < Accept-Encoding: gzip, deflate, br, zstd
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | < Cookie: NEXT_LOCALE=fr; _ga=GA1.1.1062565612.1719374133; _ga_SJ4N0KDS43=GS1.1.1719644199.12.0.1719644199.0.0.0
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | < Sec-WebSocket-Key: 9JDWmbHccoyCBx8g6crgrg==
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | > HTTP/1.1 101 Switching Protocols
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | > Upgrade: websocket
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | > Connection: Upgrade
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | > Sec-WebSocket-Accept: lPRWXSUvyCOk7Lj6cT3m9+x/j1o=
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:45:33,251 | DEBUG | websockets.server | > Date: Mon, 01 Jul 2024 09:45:33 GMT
+2024-07-01 10:45:33,252 | DEBUG | websockets.server | > Server: Python/3.12 websockets/12.0
+2024-07-01 10:45:33,252 | INFO | websockets.server | connection open
+2024-07-01 10:45:33,252 | DEBUG | websockets.server | = connection is OPEN
+2024-07-01 10:45:33,252 | DEBUG | __main__ | New client connected: ('::1', 65418, 0, 0)
+2024-07-01 10:45:57,687 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-07-01 09:45:57.687459
+2024-07-01 10:45:57,687 | DEBUG | recorder.audio_segment_manager | Created filename for recording: data\recordings\2024-07-01_10-45-57.wav
+2024-07-01 10:45:57,702 | INFO | recorder.audio_segment_manager | Audio segment saved: data\recordings\2024-07-01_10-45-57.wav
+2024-07-01 10:45:57,703 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: data\recordings\2024-07-01_10-45-57.wav
+2024-07-01 10:45:57,703 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 23.5 seconds
+2024-07-01 10:45:57,704 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-07-01 10:45:57,704 | DEBUG | __mp_main__ | Received file_path from queue: ('data\\recordings\\2024-07-01_10-45-57.wav', datetime.datetime(2024, 7, 1, 9, 45, 57, 687459), 23.5)
+2024-07-01 10:45:57,704 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-07-01 10:45:57,704 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-07-01 10:45:57,705 | DEBUG | transcriber.transcriber_service | Starting transcription for file: data\recordings\2024-07-01_10-45-57.wav
+2024-07-01 10:45:57,705 | DEBUG | transcriber.transcriber_service | Processing audio file: data\recordings\2024-07-01_10-45-57.wav
+2024-07-01 10:45:58,165 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-07-01 10:46:00,121 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-07-01 09:45:57.687459
+2024-07-01 10:46:00,121 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:02.434023 seconds
+2024-07-01 10:46:00,121 | INFO | transcriber.transcriber_service | ###### Transcription result: And I do think that that is going to be a guiding force in what we see this November. Mr Ramaswami, you and I both agreed on one thing which is that we will talk about technology and policy from it from a technology standpoint. You mentioned energy in oil in particular. One of the things that I reported was that you act as almost an intermediary between former President Trump and Elon Musk.
+2024-07-01 10:46:00,155 | DEBUG | websockets.client | = connection is CONNECTING
+2024-07-01 10:46:00,155 | DEBUG | websockets.server | = connection is CONNECTING
+2024-07-01 10:46:00,155 | DEBUG | websockets.client | > GET / HTTP/1.1
+2024-07-01 10:46:00,155 | DEBUG | websockets.client | > Host: localhost:8765
+2024-07-01 10:46:00,155 | DEBUG | websockets.client | > Upgrade: websocket
+2024-07-01 10:46:00,155 | DEBUG | websockets.client | > Connection: Upgrade
+2024-07-01 10:46:00,155 | DEBUG | websockets.client | > Sec-WebSocket-Key: 8rKna9n2cU5tzY9ap7k8yw==
+2024-07-01 10:46:00,155 | DEBUG | websockets.client | > Sec-WebSocket-Version: 13
+2024-07-01 10:46:00,156 | DEBUG | websockets.client | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:46:00,156 | DEBUG | websockets.client | > User-Agent: Python/3.12 websockets/12.0
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < GET / HTTP/1.1
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < Host: localhost:8765
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < Upgrade: websocket
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < Connection: Upgrade
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < Sec-WebSocket-Key: 8rKna9n2cU5tzY9ap7k8yw==
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < Sec-WebSocket-Version: 13
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | < User-Agent: Python/3.12 websockets/12.0
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | > HTTP/1.1 101 Switching Protocols
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | > Upgrade: websocket
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | > Connection: Upgrade
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | > Sec-WebSocket-Accept: gEVqyxo2XDGe4NA5hiSUudMeOIw=
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | > Date: Mon, 01 Jul 2024 09:46:00 GMT
+2024-07-01 10:46:00,156 | DEBUG | websockets.server | > Server: Python/3.12 websockets/12.0
+2024-07-01 10:46:00,157 | INFO | websockets.server | connection open
+2024-07-01 10:46:00,157 | DEBUG | websockets.server | = connection is OPEN
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | < HTTP/1.1 101 Switching Protocols
+2024-07-01 10:46:00,157 | DEBUG | __main__ | New client connected: ('::1', 65433, 0, 0)
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | < Upgrade: websocket
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | < Connection: Upgrade
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | < Sec-WebSocket-Accept: gEVqyxo2XDGe4NA5hiSUudMeOIw=
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | < Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | < Date: Mon, 01 Jul 2024 09:46:00 GMT
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | < Server: Python/3.12 websockets/12.0
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | = connection is OPEN
+2024-07-01 10:46:00,157 | DEBUG | websockets.client | > TEXT '{"content": "And I do think that that is going ...iption_time": 2.434023}' [494 bytes]
+2024-07-01 10:46:00,158 | DEBUG | transcriber.transcriber_service | Sent transcription data via WebSocket.
+2024-07-01 10:46:00,158 | DEBUG | websockets.client | = connection is CLOSING
+2024-07-01 10:46:00,158 | DEBUG | websockets.client | > CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:00,158 | DEBUG | websockets.server | < TEXT '{"content": "And I do think that that is going ...iption_time": 2.434023}' [494 bytes]
+2024-07-01 10:46:00,158 | DEBUG | __main__ | Received message: {'content': 'And I do think that that is going to be a guiding force in what we see this November. Mr Ramaswami, you and I both agreed on one thing which is that we will talk about technology and policy from it from a technology standpoint. You mentioned energy in oil in particular. One of the things that I reported was that you act as almost an intermediary between former President Trump and Elon Musk.', 'speech_end_timestamp': '2024-07-01T09:45:57.687459', 'transcription_time': 2.434023}
+2024-07-01 10:46:00,158 | DEBUG | __main__ | Broadcasting message: {'content': 'And I do think that that is going to be a guiding force in what we see this November. Mr Ramaswami, you and I both agreed on one thing which is that we will talk about technology and policy from it from a technology standpoint. You mentioned energy in oil in particular. One of the things that I reported was that you act as almost an intermediary between former President Trump and Elon Musk.', 'speech_end_timestamp': '2024-07-01T09:45:57.687459', 'transcription_time': 2.434023}
+2024-07-01 10:46:00,158 | DEBUG | websockets.server | > TEXT '{"content": "And I do think that that is going ...iption_time": 2.434023}' [494 bytes]
+2024-07-01 10:46:00,158 | DEBUG | websockets.server | > TEXT '{"content": "And I do think that that is going ...iption_time": 2.434023}' [494 bytes]
+2024-07-01 10:46:00,158 | DEBUG | websockets.client | < TEXT '{"content": "And I do think that that is going ...iption_time": 2.434023}' [494 bytes]
+2024-07-01 10:46:00,158 | DEBUG | websockets.server | < CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:00,158 | DEBUG | websockets.server | = connection is CLOSING
+2024-07-01 10:46:00,158 | DEBUG | websockets.server | > CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:00,160 | DEBUG | websockets.server | x half-closing TCP connection
+2024-07-01 10:46:00,160 | DEBUG | websockets.client | < CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:00,160 | DEBUG | websockets.client | = connection is CLOSED
+2024-07-01 10:46:00,160 | DEBUG | websockets.server | = connection is CLOSED
+2024-07-01 10:46:00,160 | INFO | websockets.server | connection closed
+2024-07-01 10:46:00,162 | INFO | __mp_main__ | Transcription Result: And I do think that that is going to be a guiding force in what we see this November. Mr Ramaswami, you and I both agreed on one thing which is that we will talk about technology and policy from it from a technology standpoint. You mentioned energy in oil in particular. One of the things that I reported was that you act as almost an intermediary between former President Trump and Elon Musk.
+2024-07-01 10:46:00,162 | DEBUG | __mp_main__ | Transcription for data\recordings\2024-07-01_10-45-57.wav completed.
+2024-07-01 10:46:03,243 | DEBUG | websockets.server | % sending keepalive ping
+2024-07-01 10:46:03,243 | DEBUG | websockets.server | > PING 0e 13 93 92 [binary, 4 bytes]
+2024-07-01 10:46:03,244 | DEBUG | websockets.server | < PONG 0e 13 93 92 [binary, 4 bytes]
+2024-07-01 10:46:03,244 | DEBUG | websockets.server | % received keepalive pong
+2024-07-01 10:46:17,198 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-07-01 10:46:22,677 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-07-01 09:46:22.677155
+2024-07-01 10:46:22,677 | DEBUG | recorder.audio_segment_manager | Created filename for recording: data\recordings\2024-07-01_10-46-22.wav
+2024-07-01 10:46:22,679 | INFO | recorder.audio_segment_manager | Audio segment saved: data\recordings\2024-07-01_10-46-22.wav
+2024-07-01 10:46:22,680 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: data\recordings\2024-07-01_10-46-22.wav
+2024-07-01 10:46:22,680 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 4.5 seconds
+2024-07-01 10:46:22,680 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-07-01 10:46:22,680 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-07-01 10:46:22,680 | DEBUG | __mp_main__ | Received file_path from queue: ('data\\recordings\\2024-07-01_10-46-22.wav', datetime.datetime(2024, 7, 1, 9, 46, 22, 677155), 4.5)
+2024-07-01 10:46:22,680 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-07-01 10:46:22,681 | DEBUG | transcriber.transcriber_service | Starting transcription for file: data\recordings\2024-07-01_10-46-22.wav
+2024-07-01 10:46:22,681 | DEBUG | transcriber.transcriber_service | Processing audio file: data\recordings\2024-07-01_10-46-22.wav
+2024-07-01 10:46:22,745 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-07-01 10:46:23,216 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-07-01 09:46:22.677155
+2024-07-01 10:46:23,216 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:00.539636 seconds
+2024-07-01 10:46:23,216 | INFO | transcriber.transcriber_service | ###### Transcription result: And it seems as if the former president and Elon Musk are now
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | = connection is CONNECTING
+2024-07-01 10:46:23,219 | DEBUG | websockets.server | = connection is CONNECTING
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > GET / HTTP/1.1
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > Host: localhost:8765
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > Upgrade: websocket
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > Connection: Upgrade
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > Sec-WebSocket-Key: /lN5SfK0zOSON5j07iQFnw==
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > Sec-WebSocket-Version: 13
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:46:23,219 | DEBUG | websockets.client | > User-Agent: Python/3.12 websockets/12.0
+2024-07-01 10:46:23,219 | DEBUG | websockets.server | < GET / HTTP/1.1
+2024-07-01 10:46:23,219 | DEBUG | websockets.server | < Host: localhost:8765
+2024-07-01 10:46:23,219 | DEBUG | websockets.server | < Upgrade: websocket
+2024-07-01 10:46:23,219 | DEBUG | websockets.server | < Connection: Upgrade
+2024-07-01 10:46:23,219 | DEBUG | websockets.server | < Sec-WebSocket-Key: /lN5SfK0zOSON5j07iQFnw==
+2024-07-01 10:46:23,219 | DEBUG | websockets.server | < Sec-WebSocket-Version: 13
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | < User-Agent: Python/3.12 websockets/12.0
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | > HTTP/1.1 101 Switching Protocols
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | > Upgrade: websocket
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | > Connection: Upgrade
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | > Sec-WebSocket-Accept: MndJw08ISqx0B+PL7MRchpMAFAM=
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | > Date: Mon, 01 Jul 2024 09:46:23 GMT
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | > Server: Python/3.12 websockets/12.0
+2024-07-01 10:46:23,220 | INFO | websockets.server | connection open
+2024-07-01 10:46:23,220 | DEBUG | websockets.server | = connection is OPEN
+2024-07-01 10:46:23,220 | DEBUG | websockets.client | < HTTP/1.1 101 Switching Protocols
+2024-07-01 10:46:23,220 | DEBUG | __main__ | New client connected: ('::1', 65447, 0, 0)
+2024-07-01 10:46:23,220 | DEBUG | websockets.client | < Upgrade: websocket
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | < Connection: Upgrade
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | < Sec-WebSocket-Accept: MndJw08ISqx0B+PL7MRchpMAFAM=
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | < Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | < Date: Mon, 01 Jul 2024 09:46:23 GMT
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | < Server: Python/3.12 websockets/12.0
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | = connection is OPEN
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | > TEXT '{"content": "And it seems as if the former pres...iption_time": 0.539636}' [162 bytes]
+2024-07-01 10:46:23,221 | DEBUG | transcriber.transcriber_service | Sent transcription data via WebSocket.
+2024-07-01 10:46:23,221 | DEBUG | websockets.client | = connection is CLOSING
+2024-07-01 10:46:23,222 | DEBUG | websockets.client | > CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:23,222 | DEBUG | websockets.server | < TEXT '{"content": "And it seems as if the former pres...iption_time": 0.539636}' [162 bytes]
+2024-07-01 10:46:23,222 | DEBUG | __main__ | Received message: {'content': 'And it seems as if the former president and Elon Musk are now', 'speech_end_timestamp': '2024-07-01T09:46:22.677155', 'transcription_time': 0.539636}
+2024-07-01 10:46:23,222 | DEBUG | __main__ | Broadcasting message: {'content': 'And it seems as if the former president and Elon Musk are now', 'speech_end_timestamp': '2024-07-01T09:46:22.677155', 'transcription_time': 0.539636}
+2024-07-01 10:46:23,222 | DEBUG | websockets.server | > TEXT '{"content": "And it seems as if the former pres...iption_time": 0.539636}' [162 bytes]
+2024-07-01 10:46:23,222 | DEBUG | websockets.server | > TEXT '{"content": "And it seems as if the former pres...iption_time": 0.539636}' [162 bytes]
+2024-07-01 10:46:23,222 | DEBUG | websockets.client | < TEXT '{"content": "And it seems as if the former pres...iption_time": 0.539636}' [162 bytes]
+2024-07-01 10:46:23,222 | DEBUG | websockets.server | < CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:23,222 | DEBUG | websockets.server | = connection is CLOSING
+2024-07-01 10:46:23,222 | DEBUG | websockets.server | > CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:23,222 | DEBUG | websockets.server | x half-closing TCP connection
+2024-07-01 10:46:23,222 | DEBUG | websockets.client | < CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:23,224 | DEBUG | websockets.client | = connection is CLOSED
+2024-07-01 10:46:23,224 | DEBUG | websockets.server | = connection is CLOSED
+2024-07-01 10:46:23,224 | INFO | websockets.server | connection closed
+2024-07-01 10:46:23,225 | INFO | __mp_main__ | Transcription Result: And it seems as if the former president and Elon Musk are now
+2024-07-01 10:46:23,225 | DEBUG | __mp_main__ | Transcription for data\recordings\2024-07-01_10-46-22.wav completed.
+2024-07-01 10:46:29,707 | INFO | recorder.audio_segment_manager | Speech detected for the first time.
+2024-07-01 10:46:33,242 | DEBUG | websockets.server | % sending keepalive ping
+2024-07-01 10:46:33,242 | DEBUG | websockets.server | > PING 20 73 3f d7 [binary, 4 bytes]
+2024-07-01 10:46:33,242 | DEBUG | websockets.server | < PONG 20 73 3f d7 [binary, 4 bytes]
+2024-07-01 10:46:33,243 | DEBUG | websockets.server | % received keepalive pong
+2024-07-01 10:46:38,698 | INFO | recorder.audio_segment_manager | ###### Speech Finish Time: 2024-07-01 09:46:38.698411
+2024-07-01 10:46:38,698 | DEBUG | recorder.audio_segment_manager | Created filename for recording: data\recordings\2024-07-01_10-46-38.wav
+2024-07-01 10:46:38,704 | INFO | recorder.audio_segment_manager | Audio segment saved: data\recordings\2024-07-01_10-46-38.wav
+2024-07-01 10:46:38,704 | INFO | recorder.audio_segment_manager | Buffer saved to Transcription Queue | File Path: data\recordings\2024-07-01_10-46-38.wav
+2024-07-01 10:46:38,704 | INFO | recorder.audio_segment_manager | Buffer sent for transcription | Buffer Length: 8.5 seconds
+2024-07-01 10:46:38,704 | DEBUG | recorder.audio_buffer | Clearing audio buffer
+2024-07-01 10:46:38,704 | DEBUG | recorder.audio_segment_manager | Audio buffer reset after processing.
+2024-07-01 10:46:38,705 | DEBUG | __mp_main__ | Received file_path from queue: ('data\\recordings\\2024-07-01_10-46-38.wav', datetime.datetime(2024, 7, 1, 9, 46, 38, 698411), 8.5)
+2024-07-01 10:46:38,705 | DEBUG | asyncio | Using proactor: IocpProactor
+2024-07-01 10:46:38,706 | DEBUG | transcriber.transcriber_service | Starting transcription for file: data\recordings\2024-07-01_10-46-38.wav
+2024-07-01 10:46:38,706 | DEBUG | transcriber.transcriber_service | Processing audio file: data\recordings\2024-07-01_10-46-38.wav
+2024-07-01 10:46:38,768 | INFO | transcriber.transcriber_service | Audio file processed successfully.
+2024-07-01 10:46:39,255 | INFO | transcriber.transcriber_service | ###### Speech End Time: 2024-07-01 09:46:38.698411
+2024-07-01 10:46:39,255 | INFO | transcriber.transcriber_service | ###### Transcription time: 0:00:00.557465 seconds
+2024-07-01 10:46:39,255 | INFO | transcriber.transcriber_service | ###### Transcription result: Speaking or at least have spoken, where do you see them finding middle ground and an influence if they are?
+2024-07-01 10:46:39,257 | DEBUG | websockets.client | = connection is CONNECTING
+2024-07-01 10:46:39,257 | DEBUG | websockets.server | = connection is CONNECTING
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > GET / HTTP/1.1
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > Host: localhost:8765
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > Upgrade: websocket
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > Connection: Upgrade
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > Sec-WebSocket-Key: 0DIieDeuMTXXWyqTL3TJyA==
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > Sec-WebSocket-Version: 13
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:46:39,258 | DEBUG | websockets.client | > User-Agent: Python/3.12 websockets/12.0
+2024-07-01 10:46:39,258 | DEBUG | websockets.server | < GET / HTTP/1.1
+2024-07-01 10:46:39,258 | DEBUG | websockets.server | < Host: localhost:8765
+2024-07-01 10:46:39,258 | DEBUG | websockets.server | < Upgrade: websocket
+2024-07-01 10:46:39,258 | DEBUG | websockets.server | < Connection: Upgrade
+2024-07-01 10:46:39,258 | DEBUG | websockets.server | < Sec-WebSocket-Key: 0DIieDeuMTXXWyqTL3TJyA==
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | < Sec-WebSocket-Version: 13
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | < User-Agent: Python/3.12 websockets/12.0
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | > HTTP/1.1 101 Switching Protocols
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | > Upgrade: websocket
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | > Connection: Upgrade
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | > Sec-WebSocket-Accept: IetAPl/XaPFk2kJnak19w4avVs0=
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | > Date: Mon, 01 Jul 2024 09:46:39 GMT
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | > Server: Python/3.12 websockets/12.0
+2024-07-01 10:46:39,259 | INFO | websockets.server | connection open
+2024-07-01 10:46:39,259 | DEBUG | websockets.server | = connection is OPEN
+2024-07-01 10:46:39,259 | DEBUG | websockets.client | < HTTP/1.1 101 Switching Protocols
+2024-07-01 10:46:39,260 | DEBUG | __main__ | New client connected: ('::1', 65458, 0, 0)
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | < Upgrade: websocket
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | < Connection: Upgrade
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | < Sec-WebSocket-Accept: IetAPl/XaPFk2kJnak19w4avVs0=
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | < Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | < Date: Mon, 01 Jul 2024 09:46:39 GMT
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | < Server: Python/3.12 websockets/12.0
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | = connection is OPEN
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | > TEXT '{"content": "Speaking or at least have spoken, ...iption_time": 0.557465}' [208 bytes]
+2024-07-01 10:46:39,260 | DEBUG | transcriber.transcriber_service | Sent transcription data via WebSocket.
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | = connection is CLOSING
+2024-07-01 10:46:39,260 | DEBUG | websockets.client | > CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:39,260 | DEBUG | websockets.server | < TEXT '{"content": "Speaking or at least have spoken, ...iption_time": 0.557465}' [208 bytes]
+2024-07-01 10:46:39,261 | DEBUG | __main__ | Received message: {'content': 'Speaking or at least have spoken, where do you see them finding middle ground and an influence if they are?', 'speech_end_timestamp': '2024-07-01T09:46:38.698411', 'transcription_time': 0.557465}
+2024-07-01 10:46:39,261 | DEBUG | __main__ | Broadcasting message: {'content': 'Speaking or at least have spoken, where do you see them finding middle ground and an influence if they are?', 'speech_end_timestamp': '2024-07-01T09:46:38.698411', 'transcription_time': 0.557465}
+2024-07-01 10:46:39,261 | DEBUG | websockets.server | > TEXT '{"content": "Speaking or at least have spoken, ...iption_time": 0.557465}' [208 bytes]
+2024-07-01 10:46:39,261 | DEBUG | websockets.server | > TEXT '{"content": "Speaking or at least have spoken, ...iption_time": 0.557465}' [208 bytes]
+2024-07-01 10:46:39,261 | DEBUG | websockets.client | < TEXT '{"content": "Speaking or at least have spoken, ...iption_time": 0.557465}' [208 bytes]
+2024-07-01 10:46:39,261 | DEBUG | websockets.server | < CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:39,261 | DEBUG | websockets.server | = connection is CLOSING
+2024-07-01 10:46:39,261 | DEBUG | websockets.server | > CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:39,262 | DEBUG | websockets.server | x half-closing TCP connection
+2024-07-01 10:46:39,262 | DEBUG | websockets.client | < CLOSE 1000 (OK) [2 bytes]
+2024-07-01 10:46:39,262 | DEBUG | websockets.client | = connection is CLOSED
+2024-07-01 10:46:39,262 | DEBUG | websockets.server | = connection is CLOSED
+2024-07-01 10:46:39,262 | INFO | websockets.server | connection closed
+2024-07-01 10:46:39,263 | INFO | __mp_main__ | Transcription Result: Speaking or at least have spoken, where do you see them finding middle ground and an influence if they are?
+2024-07-01 10:46:39,263 | DEBUG | __mp_main__ | Transcription for data\recordings\2024-07-01_10-46-38.wav completed.
+2024-07-01 10:46:51,338 | INFO | utils.utils | Graceful shutdown initiated...
+2024-07-01 10:46:51,338 | INFO | __mp_main__ | KeyboardInterrupt caught in transcription worker.
+2024-07-01 10:46:51,338 | INFO | websockets.server | server closing
+2024-07-01 10:46:51,338 | DEBUG | __mp_main__ | Transcription worker ended.
+2024-07-01 10:46:51,339 | DEBUG | websockets.server | = connection is CLOSING
+2024-07-01 10:46:51,339 | DEBUG | websockets.server | > CLOSE 1001 (going away) [2 bytes]
+2024-07-01 10:46:51,339 | DEBUG | websockets.server | < CLOSE 1001 (going away) [2 bytes]
+2024-07-01 10:46:51,339 | DEBUG | websockets.server | x half-closing TCP connection
+2024-07-01 10:46:51,340 | DEBUG | websockets.server | = connection is CLOSED
+2024-07-01 10:46:51,340 | INFO | websockets.server | connection closed
+2024-07-01 10:46:51,340 | INFO | websockets.server | server closed
+2024-07-01 10:46:51,702 | DEBUG | __main__ | Audio capture and processing stream has ended.
+2024-07-01 10:46:52,275 | INFO | utils.utils | All processes and threads have been shut down.
+2024-07-01 10:46:52,276 | INFO | __main__ | Main application terminated.

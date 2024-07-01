@@ -7,6 +7,7 @@ from .utils import (
     shutdown_thread,
     remove_pycache,
     signal_handling,
+    graceful_shutdown,
     setup_recording_environment,
 )
 
@@ -19,5 +20,6 @@ __all__ = [
     "shutdown_thread",
     "remove_pycache",
     "signal_handling",
+    "graceful_shutdown",
     "setup_recording_environment",
 ]

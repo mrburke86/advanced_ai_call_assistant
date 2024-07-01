@@ -3,4 +3,6 @@ sounddevice==0.4.6
 webrtcvad==2.0.10
 wavio==0.0.8
 openai-whisper==20231117
-torch==2.1.2
+soundfile==0.12.1
+colorama==0.4.6
+websockets==12.0

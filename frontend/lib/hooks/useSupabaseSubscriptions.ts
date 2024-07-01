@@ -29,31 +29,31 @@ import { getFormattedTimestamp } from "../utils";
 // Get the Supabase URL and access token from environment variables
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const SUPABASE_ACCESS_TOKEN =
-  process.env.NEXT_PUBLIC_SUPABASE_ACCESS_TOKEN || "";
+    process.env.NEXT_PUBLIC_SUPABASE_ACCESS_TOKEN || "";
 
 // Check if the required environment variables are set
 if (!SUPABASE_URL) {
-  console.log(
-    "Supabase URL is missing. Please check your environment variables."
-  );
-  throw new Error("Supabase URL is missing.");
+    console.log(
+        "Supabase URL is missing. Please check your environment variables.",
+    );
+    throw new Error("Supabase URL is missing.");
 }
 
 if (!SUPABASE_ACCESS_TOKEN) {
-  console.log(
-    "Supabase Access Token is missing. Please check your environment variables."
-  );
-  throw new Error("Supabase Access Token is missing.");
+    console.log(
+        "Supabase Access Token is missing. Please check your environment variables.",
+    );
+    throw new Error("Supabase Access Token is missing.");
 }
 
 // Initialize the Supabase client
 let supabase: SupabaseClient<any, "public", any> | null = null;
 try {
-  supabase = createClient(SUPABASE_URL, SUPABASE_ACCESS_TOKEN);
-  console.log("Supabase client has been successfully initialized.");
+    supabase = createClient(SUPABASE_URL, SUPABASE_ACCESS_TOKEN);
+    console.log("Supabase client has been successfully initialized.");
 } catch (error) {
-  console.log(`Failed to initialize Supabase client: ${error}`);
-  throw new Error(`Supabase client initialization failed: ${error}`);
+    console.log(`Failed to initialize Supabase client: ${error}`);
+    throw new Error(`Supabase client initialization failed: ${error}`);
 }
 
 /**
@@ -62,60 +62,60 @@ try {
  * @param onNewMessage Callback function to be invoked when a new user message is received.
  */
 export function useChatSubscription(onNewMessage: (message: Message) => void) {
-  const { messages, addMessage, removeMessage } = useContext(MessagesContext);
+    const { messages, addMessage, removeMessage } = useContext(MessagesContext);
 
-  useEffect(() => {
-    if (!supabase) {
-      console.error("Supabase client is not initialized.");
-      return;
-    }
-
-    // Subscribe to the "transcriptions_table" channel for new message inserts
-    const channelName = "transcriptions_table";
-    const subscription = supabase
-      .channel(channelName)
-      .on(
-        "postgres_changes",
-        { event: "INSERT", schema: "public", table: channelName },
-        (payload) => {
-          // Create a new message object from the received payload
-          const newMessage: Message = {
-            message_id: payload.new.transcription_id,
-            isUserMessage: true,
-            content: `Question: ${payload.new.content}?`,
-            speech_end_timestamp: payload.new.speech_end_timestamp,
-            transcription_time: payload.new.transcription_time,
-            messageType: payload.new.messageType,
-          };
-
-          // Handle the new message based on its type and application state
-          handleNewMessage({
-            newMessage,
-            messages,
-            addMessage,
-            removeMessage,
-            onNewMessage,
-          });
+    useEffect(() => {
+        if (!supabase) {
+            console.error("Supabase client is not initialized.");
+            return;
         }
-      )
-      .subscribe();
 
-    // Unsubscribe from the channel when the component unmounts
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, [addMessage, messages, onNewMessage, removeMessage]);
+        // Subscribe to the "transcriptions_table" channel for new message inserts
+        const channelName = "transcriptions_table";
+        const subscription = supabase
+            .channel(channelName)
+            .on(
+                "postgres_changes",
+                { event: "INSERT", schema: "public", table: channelName },
+                (payload) => {
+                    // Create a new message object from the received payload
+                    const newMessage: Message = {
+                        message_id: payload.new.transcription_id,
+                        isUserMessage: true,
+                        content: `Question: ${payload.new.content}?`,
+                        speech_end_timestamp: payload.new.speech_end_timestamp,
+                        transcription_time: payload.new.transcription_time,
+                        messageType: payload.new.messageType,
+                    };
+
+                    // Handle the new message based on its type and application state
+                    handleNewMessage({
+                        newMessage,
+                        messages,
+                        addMessage,
+                        removeMessage,
+                        onNewMessage,
+                    });
+                },
+            )
+            .subscribe();
+
+        // Unsubscribe from the channel when the component unmounts
+        return () => {
+            subscription.unsubscribe();
+        };
+    }, [addMessage, messages, onNewMessage, removeMessage]);
 }
 
 /**
  * Interface defining the properties for the `handleNewMessage` function.
  */
 interface HandleNewMessageProps {
-  newMessage: Message;
-  messages: Message[];
-  addMessage: (message: Message) => void;
-  removeMessage: (message_id: string) => void;
-  onNewMessage: (message: Message) => void;
+    newMessage: Message;
+    messages: Message[];
+    addMessage: (message: Message) => void;
+    removeMessage: (message_id: string) => void;
+    onNewMessage: (message: Message) => void;
 }
 
 /**
@@ -124,62 +124,293 @@ interface HandleNewMessageProps {
  * @param props Object containing the new message, current messages, and message management functions.
  */
 const handleNewMessage = ({
-  newMessage,
-  messages,
-  addMessage,
-  removeMessage,
-  onNewMessage,
+    newMessage,
+    messages,
+    addMessage,
+    removeMessage,
+    onNewMessage,
 }: HandleNewMessageProps) => {
-  // Check if the current message is the initial message
-  const isInitialMessage =
-    messages.length === 1 &&
-    messages[0].content === "Are you ready to get started?";
+    // Check if the current message is the initial message
+    const isInitialMessage =
+        messages.length === 1 &&
+        messages[0].content === "Are you ready to get started?";
 
-  // Check if the new message already exists in the current messages
-  const isExistingMessage = messages.some(
-    (message) => message.message_id === newMessage.message_id
-  );
-
-  // Ignore the message if it has no ID or already exists
-  if (!newMessage.message_id || isExistingMessage) {
-    console.warn(
-      `[handleNewMessage] ${getFormattedTimestamp()} - Ignored message: `,
-      newMessage
+    // Check if the new message already exists in the current messages
+    const isExistingMessage = messages.some(
+        (message) => message.message_id === newMessage.message_id,
     );
-    return;
-  }
 
-  // Replace the initial message with the new user message
-  if (isInitialMessage && newMessage.isUserMessage) {
-    console.log(
-      `[handleNewMessage] ${getFormattedTimestamp()} - Replacing initial message with: `,
-      newMessage
-    );
-    removeMessage(messages[0].message_id);
-  }
+    // Ignore the message if it has no ID or already exists
+    if (!newMessage.message_id || isExistingMessage) {
+        console.warn(
+            `[handleNewMessage] ${getFormattedTimestamp()} - Ignored message: `,
+            newMessage,
+        );
+        return;
+    }
 
-  // Process the new message based on its type
-  switch (newMessage.messageType) {
-    case "user":
-      console.log(
-        `[handleNewMessage] ${getFormattedTimestamp()} - User message received: `,
-        newMessage
-      );
-      onNewMessage(newMessage);
-      break;
-    case "chatBotResponse":
-      console.log(
-        `[handleNewMessage] ${getFormattedTimestamp()} - ChatBot response received: `,
-        newMessage
-      );
-      addMessage(newMessage);
-      break;
-    default:
-      console.warn(
-        `[handleNewMessage] ${getFormattedTimestamp()} - Unexpected messageType: ${
-          newMessage.messageType
-        }`
-      );
-      break;
-  }
+    // Replace the initial message with the new user message
+    if (isInitialMessage && newMessage.isUserMessage) {
+        console.log(
+            `[handleNewMessage] ${getFormattedTimestamp()} - Replacing initial message with: `,
+            newMessage,
+        );
+        removeMessage(messages[0].message_id);
+    }
+
+    // Process the new message based on its type
+    switch (newMessage.messageType) {
+        case "user":
+            console.log(
+                `[handleNewMessage] ${getFormattedTimestamp()} - User message received: `,
+                newMessage,
+            );
+            onNewMessage(newMessage);
+            break;
+        case "chatBotResponse":
+            console.log(
+                `[handleNewMessage] ${getFormattedTimestamp()} - ChatBot response received: `,
+                newMessage,
+            );
+            addMessage(newMessage);
+            break;
+        default:
+            console.warn(
+                `[handleNewMessage] ${getFormattedTimestamp()} - Unexpected messageType: ${
+                    newMessage.messageType
+                }`,
+            );
+            break;
+    }
 };
+
+// ---
+// --- Below is the code without comments and console logs
+// ---
+
+// // frontend\lib\hooks\useSupabaseSubscriptions.ts
+// "use client";
+// import { SupabaseClient, createClient } from "@supabase/supabase-js";
+// import { useContext, useEffect } from "react";
+// import { Message } from "../validators/message";
+// import { MessagesContext } from "@/context/messages";
+// import { getFormattedTimestamp } from "../utils";
+
+// const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+// const SUPABASE_ACCESS_TOKEN =
+//   process.env.NEXT_PUBLIC_SUPABASE_ACCESS_TOKEN || "";
+
+// if (!SUPABASE_URL) {
+//   throw new Error("Supabase URL is missing.");
+// }
+
+// if (!SUPABASE_ACCESS_TOKEN) {
+//   throw new Error("Supabase Access Token is missing.");
+// }
+
+// let supabase: SupabaseClient<any, "public", any> | null = null;
+// try {
+//   supabase = createClient(SUPABASE_URL, SUPABASE_ACCESS_TOKEN);
+// } catch (error) {
+//   throw new Error(`Supabase client initialization failed: ${error}`);
+// }
+
+// export function useChatSubscription(onNewMessage: (message: Message) => void) {
+//   const { messages, addMessage, removeMessage } = useContext(MessagesContext);
+
+//   useEffect(() => {
+//     if (!supabase) {
+//       return;
+//     }
+
+//     const channelName = "transcriptions_table";
+//     const subscription = supabase
+//       .channel(channelName)
+//       .on(
+//         "postgres_changes",
+//         { event: "INSERT", schema: "public", table: channelName },
+//         (payload) => {
+//           const newMessage: Message = {
+//             message_id: payload.new.transcription_id,
+//             isUserMessage: true,
+//             content: `Question: ${payload.new.content}?`,
+//             speech_end_timestamp: payload.new.speech_end_timestamp,
+//             transcription_time: payload.new.transcription_time,
+//             messageType: payload.new.messageType,
+//           };
+
+//           handleNewMessage({
+//             newMessage,
+//             messages,
+//             addMessage,
+//             removeMessage,
+//             onNewMessage,
+//           });
+//         }
+//       )
+//       .subscribe();
+
+//     return () => {
+//       subscription.unsubscribe();
+//     };
+//   }, [addMessage, messages, onNewMessage, removeMessage]);
+// }
+
+// interface HandleNewMessageProps {
+//   newMessage: Message;
+//   messages: Message[];
+//   addMessage: (message: Message) => void;
+//   removeMessage: (message_id: string) => void;
+//   onNewMessage: (message: Message) => void;
+// }
+
+// const handleNewMessage = ({
+//   newMessage,
+//   messages,
+//   addMessage,
+//   removeMessage,
+//   onNewMessage,
+// }: HandleNewMessageProps) => {
+//   const isInitialMessage =
+//     messages.length === 1 &&
+//     messages[0].content === "Are you ready to get started?";
+
+//   const isExistingMessage = messages.some(
+//     (message) => message.message_id === newMessage.message_id
+//   );
+
+//   if (!newMessage.message_id || isExistingMessage) {
+//     return;
+//   }
+
+//   if (isInitialMessage && newMessage.isUserMessage) {
+//     removeMessage(messages[0].message_id);
+//   }
+
+//   switch (newMessage.messageType) {
+//     case "user":
+//       onNewMessage(newMessage);
+//       break;
+//     case "chatBotResponse":
+//       addMessage(newMessage);
+//       break;
+//     default:
+//       break;
+//   }
+// };
+
+// ---
+// --- Below is a test integration of Zustand
+// ---
+
+// // frontend\lib\hooks\useSupabaseSubscriptions.ts
+// "use client";
+// import { SupabaseClient, createClient } from "@supabase/supabase-js";
+// import { useEffect } from "react";
+// import { Message } from "../validators/message";
+// // import { MessagesContext } from "@/context/messages";
+// import { useMessagesStore } from "@/store/messagesStore";
+
+// const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+// const SUPABASE_ACCESS_TOKEN =
+//     process.env.NEXT_PUBLIC_SUPABASE_ACCESS_TOKEN || "";
+
+// if (!SUPABASE_URL) {
+//     throw new Error("Supabase URL is missing.");
+// }
+
+// if (!SUPABASE_ACCESS_TOKEN) {
+//     throw new Error("Supabase Access Token is missing.");
+// }
+
+// let supabase: SupabaseClient<any, "public", any> | null = null;
+// try {
+//     supabase = createClient(SUPABASE_URL, SUPABASE_ACCESS_TOKEN);
+// } catch (error) {
+//     throw new Error(`Supabase client initialization failed: ${error}`);
+// }
+
+// export function useChatSubscription(onNewMessage: (message: Message) => void) {
+//     // const { messages, addMessage, removeMessage } = useContext(MessagesContext);
+//     const { messages, addMessage, removeMessage } = useMessagesStore();
+
+//     useEffect(() => {
+//         if (!supabase) {
+//             return;
+//         }
+
+//         const channelName = "transcriptions_table";
+//         const subscription = supabase
+//             .channel(channelName)
+//             .on(
+//                 "postgres_changes",
+//                 { event: "INSERT", schema: "public", table: channelName },
+//                 (payload) => {
+//                     const newMessage: Message = {
+//                         message_id: payload.new.transcription_id,
+//                         isUserMessage: true,
+//                         content: `Question: ${payload.new.content}?`,
+//                         speech_end_timestamp: payload.new.speech_end_timestamp,
+//                         transcription_time: payload.new.transcription_time,
+//                         messageType: payload.new.messageType,
+//                     };
+
+//                     handleNewMessage({
+//                         newMessage,
+//                         messages,
+//                         addMessage,
+//                         removeMessage,
+//                         onNewMessage,
+//                     });
+//                 },
+//             )
+//             .subscribe();
+
+//         return () => {
+//             subscription.unsubscribe();
+//         };
+//     }, [addMessage, messages, onNewMessage, removeMessage]);
+// }
+
+// interface HandleNewMessageProps {
+//     newMessage: Message;
+//     messages: Message[];
+//     addMessage: (message: Message) => void;
+//     removeMessage: (message_id: string) => void;
+//     onNewMessage: (message: Message) => void;
+// }
+
+// const handleNewMessage = ({
+//     newMessage,
+//     messages,
+//     addMessage,
+//     removeMessage,
+//     onNewMessage,
+// }: HandleNewMessageProps) => {
+//     const isInitialMessage =
+//         messages.length === 1 &&
+//         messages[0].content === "Are you ready to get started?";
+
+//     const isExistingMessage = messages.some(
+//         (message) => message.message_id === newMessage.message_id,
+//     );
+
+//     if (!newMessage.message_id || isExistingMessage) {
+//         return;
+//     }
+
+//     if (isInitialMessage && newMessage.isUserMessage) {
+//         removeMessage(messages[0].message_id);
+//     }
+
+//     switch (newMessage.messageType) {
+//         case "user":
+//             onNewMessage(newMessage);
+//             break;
+//         case "chatBotResponse":
+//             addMessage(newMessage);
+//             break;
+//         default:
+//             break;
+//     }
+// };

@@ -18,7 +18,7 @@ class WhisperModelLoader:
 
         try:
             # Load the Whisper model
-            whisper_model = whisper.load_model("base")
+            whisper_model = whisper.load_model(model_name)
             logger.info(f"Whisper model {model_name} loaded successfully.")
 
             # Check if CUDA is available and move the model to GPU if possible

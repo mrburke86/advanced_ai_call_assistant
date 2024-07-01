@@ -25,8 +25,8 @@ import { cn } from "@/lib/utils";
  */
 
 export interface ChatProps extends React.ComponentProps<"div"> {
-  chat_id?: string;
-  initialMessages?: Message[];
+    chat_id?: string;
+    initialMessages?: Message[];
 }
 
 /**
@@ -39,17 +39,48 @@ export interface ChatProps extends React.ComponentProps<"div"> {
  * @returns {JSX.Element} The rendered Chat component.
  */
 export function Chat({ chat_id, className }: ChatProps) {
-  return (
-    <>
-      <div
-        className={cn(
-          "border-2 border-blue-400 pb-[200px] pt-4 md:pt-10",
-          className
-        )}
-      >
-        {/* Render the ChatList component */}
-        <ChatList />
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div
+                className={cn(
+                    "border-2 border-blue-400 pb-[200px] pt-4 md:pt-10",
+                    className,
+                )}
+            >
+                {/* Render the ChatList component */}
+                <ChatList />
+            </div>
+        </>
+    );
 }
+
+// ---
+// --- Below is the code without comments and console logs
+// ---
+
+// // frontend\components\chat\chat.tsx
+// "use client";
+
+// import { ChatList } from "@/components/chat/chat-list";
+// import { Message } from "@/lib/validators/message";
+// import { cn } from "@/lib/utils";
+
+// export interface ChatProps extends React.ComponentProps<"div"> {
+//   chat_id?: string;
+//   initialMessages?: Message[];
+// }
+
+// export function Chat({ chat_id, className }: ChatProps) {
+//   return (
+//     <>
+//       <div
+//         className={cn(
+//           "border-2 border-blue-400 pb-[200px] pt-4 md:pt-10",
+//           className
+//         )}
+//       >
+//         <ChatList />
+//       </div>
+//     </>
+//   );
+// }

@@ -1,9 +1,9 @@
 // frontend\lib\openai-stream.ts
 
 import {
-  createParser,
-  ParsedEvent,
-  ReconnectInterval,
+    createParser,
+    ParsedEvent,
+    ReconnectInterval,
 } from "eventsource-parser";
 
 /**
@@ -55,8 +55,8 @@ export type ChatGPTAgent = "user" | "system";
  * @property {string} content - The content of the message.
  */
 export interface ChatGPTMessage {
-  role: ChatGPTAgent;
-  content: string;
+    role: ChatGPTAgent;
+    content: string;
 }
 
 /**
@@ -73,15 +73,15 @@ export interface ChatGPTMessage {
  * @property {number} n - The number of responses to generate.
  */
 export interface OpenAIStreamPayload {
-  model: string;
-  messages: ChatGPTMessage[];
-  temperature: number;
-  top_p: number;
-  frequency_penalty: number;
-  presence_penalty: number;
-  max_tokens: number;
-  stream: boolean;
-  n: number;
+    model: string;
+    messages: ChatGPTMessage[];
+    temperature: number;
+    top_p: number;
+    frequency_penalty: number;
+    presence_penalty: number;
+    max_tokens: number;
+    stream: boolean;
+    n: number;
 }
 
 /**
@@ -90,66 +90,149 @@ export interface OpenAIStreamPayload {
  * @returns {Promise<ReadableStream>} A Promise that resolves to a ReadableStream of the response.
  */
 export async function OpenAIStream(payload: OpenAIStreamPayload) {
-  const encoder = new TextEncoder();
-  const decoder = new TextDecoder();
+    const encoder = new TextEncoder();
+    const decoder = new TextDecoder();
 
-  let counter = 0;
+    let counter = 0;
 
-  // Send a POST request to the OpenAI API with the given payload
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ""}`,
-    },
-    method: "POST",
-    body: JSON.stringify(payload),
-  });
+    // Send a POST request to the OpenAI API with the given payload
+    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ""}`,
+        },
+        method: "POST",
+        body: JSON.stringify(payload),
+    });
 
-  // Create a new ReadableStream to handle the response
-  const stream = new ReadableStream({
-    async start(controller) {
-      /**
-       * Handles a parsed event from the API response.
-       * @param {ParsedEvent | ReconnectInterval} event - The parsed event.
-       */
-      function onParse(event: ParsedEvent | ReconnectInterval) {
-        if (event.type === "event") {
-          const data = event.data;
+    // Create a new ReadableStream to handle the response
+    const stream = new ReadableStream({
+        async start(controller) {
+            /**
+             * Handles a parsed event from the API response.
+             * @param {ParsedEvent | ReconnectInterval} event - The parsed event.
+             */
+            function onParse(event: ParsedEvent | ReconnectInterval) {
+                if (event.type === "event") {
+                    const data = event.data;
 
-          // If the data is "[DONE]", close the stream
-          if (data === "[DONE]") {
-            controller.close();
-            return;
-          }
+                    // If the data is "[DONE]", close the stream
+                    if (data === "[DONE]") {
+                        controller.close();
+                        return;
+                    }
 
-          // Parse the JSON data and extract the message content
-          try {
-            const json = JSON.parse(data);
-            const text = json.choices[0].delta?.content || "";
+                    // Parse the JSON data and extract the message content
+                    try {
+                        const json = JSON.parse(data);
+                        const text = json.choices[0].delta?.content || "";
 
-            // Ignore the first two messages if they contain a newline character
-            if (counter < 2 && (text.match(/\n/) || []).length) {
-              return;
+                        // Ignore the first two messages if they contain a newline character
+                        if (counter < 2 && (text.match(/\n/) || []).length) {
+                            return;
+                        }
+
+                        // Enqueue the message content in the ReadableStream
+                        const queue = encoder.encode(text);
+                        controller.enqueue(queue);
+                        counter++;
+                    } catch (e) {
+                        // If there's an error parsing the JSON, pass it to the controller
+                        controller.error(e);
+                    }
+                }
             }
 
-            // Enqueue the message content in the ReadableStream
-            const queue = encoder.encode(text);
-            controller.enqueue(queue);
-            counter++;
-          } catch (e) {
-            // If there's an error parsing the JSON, pass it to the controller
-            controller.error(e);
-          }
-        }
-      }
+            // Create a new parser and feed the response body to it
+            const parser = createParser(onParse);
+            for await (const chunk of res.body as any) {
+                parser.feed(decoder.decode(chunk));
+            }
+        },
+    });
 
-      // Create a new parser and feed the response body to it
-      const parser = createParser(onParse);
-      for await (const chunk of res.body as any) {
-        parser.feed(decoder.decode(chunk));
-      }
-    },
-  });
-
-  return stream;
+    return stream;
 }
+
+// ---
+// --- Below is the code without comments and console logs
+// ---
+
+// // frontend\lib\openai-stream.ts
+// import {
+//   createParser,
+//   ParsedEvent,
+//   ReconnectInterval,
+// } from "eventsource-parser";
+
+// export type ChatGPTAgent = "user" | "system";
+
+// export interface ChatGPTMessage {
+//   role: ChatGPTAgent;
+//   content: string;
+// }
+
+// export interface OpenAIStreamPayload {
+//   model: string;
+//   messages: ChatGPTMessage[];
+//   temperature: number;
+//   top_p: number;
+//   frequency_penalty: number;
+//   presence_penalty: number;
+//   max_tokens: number;
+//   stream: boolean;
+//   n: number;
+// }
+
+// export async function OpenAIStream(payload: OpenAIStreamPayload) {
+//   const encoder = new TextEncoder();
+//   const decoder = new TextDecoder();
+
+//   let counter = 0;
+
+//   const res = await fetch("https://api.openai.com/v1/chat/completions", {
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ""}`,
+//     },
+//     method: "POST",
+//     body: JSON.stringify(payload),
+//   });
+
+//   const stream = new ReadableStream({
+//     async start(controller) {
+//       function onParse(event: ParsedEvent | ReconnectInterval) {
+//         if (event.type === "event") {
+//           const data = event.data;
+
+//           if (data === "[DONE]") {
+//             controller.close();
+//             return;
+//           }
+
+//           try {
+//             const json = JSON.parse(data);
+//             const text = json.choices[0].delta?.content || "";
+
+//             if (counter < 2 && (text.match(/\n/) || []).length) {
+//               return;
+//             }
+
+//             const queue = encoder.encode(text);
+//             controller.enqueue(queue);
+//             counter++;
+//           } catch (e) {
+//             controller.error(e);
+//           }
+//         }
+//       }
+
+//       const parser = createParser(onParse);
+//       for await (const chunk of res.body as any) {
+//         parser.feed(decoder.decode(chunk));
+//       }
+//     },
+//   });
+
+//   return stream;
+// }
